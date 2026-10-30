@@ -509,6 +509,16 @@ body.helpmode #helpBar{display:flex}
 .mi.done .t b{color:var(--tx3);text-decoration:line-through}
 .mi .t span{font-size:12px;color:var(--tx2);line-height:1.6;display:block}
 .mi .tg{display:inline-block;margin-top:5px;font-size:11px;background:var(--main-l);color:var(--main-d);padding:2px 8px;border-radius:9px;font-weight:700}
+.mi .t .mi-foot{display:flex;align-items:center;gap:8px;margin-top:5px;flex-wrap:wrap}
+.mi .t .mi-foot .tg{display:inline-block;margin-top:0}
+.mi-pdf{font-size:11px;font-weight:700;color:#B4321F;border:1px solid #F1C4BC;background:#FFF6F4;border-radius:9px;padding:1px 8px;text-decoration:none}
+.mi-pdf:hover{background:#FDE7E2}
+.man-top{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+.man-top a{text-decoration:none}
+.man-top .man-big{height:44px;padding:0 20px;font-size:14.5px}
+.man-top small{font-weight:400;opacity:.85;margin-left:4px}
+.man-dl{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:13px;border:1px solid var(--main);color:var(--main);font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap}
+.man-dl:hover{background:var(--main-l)}
 .mp-f{padding:12px 18px;border-top:1px solid var(--line2);background:#FAFBFC;display:flex;gap:8px}
 
 /* 지도 placeholder */
@@ -664,6 +674,7 @@ body.guiding .gnb,body.guiding .gnb-dim{top:38px}
       <span class="sim-tag">연수용 시뮬레이터</span>
       <div class="inner-right">
         <button class="top-btn helpBtn" id="btnHelp" title="도움말 모드">❕ 도움말</button>
+        <button class="top-btn" id="btnManual" title="실습 미션 매뉴얼(PDF) 내려받기">매뉴얼 PDF</button>
         <button class="top-btn" id="btnFaq">FAQ</button>
         <button class="top-btn" id="btnCap">지원 기능표</button>
         <button class="top-btn" id="btnDiff">실제와 다른 점</button>
@@ -700,6 +711,7 @@ body.guiding .gnb,body.guiding .gnb-dim{top:38px}
   </div>
   <div class="mp-b" id="mpB"></div>
   <div class="mp-f">
+    <button class="btn--st small" id="mpManual">매뉴얼 PDF</button>
     <button class="btn--st small" id="mpExport">점검표 초안 내보내기</button>
     <button class="btn--st small btn-red" id="mpReset">처음 상태로</button>
   </div>
@@ -1301,7 +1313,7 @@ setInterval(function(){
 },450);
 document.addEventListener("click",function(e){
   if(e.target.closest("#gdStop")){coachStop();toast("안내를 중단했습니다. 미션 패널에서 다시 시작할 수 있습니다.","no");return;}
-  const gm=e.target.closest("[data-guide]");
+  const gm=!e.target.closest(".mi-pdf")&&e.target.closest("[data-guide]");
   if(gm){coachStart(gm.getAttribute("data-guide"));return;}
   if(!GD)return;
   const st=COACH[GD.id].steps[GD.i];
@@ -2966,7 +2978,7 @@ function paintMi(){
   const n=MISSIONS.filter(m=>S.missions[m.id]).length;
   $("#fabBg").textContent=n+"/"+MISSIONS.length;
   $("#mpPr").style.width=Math.round(n/MISSIONS.length*100)+"%";
-  $("#mpB").innerHTML=MISSIONS.map(m=>'<div class="mi'+(S.missions[m.id]?" done":"")+'" data-guide="'+m.id+'" style="cursor:pointer" title="누르면 화면 안내와 함께 진행합니다"><span class="ck">'+I.chk+'</span><span class="t"><b>'+esc(m.t)+"</b><span>"+esc(m.d)+'</span><span class="tg">'+esc(m.tg)+"</span></span></div>").join("");
+  $("#mpB").innerHTML=MISSIONS.map((m,i)=>'<div class="mi'+(S.missions[m.id]?" done":"")+'" data-guide="'+m.id+'" style="cursor:pointer" title="누르면 화면 안내와 함께 진행합니다"><span class="ck">'+I.chk+'</span><span class="t"><b>'+esc(m.t)+"</b><span>"+esc(m.d)+'</span><span class="mi-foot"><span class="tg">'+esc(m.tg)+'</span>'+manLink(MAN.m[i][0],MAN.m[i][1],"📄 PDF","mi-pdf",'이 미션 매뉴얼(PDF) 내려받기')+"</span></span></div>").join("");
 }
 function exportChk(){
   const d=S.dev,L=[];
@@ -3006,6 +3018,7 @@ document.addEventListener("click",function(e){
   if(h("#btnCap")){popCap();return;}
   if(h("#btnDiff")){popDiff();return;}
   if(h("#btnCredit")){popCreditBox();return;}
+  if(h("#btnManual")||h("#mpManual")){popManual();return;}
   if(h("[data-pageguide]")){pageGuide();return;}
   if(h("#fab")){$("#mp").hidden=!$("#mp").hidden;return;}
   if(h("#mpExport")){exportChk();return;}
@@ -3181,6 +3194,23 @@ document.addEventListener("keydown",function(e){
 function popCredit(){
   try{if(sessionStorage.getItem("argos_credit_seen"))return;sessionStorage.setItem("argos_credit_seen","1");}catch(e){}
   popCreditBox();
+}
+/* ---- 실습 미션 매뉴얼(PDF) 내려받기 — 파일은 깃허브 게시본의 manual/ 폴더 ----
+   게시 주소에서는 같은 출처라 download 이름(한글)으로 저장되고, 다른 곳(내 PC 파일 등)에서는 새 탭으로 열린다 */
+const MAN_BASE=location.hostname==="songsamscience.github.io"?"manual/":"https://songsamscience.github.io/mdm-simulator/manual/";
+const MAN=/*MAN-START*/{"all":["MDM-mission-manual-all.pdf","MDM 실습 미션 매뉴얼(전체).pdf",68,21.9],"start":["00-start.pdf","00_표지와 시작하기.pdf",2,1.1],"m":[["mission-01.pdf","미션01_미설치 단말 찾아내기.pdf",3,1.2],["mission-02.pdf","미션02_사용자 이름 변경(개별).pdf",4,1.3],["mission-03.pdf","미션03_이름 일괄 변경 템플릿 받기.pdf",3,1.2],["mission-04.pdf","미션04_화면 표시 설정 바꾸기.pdf",4,1.3],["mission-05.pdf","미션05_조직 담당자 계정 만들기.pdf",6,1.7],["mission-06.pdf","미션06_단말 그룹 만들기.pdf",3,0.9],["mission-07.pdf","미션07_분실 등록.pdf",4,1.3],["mission-08.pdf","미션08_분실 단말 위치 확인.pdf",4,1.4],["mission-09.pdf","미션09_Windows 통합설정 만들기.pdf",7,1.8],["mission-10.pdf","미션10_통합설정 적용.pdf",4,1.3],["mission-11.pdf","미션11_미적용 재배포.pdf",3,1.0],["mission-12.pdf","미션12_MS Store 앱 등록.pdf",4,1.2],["mission-13.pdf","미션13_앱 배포.pdf",4,1.4],["mission-14.pdf","미션14_웹 사이트 Black List 등록.pdf",4,1.3],["mission-15.pdf","미션15_대여 단말 설정 후 대여하기.pdf",6,1.6],["mission-16.pdf","미션16_처리 이력 확인.pdf",3,1.0]]}/*MAN-END*/;
+function manLink(f,dn,label,cls,title){return '<a class="'+(cls||"")+'" href="'+MAN_BASE+f+'" download="'+esc(dn)+'" target="_blank" rel="noopener"'+(title?' title="'+esc(title)+'"':"")+">"+label+"</a>";}
+function popManual(){
+  const A=MAN.all,B=MAN.start;
+  pop({title:"실습 미션 매뉴얼 (PDF)",w:"w900",
+   body:'<div class="msg-box msg-i">미션마다 단계별 화면과 확인할 점을 담은 안내서입니다. 전체본을 받거나 필요한 미션만 골라 받으세요.</div>'
+    +'<div class="man-top">'+manLink(A[0],A[1],"⬇ 전체 매뉴얼 내려받기<small>("+A[2]+"쪽 · "+A[3]+"MB)</small>","btn--st btn-major man-big")
+    +manLink(B[0],B[1],"표지와 시작하기<small>("+B[2]+"쪽)</small>","btn--st man-big")+"</div>"
+    +'<div class="list-st--table scroll-y" style="max-height:380px"><table class="tbl"><thead><tr><th style="width:56px">번호</th><th class="l">미션</th><th class="l">관련 매뉴얼</th><th style="width:60px">쪽수</th><th style="width:110px">내려받기</th></tr></thead><tbody>'
+    +MISSIONS.map(function(m,i){const x=MAN.m[i];return "<tr><td>"+String(i+1).padStart(2,"0")+'</td><td class="l"><b>'+esc(m.t)+'</b></td><td class="l">'+esc(m.tg)+"</td><td>"+x[2]+"쪽</td><td>"+manLink(x[0],x[1],"⬇ PDF","man-dl")+"</td></tr>";}).join("")
+    +"</tbody></table></div>"
+    +'<p class="bottom-txt-alert">※ 매뉴얼 화면은 처음 상태에서 미션 1부터 차례로 진행하며 찍었습니다. 앞 미션을 건너뛰면 목록의 개수 등이 조금 다를 수 있습니다.</p>',
+   btns:'<button class="btn--st pill btn-major" data-close>닫기</button>'});
 }
 function popCreditBox(){
   const r=(k,v)=>'<tr><td class="l" style="width:120px;background:#F7F9FB;font-weight:700;vertical-align:top">'+k+'</td><td class="l" style="line-height:1.7">'+v+"</td></tr>";
