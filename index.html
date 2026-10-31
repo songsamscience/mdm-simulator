@@ -67,6 +67,63 @@ a{color:var(--main);text-decoration:none}
   .lg-support{padding:14px 18px;gap:14px}
 }
 
+
+/* ===== 실습 기종 고르기 ===== */
+#platPick{position:fixed;inset:0;z-index:195;background:#F1F7FD;display:flex;align-items:center;justify-content:center;padding:24px;overflow:auto;font-family:var(--font)}
+.pp-box{position:relative;width:min(1040px,100%);text-align:center}
+.pp-k{display:inline-block;background:#FFD166;color:#4A3200;font-weight:800;font-size:12px;padding:4px 12px;border-radius:4px}
+#platPick h2{margin:14px 0 8px;font-size:28px;color:#0A2A5A;letter-spacing:-.8px}
+#platPick p{margin:0 0 26px;color:#4B5563;font-size:14px;line-height:1.7}
+.pp-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.pp-card{background:#fff;border:2px solid transparent;border-radius:14px;padding:26px 20px 22px;display:flex;flex-direction:column;align-items:center;gap:8px;box-shadow:0 4px 18px rgba(30,70,130,.08);cursor:pointer;font-family:inherit;transition:transform .12s,border-color .12s}
+.pp-card:hover{border-color:var(--pc);transform:translateY(-2px)}
+.pp-card.cur{border-color:var(--pc)}
+.pp-card svg{width:132px;height:96px;margin-bottom:6px}
+.pp-card b{font-size:20px;color:#111;letter-spacing:-.5px}
+.pp-d{font-size:13px;color:#4B5563;line-height:1.5}
+.pp-m{font-size:12.5px;color:var(--pc);font-weight:700;background:color-mix(in srgb,var(--pc) 10%,#fff);padding:3px 10px;border-radius:10px}
+.pp-go{margin-top:8px;background:var(--pc);color:#fff;font-weight:700;font-size:14px;padding:10px 18px;border-radius:8px;width:100%}
+.pp-x{position:absolute;right:0;top:0;width:38px;height:38px;border:0;border-radius:50%;background:#fff;font-size:22px;color:#4B5563;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+@media (max-width:760px){.pp-cards{grid-template-columns:1fr}.pp-card{flex-direction:row;flex-wrap:wrap;text-align:left;justify-content:flex-start;padding:16px}.pp-card svg{width:80px;height:58px;margin:0}.pp-go{width:auto}}
+.top-btn.plat-btn{border-color:#FFD166;color:#FFE7A3}
+.top-btn.plat-btn b{color:#fff}
+/* ===== Android·AMA·iOS 위자드 ===== */
+.wz-note{margin:-6px 0 14px;font-size:12.5px;color:var(--tx3)}
+.blk-grp{margin-bottom:16px}
+.blk-gh{font-weight:800;font-size:14px;color:var(--navy);margin:0 0 8px;padding-left:8px;border-left:4px solid var(--main)}
+.gp-box{border:1px solid var(--line);border-radius:8px;background:#fff;overflow:hidden}
+.gp-top{display:flex;gap:8px;align-items:center;padding:10px;border-bottom:1px solid var(--line2);background:#F8FAFB}
+.gp-logo{font-weight:800;font-size:13px;color:#2FA84F;white-space:nowrap}
+.gp-res{max-height:330px;overflow:auto}
+.gp-it{display:flex;align-items:center;gap:10px;padding:9px 12px;border-bottom:1px solid var(--line2)}
+.gp-it.on{background:var(--main-l)}
+.gp-tx{flex:1;min-width:0;display:flex;flex-direction:column}
+.gp-tx b{font-size:13.5px}.gp-tx span{font-size:12px;color:var(--tx3)}
+.ama-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:14px}
+@media (max-width:1100px){.ama-grid{grid-template-columns:1fr}}
+.tag-line{background:#EEF2F6;color:#3B4B5B;font-weight:700}
+.btn-link{border:0;background:none;color:var(--main);text-decoration:underline;font-size:12.5px;padding:0}
+.wall-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ipad-pv{margin-top:12px;display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12.5px}
+.ipad-scr{width:170px;height:122px;border:6px solid #3B3B3D;border-radius:12px;background:#E9EEF3;display:flex;align-items:center;justify-content:center;text-align:center;padding:6px;font-size:12px}
+.ipad-scr.has{background:linear-gradient(135deg,#5B8DEF,#7FD3FA);color:#fff;font-weight:700}
+.home-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:14px}
+.hs-pool{max-height:360px;overflow:auto}
+.hs-row{display:flex;align-items:center;gap:8px;padding:6px 4px;border-bottom:1px solid var(--line2);font-size:13px}
+.hs-g{width:28px;height:28px;border-radius:7px;background:#3B3B3D;color:#fff;display:inline-flex;align-items:center;justify-content:center;font-weight:800;font-size:12px;flex:0 0 auto}
+.ipad-home{border:8px solid #2B2B2D;border-radius:18px;background:linear-gradient(160deg,#9FC3F5,#C9E6FB);padding:16px 14px 10px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+.hs-page{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;align-content:start;min-height:170px}
+.hs-dock{display:flex;gap:10px;justify-content:center;background:rgba(255,255,255,.45);border-radius:14px;padding:8px;min-height:62px;align-items:center}
+.hs-ic{position:relative;display:flex;flex-direction:column;align-items:center;gap:3px;width:56px}
+.hs-ic .hs-g{width:40px;height:40px;border-radius:10px;font-size:15px}
+.hs-ic small{font-size:10px;color:#13253D;max-width:56px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.hs-ic button{position:absolute;top:-6px;right:2px;width:18px;height:18px;border-radius:50%;border:0;background:#E3001C;color:#fff;font-size:11px;line-height:1;padding:0}
+.asm-b{font-size:8.5px;font-weight:800;background:#3B3B3D;color:#fff;border-radius:3px;padding:0 3px;margin-left:-6px;vertical-align:-2px}
+.vpp-bar{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:-4px 0 14px;font-size:13px}
+.vpp-bar .vpp-at{color:var(--tx3);font-size:12px;margin-left:auto}
+.lic{font-size:12px;color:var(--tx2);margin-top:4px}
+.lic b{color:var(--main)}
+
 /* ===== 셸 (실제 사이트 style-ui-2.2: 64px 아이콘 레일 + 펼치면 260px 오버레이) ===== */
 .wrap{display:flex;height:100%;padding-left:64px}
 .gnb{position:fixed;left:0;top:0;bottom:0;z-index:60;width:260px;background:var(--gnb);display:flex;flex-direction:column;transition:width .18s;overflow:hidden;box-shadow:4px 0 14px rgba(0,0,0,.18)}
@@ -259,7 +316,7 @@ a{color:var(--main);text-decoration:none}
 .dc-nm .pen:hover{color:var(--main)}
 .i-os{width:20px;height:20px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff;flex:0 0 auto;font-style:normal}
 .i-and{background:#2FA84F} .i-ios{background:#3B3B3D} .i-win{background:#0F6CBD} .i-chrome{background:#F4B400;color:#4a3a00}
-.i-ama{background:#8E8E93;font-size:7px} .i-ceu{background:#2AA8A0} .i-off{background:#D5DCE2;color:#fff}
+.i-ama{background:#1A73E8;font-size:7px;letter-spacing:-.2px} .i-ceu{background:#2AA8A0} .i-off{background:#D5DCE2;color:#fff}
 .i-os.i-off{background:#D5DCE2}
 /* ── 실제 setUpWizardWindows.html 재현 ── */
 .tsw-steps{display:flex;border:1px solid var(--line);border-radius:6px;overflow:hidden;margin:2px 0 18px;background:#fff}
@@ -405,7 +462,7 @@ a{color:var(--main);text-decoration:none}
 .wz-tab.on{background:var(--main);color:#fff;font-weight:700;border-bottom-color:var(--main)}
 .wz-body{background:#fff;border:1px solid var(--line);border-top:0;padding:22px;min-height:360px}
 .wz-foot{background:#fff;border:1px solid var(--line);border-top:0;border-radius:0 0 6px 6px;padding:14px 20px;display:flex;gap:8px}
-.wz-foot .right{margin-left:auto;display:flex;gap:8px}
+.wz-foot .right{margin-left:auto;display:flex;gap:8px;flex:0 0 auto;flex-direction:row}   /* 본문 칸의 .right(세로 flex:1)를 물려받지 않게 */
 .sect-t{font-size:14px;font-weight:700;color:var(--main);margin:0 0 12px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .sect-t .desc{font-weight:400;color:var(--tx2);font-size:12.5px}
 .sect-t .right{margin-left:auto}
@@ -534,12 +591,24 @@ body.helpmode #helpBar{display:flex}
   .main-grid{grid-template-columns:1fr}
   .blu-change-wrap{grid-template-columns:1fr}
   .blu-change-move-btns{flex-direction:row;padding:12px 0}
-  .tree-area{display:none}
+  /* 조직 칸을 숨기면 조직을 골라야 하는 미션(1·2·8)이 멈춘다 → 좁게 남긴다 */
+  .tree-area{width:168px}
+  .tree-title{font-size:18px}
 }
 @media(max-width:820px){
+  /* 휴대폰: 조직 칸을 위쪽 가로 띠로 쌓는다(옆으로 밀어 보기) */
+  .body-row{flex-direction:column}
+  .tree-area{width:auto;flex:0 0 auto;display:flex;align-items:center;gap:6px;padding:6px 8px;border-right:0;border-bottom:1px solid rgba(0,0,0,.1);overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+  .tree-title{margin:0;padding:0 4px;font-size:14px;flex:0 0 auto}
+  .jstree{display:flex;gap:4px;padding:0}
+  .jstree button,.jstree .d1{width:auto;padding:0 10px;height:30px;border:1px solid #DCE5EE;background:#fff}
+  .container{min-height:0}
   .blk-grid{grid-template-columns:1fr}
   .day-grid{grid-template-columns:repeat(4,1fr)}
   .contents,.header-top:empty+.contents{padding:14px 12px 30px}
+  /* 아래 기능 줄이 여러 줄로 쌓이면 단말 목록이 가려진다 → 한 줄로 두고 옆으로 밀어 보기 */
+  .footer-fix{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;min-height:0;padding:8px 12px}
+  .footer-fix>*{flex:0 0 auto}
   .header-top{padding:18px 12px 10px}
   .header-fix{padding:0 12px 0 16px;gap:8px}
   .school-name{font-size:19px;white-space:nowrap}
@@ -580,10 +649,25 @@ body.helpmode #helpBar{display:flex}
 @keyframes gdPulse{0%,100%{box-shadow:0 0 0 0 rgba(255,185,0,.55)}50%{box-shadow:0 0 0 9px rgba(255,185,0,0)}}
 body.guiding .wrap{height:calc(100% - 38px);margin-top:38px}
 body.guiding .gnb,body.guiding .gnb-dim{top:38px}
+/* 따라하기 중에는 「실습 미션」 단추·패널을 숨긴다(눌러야 할 [상세]·[+]를 덮음, 그만두기는 위쪽 띠의 [안내 중단]) */
+body.guiding #fab,body.guiding #mp{display:none}
+/* 휴대폰: 위쪽 띠는 한 줄(넘치면 …), 안내 카드는 아래 전체 폭으로 작게 — 두 줄 띠·큰 카드가 창의 머리·단추를 덮는다 */
+@media(max-width:820px){
+  #guideBar{padding:7px 10px;font-size:12.5px;gap:8px}
+  #guideBar .g-t{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  #guideBar .gsp{display:none}
+  #guideBar button{flex:0 0 auto;padding:3px 9px}
+  #coach,#coach.co-r{left:8px;right:8px;bottom:8px;top:auto;max-width:none;padding:10px 12px}
+  #coach.co-t{left:8px;right:8px;bottom:auto;top:44px}
+  #coach .c-t{font-size:13.5px}
+  #coach .c-d{font-size:12.5px;line-height:1.5}
+  #coach .c-s{display:none}
+}
 </style>
 </head>
 <body>
 <!-- ===== 로그인 (매뉴얼 02장 재현) ===== -->
+<div id="platPick" hidden></div>
 <div id="login">
   <div class="lg-page">
     <div class="lg-toplogo"><svg viewBox="0 0 40 44" aria-hidden="true"><circle cx="20" cy="6" r="4.6" fill="#2DB39E"/><path d="M4 11c4 7 9 10 16 10s12-3 16-10" fill="none" stroke="#1F5FAE" stroke-width="4.4" stroke-linecap="round"/><path d="M20 21c-6 4-7 10-3 14s9 4 9-1-6-6-9-3" fill="none" stroke="#1F5FAE" stroke-width="4.4" stroke-linecap="round"/></svg>서울특별시교육청</div>
@@ -673,6 +757,7 @@ body.guiding .gnb,body.guiding .gnb-dim{top:38px}
       <h1 class="school-name" id="deptNm" data-h="top.school">디지털튜터학교</h1>
       <span class="sim-tag">연수용 시뮬레이터</span>
       <div class="inner-right">
+        <button class="top-btn plat-btn" id="btnPlat" title="실습 기종 바꾸기">기종: <b>Windows</b> ⇄</button>
         <button class="top-btn helpBtn" id="btnHelp" title="도움말 모드">❕ 도움말</button>
         <button class="top-btn" id="btnManual" title="실습 미션 매뉴얼(PDF) 내려받기">매뉴얼 PDF</button>
         <button class="top-btn" id="btnFaq">FAQ</button>
@@ -705,7 +790,7 @@ body.guiding .gnb,body.guiding .gnb-dim{top:38px}
 <button class="fab" id="fab" hidden>실습 미션 <span class="bg" id="fabBg">0</span></button>
 <div class="mp" id="mp" hidden>
   <div class="mp-h">
-    <h3>실습 미션</h3>
+    <h3 id="mpTitle">실습 미션</h3>
     <p>사용자매뉴얼 v4.1의 장(章)을 따라 묶은 실습 과제입니다.</p>
     <div class="mp-pr"><i id="mpPr" style="width:0%"></i></div>
   </div>
@@ -761,7 +846,7 @@ const I={
  shield:S1('<path d="M12 3l7.5 3v5.2c0 4.4-3 8.3-7.5 9.8-4.5-1.5-7.5-5.4-7.5-9.8V6z"/>',52),
  pin:'<svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>'
 };
-const OSIC={Android:'<i class="i-os i-and">A</i>',iOS:'<i class="i-os i-ios"></i>',Windows:'<i class="i-os i-win">W</i>',Chrome:'<i class="i-os i-chrome">C</i>'};
+const OSIC={AMAndroid:'<i class="i-os i-ama">AMA</i>',Android:'<i class="i-os i-and">A</i>',iOS:'<i class="i-os i-ios"></i>',Windows:'<i class="i-os i-win">W</i>',Chrome:'<i class="i-os i-chrome">C</i>'};
 
 /* ============================================================
    도움말 사전 — 서울시교육청 「스마트기기 통합관리시스템 사용자매뉴얼 v4.1」 발췌
@@ -1023,7 +1108,7 @@ const WEBSITES=[
  {tp:"Black List",n:"네이버",a:"*.naver.com",rd:"2023/10/12 16:55",md:"2023/10/12 16:55"},
  {tp:"White List",n:"네이버",a:"*naver.com",rd:"2023/05/26 14:50",md:""}
 ];
-const MISSIONS=[
+const MISSIONS_WIN=[
  {id:"m1",t:"미설치 단말 찾아내기",d:"단말 현황 → 조직 맨 위 「디지털튜터학교」(전체) → 검색필터에서 연결여부 「미설치」. 몇 대인지 확인하세요.",tg:"05장 단말현황"},
  {id:"m2",t:"사용자 이름 변경(개별)",d:"DESKTOP- 으로 시작하는 단말의 연필(✏)을 눌러 관리번호로 바꾸세요.",tg:"06장 이름 변경"},
  {id:"m3",t:"이름 일괄 변경 템플릿 받기",d:"단말 현황 → 툴바의 「사용자/단말 이름 일괄 변경」 아이콘(엑셀 ⬆) → 「템플릿 [수정용]」을 내려받으세요.",tg:"07장 이름 변경(일괄)"},
@@ -1041,11 +1126,12 @@ const MISSIONS=[
  {id:"m15",t:"대여 단말 설정 후 대여하기",d:"단말 대여 관리 → 「대여 단말 설정」으로 단말 지정 → 「대여」로 대여자에게 빌려주세요.",tg:"29장 대여관리"},
  {id:"m16",t:"처리 이력 확인",d:"좌측 메뉴 「처리 이력」(또는 단말 현황 툴바의 시계 아이콘)에서 지금까지 실행한 명령들의 성공 여부를 확인하세요.",tg:"26장 처리이력"}
 ];
+let MISSIONS=MISSIONS_WIN;   /* 지금 기종의 미션 — syncPlat()이 바꾼다 */
 
 /* ============ 상태 ============ */
 const KEY="ssam_mdm_sim_v2";   /* v2: 처리 이력 예시를 실제 단말 목록에서 뽑음 — 옛 v1 기록은 새 데이터로 바뀜 */
 let S=null,CREDIT=null,WZ=null,HELP=false;
-function fresh(){
+function freshWin(){
   const dv=seedDev(),po=seedPol();
   po.forEach(p=>{p.targets=dv.filter(d=>d.policy===p.name).map(d=>d.id);});
   /* 처리 이력 예시도 단말 현황에 실제로 있는 단말(이름·시리얼)로 — 두 화면을 맞대 봐도 어긋나지 않게 */
@@ -1076,8 +1162,9 @@ function fresh(){
         disp:{user:"단말 이름",dev:"시리얼 번호",cnt:10,layout:"큰 그리드"},grid:"x5",listv:false,sort:"이름",sortDir:"desc",
         sel:[],tab:{},gnbOff:true,noticeHidden:false,user:"mdm관리자"}};
 }
-function load(){try{const r=localStorage.getItem(KEY);if(r){const o=JSON.parse(r);if(o&&o.dev&&o.dev.length)return o;}}catch(e){}return fresh();}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(S));}catch(e){}}
+function fresh(){return PLAT==="and"?freshAnd():PLAT==="ios"?freshIos():freshWin();}
+function load(){try{const r=localStorage.getItem(PLATS[PLAT].key);if(r){const o=JSON.parse(r);if(o&&o.dev&&o.dev.length)return o;}}catch(e){}return fresh();}
+function save(){try{localStorage.setItem(PLATS[PLAT].key,JSON.stringify(S));}catch(e){}}
 
 /* ============ 유틸 ============ */
 const $=s=>document.querySelector(s);
@@ -1102,7 +1189,7 @@ function alertPop(title,html,okTx,onOk,danger){
    mount:(el,close)=>{el.querySelector("[data-ok]").addEventListener("click",()=>{close();onOk();});}});
 }
 function infoPop(html,title){pop({title:title||"알림",body:'<div class="alert-content">'+html+"</div>",btns:'<button class="btn--st pill btn-major" data-close>확인</button>'});}
-function done(id){if(S.missions[id])return;S.missions[id]=true;save();paintMi();const m=MISSIONS.filter(x=>x.id===id)[0];if(m)toast("🎉 미션 완료 — "+m.t,"ok");}
+function done(id){if(S.missions[id]||!MISSIONS.some(x=>x.id===id))return;S.missions[id]=true;save();paintMi();const m=MISSIONS.filter(x=>x.id===id)[0];if(m)toast("🎉 미션 완료 — "+m.t,"ok");}
 function logHist(fn,cnt,devs){
   S.hist.unshift({no:63867694+Math.floor(Math.random()*90000),fn:fn,cnt:cnt,ok:cnt,fail:0,user:S.ui.user,dt:now(),
     devs:(devs||[]).map(d=>[d.user||d.name,d.serial,"처리성공",now()])});
@@ -1234,19 +1321,28 @@ function coachPaint(){
   if(!GD){bar.hidden=true;co.hidden=true;document.body.classList.remove("guiding");if(wasG)placeFab();
     document.querySelectorAll(".gd-hl").forEach(function(e){e.classList.remove("gd-hl");});return;}
   const g=COACH[GD.id],st=g.steps[GD.i];
+  /* 마지막 단계를 마쳤는데 결과 창(템플릿·주소·처리 이력)이 남아 있으면 — 같은 단추가 계속 반짝이면 또 누르게 된다 → 그 창의 닫기를 짚는다 */
+  const fin=(S.missions[GD.id]&&!GD.replay)||(GD.fin&&GD.replay);
+  const tp=fin?[].slice.call(document.querySelectorAll("#popRoot .popup-area-bg")).pop():null;
+  const tt=tp?"열린 창 닫기":st.t;
   document.body.classList.add("guiding");if(!wasG)placeFab();
   bar.hidden=false;
-  bar.innerHTML='🎯 <b>'+esc(g.n)+'</b> 수행 중 · 단계 '+(GD.i+1)+"/"+g.steps.length+' — '+esc(st.t)
-    +'<span class="gsp"></span><button id="gdStop">안내 중단</button>';
+  bar.innerHTML='<span class="g-t">🎯 <b>'+esc(g.n)+'</b> 수행 중 · 단계 '+(GD.i+1)+"/"+g.steps.length+' — '+esc(tt)
+    +'</span><span class="gsp"></span><button id="gdStop">안내 중단</button>';
   co.hidden=false;
-  co.innerHTML='<div class="c-t">'+(GD.i+1)+"단계 · "+esc(st.t)+'</div>'
+  co.innerHTML=tp?'<div class="c-t">마무리 · 열린 창 닫기</div><div class="c-d">미션을 끝냈습니다. 반짝이는 단추로 열린 창을 닫으면 완료 표시가 뜹니다.</div>'
+    :'<div class="c-t">'+(GD.i+1)+"단계 · "+esc(st.t)+'</div>'
     +'<div class="c-d">'+esc(st.d||"")+'</div>'
     +'<div class="c-s">노랗게 반짝이는 곳을 누르면 다음 단계로 넘어갑니다 ('+(GD.i+1)+"/"+g.steps.length+")</div>";
   document.querySelectorAll(".gd-hl").forEach(function(e){e.classList.remove("gd-hl");});
-  if(st.page&&S.ui.page!==st.page)return;
-  /* 이미 원하는 값이면(예: 전에 「사용자 이름」으로 바꿔 둠) 다시 골라도 change 가 안 나 멈춘다 → 건너뜀 */
-  if(st.skipIf&&st.skipIf()){coachNext();return;}
-  const el=document.querySelector(st.sel);
+  let el;
+  if(tp){el=[].slice.call(tp.querySelectorAll(".popup-btns [data-close]")).filter(function(b){return b.offsetWidth;})[0]||tp.querySelector(".popup-head .x");}
+  else{
+    if(st.page&&S.ui.page!==st.page)return;
+    /* 이미 원하는 값이면(예: 전에 「사용자 이름」으로 바꿔 둠) 다시 골라도 change 가 안 나 멈춘다 → 건너뜀 */
+    if(st.skipIf&&st.skipIf()){coachNext();return;}
+    el=document.querySelector(st.sel);
+  }
   if(el&&!el.disabled){
     /* 라디오·체크박스는 opacity:0 으로 숨어 있어(166행) 그 자체에 칠하면 안 보인다 → 보이는 조상에 */
     let gt=el;
@@ -1260,7 +1356,8 @@ function coachPaint(){
     /* 안내 카드 자리 고르기 — 기본(왼쪽 아래) 자리를 기준으로 재야 왔다 갔다 하지 않는다 */
     const cw=co.offsetWidth,ch=co.offsetHeight;
     const hit=(L,T)=>!(r.right<L||r.left>L+cw||r.bottom<T||r.top>T+ch);
-    const pos=!hit(18,innerHeight-18-ch)?"":(!hit(innerWidth-18-cw,innerHeight-156-ch)?"co-r":"co-t");
+    /* 휴대폰(820px 이하)에선 카드가 아래 전체 폭이라 오른쪽 자리가 따로 없다 → 바로 위로 */
+    const pos=!hit(18,innerHeight-18-ch)?"":(innerWidth>820&&!hit(innerWidth-18-cw,innerHeight-156-ch)?"co-r":"co-t");
     co.classList.toggle("co-r",pos==="co-r");co.classList.toggle("co-t",pos==="co-t");
   }
 }
@@ -1269,6 +1366,8 @@ function coachOffView(el,r){
   for(let p=el.parentElement;p&&p!==document.body;p=p.parentElement){
     const cs=getComputedStyle(p);
     if(/(auto|scroll)/.test(cs.overflowY)){const q=p.getBoundingClientRect();if(r.top<q.top-2||r.bottom>q.bottom+2)return true;}
+    /* 옆으로도: 좁은 화면에서 표 오른쪽 끝 [상세]가 칸 밖으로 잘려 있으면 굴려 보여 준다 */
+    if(/(auto|scroll)/.test(cs.overflowX)&&p.scrollWidth>p.clientWidth){const q=p.getBoundingClientRect();if(r.width<=q.width&&(r.left<q.left-2||r.right>q.right+2))return true;}
   }
   return false;
 }
@@ -1302,7 +1401,7 @@ function coachNext(){
 setInterval(function(){
   if(!GD)return;
   if((S.missions[GD.id]&&!GD.replay)||(GD.fin&&GD.replay)){
-    if(document.querySelector(".popup-area-bg"))return;   /* 결과 팝업을 먼저 닫게 */
+    if(document.querySelector(".popup-area-bg")){coachPaint();return;}   /* 결과 팝업을 먼저 닫게 — 그 창의 닫기를 짚는다 */
     const nm=COACH[GD.id].n;coachStop();
     pop({title:"미션 완료! 🎉",
      body:'<div class="msg-box msg-g"><b>'+esc(nm)+'</b> 를 끝냈습니다. 우측 아래 실습 미션 패널에 체크되었습니다.</div>',
@@ -1323,7 +1422,7 @@ document.addEventListener("click",function(e){
 document.addEventListener("input",function(e){
   if(!GD)return;const st=COACH[GD.id].steps[GD.i];
   if(st.ev!=="input")return;
-  if(e.target.closest(st.match||st.sel)&&String(e.target.value||"").trim().length>=(st.min||2))coachNext();
+  if(e.target.closest(st.match||st.sel)&&String(e.target.value||"").trim().length>=(st.min||2)&&(!st.re||st.re.test(String(e.target.value))))coachNext();
 },true);
 document.addEventListener("change",function(e){
   if(!GD)return;const st=COACH[GD.id].steps[GD.i];
@@ -1415,7 +1514,11 @@ const GUIDE={
  parent:["학부모앱 : 보호자가 자녀 단말 사용을 확인·관리하는 서비스로, 관리자 웹에서는 가입 현황을 확인합니다."]
 };
 function pageGuide(){
-  const g=GUIDE[S.ui.page]||GUIDE.home;
+  const GX={and:{setup:["Android 위자드 8단계 : 차단 및 초기화 → 사용 시간 설정 → 배포 앱 → 배포 콘텐츠 → 앱 제어 → 차단 예외 앱 → 사이트 제어 → 내용 확인.","AMA 위자드 5단계 : 차단 → 사용 시간 설정 → 앱 배포 및 제어(Google Play · Web App · 관리형 구성) → 사이트 제어 → 내용 확인."],
+      apps:["Android 탭은 In House(APK 파일 등록)만, Android(Play Store) 탭은 AMA 단말용 Google Play · Web App 등록입니다."],devices:["Android 초기화는 「기본」(공장 초기화, 에이전트도 삭제)과 「고급」(비밀번호·데이터·앱 등 골라서)으로 나뉩니다. 연결여부 「설치 중」은 에이전트 승인 대기 단말입니다."]},
+    ios:{setup:["iOS 위자드 9단계 : 차단 및 초기화 → 배포 앱 → 웹 클립 → 앱 제어 → 사이트 제어 → 배경화면 → 화면 제어 → Wi-Fi → 내용 확인. 감독(ASM 자동 등록) 단말에서만 적용됩니다."],
+      apps:["iOS(VPP) : ASM에서 「받기」한 앱을 [VPP 앱 동기화]로 가져오고, [VPP 앱 정보]에서 단말에 배정·배정 취소합니다. [단말 앱 동기화]로 설치된 앱을 최신 버전으로 올립니다."],devices:["iPad 동기화는 단말 이름의 방향(단말 → MDM 서버 / MDM 서버 → 단말)을 고릅니다. 초기화는 공장 초기화·비밀번호 초기화 두 가지이고, 메시지·단말 찾기는 ASM 단말에서 지원하지 않습니다."]}};
+  const g=(GUIDE[S.ui.page]||GUIDE.home).concat(((GX[PLAT]||{})[S.ui.page])||[]);
   pop({title:"이 화면 설명 — 사용자매뉴얼 v4.1",w:"w900",
    body:'<div class="msg-box msg-i">아래 설명은 서울시교육청 「스마트기기 통합관리시스템 사용자매뉴얼 v4.1」의 해당 장(章) 내용을 정리한 것입니다. 상단의 <b>❕ 도움말</b> 버튼을 켜면 화면 요소 위에 마우스를 올려 개별 설명을 볼 수 있습니다.</div>'
    +'<ol style="padding-left:22px;line-height:2">'+g.map(x=>"<li>"+esc(x)+"</li>").join("")+"</ol>",
@@ -1511,16 +1614,17 @@ function filt(){
 }
 function usedPct(d){return d.totGB?Math.round((d.totGB-d.freeGB)/d.totGB*100):0;}
 function isBare(d){return /^DESKTOP-/.test(d.name)&&!d.user;}
+function isIpadBare(d){return d.platform==="iOS"&&d.name==="iPad"&&!d.devName;}
 /* 미션 안내가 짚는 단말은 100대 표시 한도·정렬 방향과 상관없이 맨 앞에 보이게(pin: "bare" 또는 단말 id) */
 function pinFront(list,shown){
   if(typeof GD==="undefined"||!GD)return shown;
   const st=COACH[GD.id].steps[GD.i],pin=st&&st.pin;if(!pin)return shown;
-  const hit=list.filter(d=>pin==="bare"?isBare(d):d.id===pin);if(!hit.length)return shown;
+  const hit=list.filter(d=>pin==="bare"?isBare(d):pin==="ipad"?isIpadBare(d):pin==="lost"?d.lost:d.id===pin);if(!hit.length)return shown;
   return hit.concat(shown.filter(d=>hit.indexOf(d)<0)).slice(0,Math.max(shown.length,hit.length));
 }
 function connTag(c){
   return c==="연결"?'<span style="color:#0B8A5E;font-weight:700">연결</span>':c==="미연결"?'<span style="color:#888;font-weight:700">미연결</span>'
-   :c==="미설치"?'<span class="cc-red" style="font-weight:700">미설치</span>':'<span class="cc-orange" style="font-weight:700">미등록</span>';
+   :c==="미설치"?'<span class="cc-red" style="font-weight:700">미설치</span>':c==="설치 중"?'<span class="cc-orange" style="font-weight:700">설치 중</span>':'<span class="cc-orange" style="font-weight:700">미등록</span>';
 }
 function osIco(p){return OSIC[p]||OSIC.Windows;}
 function devCard(d){
@@ -1528,15 +1632,15 @@ function devCard(d){
   const nm=S.ui.disp.user==="사용자 이름"?(d.user||d.name):d.name;
   const idv=S.ui.disp.dev==="시리얼 번호"?d.serial:d.mac;
   const idl=S.ui.disp.dev==="시리얼 번호"?"SERIAL":"MAC";
-  const uninstalled=d.conn==="미설치"||d.conn==="미등록";
+  const uninstalled=d.conn==="미설치"||d.conn==="미등록"||d.conn==="설치 중";
   const pct=usedPct(d);
   return '<div class="dev-card'+(sel?" sel":"")+(d.lost?" lostc":"")+'">'
    +'<div class="dc-top"><label class="label-check-circle" style="gap:0"><input type="checkbox" data-pick="'+d.id+'"'+(sel?" checked":"")+'><i style="width:19px;height:19px"></i></label>'
-   +(d.lost?'<span class="tag tag-red" data-h="card.state">분실</span>':"")+(d.perm?'<span class="tag tag-yellow" data-h="card.state">권한</span>':"")+(d.multi?'<span class="tag tag-yellow" data-h="card.state">멀티유저</span>':"")+(d.pending?'<span class="tag tag-line-red">미적용</span>':"")
+   +(d.lost?'<span class="tag tag-red" data-h="card.state">분실</span>':"")+(d.perm?'<span class="tag tag-yellow" data-h="card.state">권한</span>':"")+(d.multi?'<span class="tag tag-yellow" data-h="card.state">멀티유저</span>':"")+(d.pending?'<span class="tag tag-line-red">미적용</span>':"")+(d.appMiss?'<span class="tag tag-line-red">앱 누락</span>':"")
    +'<span class="st">'+(d.mute?'<span class="mute-on" data-h="card.sound">'+I.spkoff+"</span>":'<span data-h="card.sound">'+I.spk+"</span>")
    +'<span class="'+(d.conn==="연결"?"wifi-on":"")+'" data-h="card.conn" title="'+d.conn+'">'+I.wifi+"</span>"
-   +'<button class="dc-dots" data-detail="'+d.id+'" data-h="card.dots">⋮</button></span></div>'
-   +'<div class="dc-nm"><span data-h="card.os">'+osIco(d.platform)+'</span><span class="t" data-h="card.name">'+esc(nm)+'</span><button class="pen" data-rename="'+d.id+'"'+(isBare(d)?" data-bare":"")+' title="이름 변경">'+I.pen+"</button></div>"
+   +'<button class="dc-dots" data-detail="'+d.id+'"'+(d.lost?" data-lostdev":"")+' data-h="card.dots">⋮</button></span></div>'
+   +'<div class="dc-nm"><span data-h="card.os">'+osIco(d.platform)+(d.asm?'<span class="asm-b" title="IOS(ASM)">ASM</span>':"")+'</span><span class="t" data-h="card.name">'+esc(nm)+'</span><button class="pen" data-rename="'+d.id+'"'+(isBare(d)?" data-bare":"")+(isIpadBare(d)?" data-ipad":"")+' title="이름 변경">'+I.pen+"</button></div>"
    +'<div class="dc-body">'
    +'<div class="dc-row" data-h="card.org"><span class="k">조직</span><span class="v" style="font-weight:400" title="'+esc(S.orgs.filter(o=>o.id===d.org)[0]?S.orgs.filter(o=>o.id===d.org)[0].n:"-")+'">'+esc(S.orgs.filter(o=>o.id===d.org)[0]?S.orgs.filter(o=>o.id===d.org)[0].n:"-")+'</span><span class="k" style="min-width:auto">ㅣ 그룹</span><span class="v">'+esc(d.group||"그룹 없음")+"</span></div>"
    +(uninstalled?'<div class="dc-row" data-h="card.policy"><span class="k">통합 설정</span><span class="v">'+esc(d.policy||"-")+'</span></div><div class="dc-row"><span class="k">상태</span><span class="v">'+connTag(d.conn)+"</span></div>"
@@ -1551,14 +1655,14 @@ function devListRows(list){
     const sel=S.ui.sel.indexOf(d.id)>=0;
     return '<tr class="'+(sel?"sel":"")+'"><td><label class="label-check-circle" style="gap:0"><input type="checkbox" data-pick="'+d.id+'"'+(sel?" checked":"")+'><i style="width:19px;height:19px"></i></label></td>'
      +"<td>"+osIco(d.platform)+"</td>"
-     +'<td class="l"><b>'+esc(d.user||d.name)+'</b> <button class="dc-dots" data-rename="'+d.id+'"'+(isBare(d)?" data-bare":"")+' style="color:#999">'+I.pen+"</button></td>"
+     +'<td class="l"><b>'+esc(d.user||d.name)+'</b> <button class="dc-dots" data-rename="'+d.id+'"'+(isBare(d)?" data-bare":"")+(isIpadBare(d)?" data-ipad":"")+' style="color:#999">'+I.pen+"</button></td>"
      +"<td>"+connTag(d.conn)+"</td><td>"+(d.multi?"멀티유저":"-")+"</td>"
      +'<td class="l">'+esc(S.orgs.filter(o=>o.id===d.org)[0]?S.orgs.filter(o=>o.id===d.org)[0].n:"-")+"</td>"
      +'<td class="l">'+esc(d.group||"그룹 없음")+'</td><td class="l mono">'+esc(d.serial)+"</td>"
      +'<td class="l">'+esc(d.policy||"정책제외")+"</td>"
      +'<td class="l">'+(S.hist.filter(h=>h.devs&&h.devs.some(v=>v[1]===d.serial))[0]?esc(S.hist.filter(h=>h.devs&&h.devs.some(v=>v[1]===d.serial))[0].fn)+"(처리성공)":"-")+"</td>"
      +"<td><span style='color:#0B8A5E'>●</span> "+usedPct(d)+"%</td><td>"+esc(d.lastAccess||"-")+"</td>"
-     +'<td><button class="btn--st small btn-major-outline" data-detail="'+d.id+'">상세</button></td></tr>';
+     +'<td><button class="btn--st small btn-major-outline" data-detail="'+d.id+'"'+(d.lost?" data-lostdev":"")+'>상세</button></td></tr>';
   }).join("");
 }
 function pgDev(){
@@ -1587,8 +1691,7 @@ function pgDev(){
      +(list.length>100?'<p class="bottom-txt-alert" style="margin-top:12px">※ 전체 '+list.length+'대 중 100대까지 표시합니다. 좌측 조직을 선택하거나 검색으로 좁혀 보세요. (실제 사이트는 페이지로 나눠 표시)</p>':"")
      :'<div class="no-data-st">검색 결과가 없습니다.</div>';
   }
-  const fns=[["sync","동기화","fn.sync"],["reset","초기화","fn.reset"],["lost","분실 등록/해제","fn.lost"],["setting","통합 설정 적용","fn.setting"],["msg","메시지","fn.msg"],
-   ["find","단말 찾기","fn.find"],["app","앱 배포","fn.app"],["appdel","앱 삭제","fn.appdel"],["osup","OS 업데이트","fn.osup"],["reboot","재부팅","fn.reboot"],["qr","QR코드 인쇄","fn.qr"],["mute","소리 끄기","fn.mute"]];
+  const fns=fnsFor();
   const gbtn=(k,l)=>'<button class="btn-ico'+((S.ui.grid===k&&!useList)?" on":"")+'" data-grid="'+k+'" title="'+l+'" data-h="dev.grid">'+l+"</button>";
   return {
    head:head("단말 현황","dev.search",tabs([["dev","단말 모드"],["grp","그룹 모드"]],S.ui.mode,"mode","dev.mode")),
@@ -1620,8 +1723,8 @@ function fltBox(){
   const opt=(v,c)=>'<option value="'+esc(v)+'"'+(c===v?" selected":"")+">"+esc(v||"전체")+"</option>";
   return '<div class="filter-sort" style="border-top:1px dashed var(--line)">'
    +'<span style="font-size:13px;font-weight:700;color:var(--main)">검색필터</span>'
-   +'<select class="select--st" data-f="platform" style="height:34px"><option value="">플랫폼 전체</option>'+["Android","iOS","Windows"].map(v=>'<option'+(S.ui.f.platform===v?" selected":"")+">"+v+"</option>").join("")+"</select>"
-   +'<select class="select--st" data-f="conn" style="height:34px"><option value="">연결여부 전체</option>'+["연결","미연결","미설치","미등록"].map(v=>'<option'+(S.ui.f.conn===v?" selected":"")+">"+v+"</option>").join("")+"</select>"
+   +'<select class="select--st" data-f="platform" style="height:34px"><option value="">플랫폼 전체</option>'+platOS().map(v=>'<option'+(S.ui.f.platform===v?" selected":"")+">"+v+"</option>").join("")+"</select>"
+   +'<select class="select--st" data-f="conn" style="height:34px"><option value="">연결여부 전체</option>'+(PLAT==="and"?["연결","미연결","설치 중","미설치","미등록"]:["연결","미연결","미설치","미등록"]).map(v=>'<option'+(S.ui.f.conn===v?" selected":"")+">"+v+"</option>").join("")+"</select>"
    +'<select class="select--st" data-f="vol" style="height:34px"><option value="">저장공간 전체</option>'+["여유","부족"].map(v=>'<option'+(S.ui.f.vol===v?" selected":"")+">"+v+"</option>").join("")+"</select>"
    +'<select class="select--st" data-f="policy" style="height:34px"><option value="">통합설정 전체</option><option value="__none__"'+(S.ui.f.policy==="__none__"?" selected":"")+">미지정/제외</option>"
     +S.pol.map(p=>'<option'+(S.ui.f.policy===p.name?" selected":"")+">"+esc(p.name)+"</option>").join("")+"</select>"
@@ -1655,13 +1758,15 @@ function popDisp(){
 /* ---- 이름 변경 (06장) ---- */
 function popRename(id){
   const d=S.dev.filter(x=>x.id===id)[0];if(!d)return;
-  pop({title:"사용자 이름 변경",
-   body:'<div class="opt-bx"><input type="text" class="input--st" id="rnU" value="'+esc(d.user||d.name)+'" placeholder="사용자 이름을 입력해 주세요." style="width:100%"></div>'
+  const ios=d.platform==="iOS";
+  pop({title:ios?"단말 이름 수정":"사용자 이름 변경",
+   body:'<div class="opt-bx"><input type="text" class="input--st" id="rnU" value="'+esc(ios?d.name:(d.user||d.name))+'" placeholder="'+(ios?"단말 이름을 입력해 주세요.":"사용자 이름을 입력해 주세요.")+'" style="width:100%"></div>'
     +'<p class="bottom-txt-alert">※ 한글, 영문, 숫자 및 특수 문자(, " &lt; &gt; 제외) 최대 100자까지 입력할 수 있습니다.<br>※ 이름 변경은 이름만 변경되며 단말이 등록된 “조직”, “그룹” 등의 위치는 변경 되지 않습니다.<br>※ 변경한 이름은 단말의 스마트기기 통합관리 앱에도 반영됩니다.',
-   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>변경</button>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>'+(ios?"저장":"변경")+'</button>',
    mount:(el,close)=>{el.querySelector("[data-ok]").addEventListener("click",function(){
      const v=el.querySelector("#rnU").value.trim();
      if(!v){toast("사용자 이름을 입력해 주세요.","no");return;}
+     if(ios){const wasI=isIpadBare(d);d.name=v;if(wasI)done("i1");logHist("이름 변경",1,[d]);save();close();render();toast("단말 이름을 저장했습니다. MDM 서버 → 단말로 이름이 내려갑니다.","ok");return;}
      const was=/^DESKTOP-/.test(d.name)&&!d.user;
      d.user=v;if(/^DESKTOP-/.test(d.name))d.name=v;
      if(was)done("m2");
@@ -1707,7 +1812,7 @@ function popDetail(id){
      ["연락처","기기 연락처 앱의 연락처 데이터 초기화 시 이용",true],
      ["다른 앱 위에 표시","잠금 화면이나 시간 제한 메시지를 다른 화면 위에 표시하기 위해 이용",!d.perm],
      ["알림","관리자 발송 알림 표시에 이용",true]];
-    inner=win?'<div class="no-data-st" style="border:0">Windows 단말은 접근 권한 상태를 제공하지 않습니다.</div>'
+    inner=(win||d.platform==="iOS")?'<div class="no-data-st" style="border:0">'+(win?"Windows":"iPad")+' 단말은 접근 권한 상태를 제공하지 않습니다.</div>'
      :'<div data-h="detail.perm">'+rows.map(r=>'<div style="display:flex;align-items:center;gap:14px;padding:15px 20px;border-radius:5px;background:#F4F6F8;margin-bottom:9px"><div style="flex:1"><b>'+r[0]+'</b><div style="font-size:12.5px;color:var(--tx2)">'+r[1]+"</div></div>"
        +'<span style="padding:5px 13px;border-radius:99px;font-weight:700;font-size:13px;color:#fff;background:'+(r[2]?"#1AC182":"#E3001C")+'">'+(r[2]?"허용됨":"해제됨")+"</span></div>").join("")
      +'<p class="bottom-txt-alert">※ 권한 해제 감지는 MDM Agent 1.3.88 버전부터 지원되며, 해제 후 1~5분 안에 서버에 감지됩니다.</p></div>';
@@ -1769,7 +1874,7 @@ function popLocation(id){
          pop({title:"주소 정보",body:'<div class="opt-bx"><dl class="opd-dl d-flex"><dt class="cc-blue">위도</dt><dd><b>'+l[1]+'</b></dd></dl><dl class="opd-dl d-flex"><dt class="cc-blue">경도</dt><dd><b>'+l[2]+"</b></dd></dl></div>"
           +'<div class="opt-bx"><dl class="opd-dl"><dt class="cc-blue">지번 주소</dt><dd style="margin-top:4px"><b>'+l[3]+'</b></dd></dl><dl class="opd-dl" style="margin-top:10px"><dt class="cc-blue">도로명 주소</dt><dd style="margin-top:4px"><b>'+l[4]+"</b></dd></dl></div>",
           btns:'<button class="btn--st pill btn-major-outline" data-close>확인</button>'});
-         done("m8");return;}
+         done("m8");if(d.lost)done("a8");return;}
        if(e.target.closest("[data-locupd]")){
          const tb=el.querySelector("#locRows");
          tb.insertAdjacentHTML("afterbegin",'<tr class="sel"><td class="l"><b>'+now()+"</b></td><td>37.5759</td><td>126.9769</td><td><button class='btn--st small btn-major-outline' data-addr='0'>확인</button></td></tr>");
@@ -1783,6 +1888,9 @@ function bulk(kind){
   const on=ds.filter(d=>d.conn==="연결"),off=ds.filter(d=>d.conn!=="연결");
   const cnt='<div style="display:flex;align-items:center;gap:6px;margin-bottom:14px;font-size:13.5px">📱 <span>선택한 단말</span> <b class="cc-red" style="font-size:16px">'+ds.length+"</b>대"+(off.length?' <span class="cc-gray" style="font-size:12px">(미연결·미설치 '+off.length+"대 — 연결 시 순차 반영)</span>":"")+"</div>";
   const fin=(m,fn,skipLog)=>{if(!skipLog)logHist(fn,ds.length,ds);save();render();toast(m,"ok");};
+  if(kind==="sync"&&ds.every(d=>d.platform==="iOS")){popSyncIos(ds,cnt,fin);return;}
+  if(kind==="reset"&&ds.every(d=>d.platform==="iOS")){popResetIos(ds,cnt,fin);return;}
+  if(kind==="reset"&&ds.every(d=>d.platform==="Android"||d.platform==="AMAndroid")){popResetAnd(ds,cnt,fin);return;}
   if(kind==="sync"){
     pop({title:"동기화 옵션 선택",body:cnt
      +'<div class="opt-bx"><dl class="opd-dl"><dt><label class="label-check-circle"><input type="checkbox" id="sy1" checked><i></i><span>단말 정보 동기화</span></label></dt><dd style="margin:6px 0 0 30px;color:var(--tx2);font-size:13px">단말 이름, 용량, OS 버전 등의 정보를 동기화</dd></dl></div>'
@@ -1821,8 +1929,9 @@ function bulk(kind){
      +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>분실</dt><dd><label class="label-radio"><input type="radio" name="lk" value="reg" checked><i></i><span>등록</span></label> &nbsp;<label class="label-radio"><input type="radio" name="lk" value="un"><i></i><span>해제</span></label></dd></dl></div>'
      +'<div class="opt-bx"><dl class="opd-dl"><dt>잠금메시지 <small class="cc-gray" id="lsB">(0 / 500 byte)</small></dt><dd style="margin-top:8px"><textarea class="textarea--st" id="lsMsg" placeholder="잠금 메시지를 입력해 주세요.">분실 단말입니다. 습득시 연락 주세요.</textarea></dd></dl></div>'
      +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>전화번호</dt><dd><input type="text" class="input--st" id="lsTel" value="010-0000-0000" style="width:250px"></dd></dl></div>'
-     +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>소리알림</dt><dd><label class="label-radio"><input type="radio" name="snd"><i></i><span>On</span></label> <label class="label-radio"><input type="radio" name="snd" checked><i></i><span>Off</span></label></dd></dl></div>'
-     +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>현재 위치 확인</dt><dd><label class="label-radio"><input type="radio" name="loc" checked><i></i><span>On</span></label> <label class="label-radio"><input type="radio" name="loc"><i></i><span>Off</span></label></dd></dl></div>'
+     +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>소리알림</dt><dd><label class="label-radio"><input type="radio" name="snd" value="on"><i></i><span>On</span></label> <label class="label-radio"><input type="radio" name="snd" value="off" checked><i></i><span>Off</span></label></dd></dl></div>'
+     +(ds.every(d=>d.platform==="iOS")?'<p class="bottom-txt-alert cc-red" style="margin:0 0 8px">※ Android, iOS 단말만 잠금화면 설정을 지원하며 분실등록 시 Android, iOS, Windows 단말 위치확인이 가능 합니다.</p>'
+       :'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>현재 위치 확인</dt><dd><label class="label-radio"><input type="radio" name="loc" checked><i></i><span>On</span></label> <label class="label-radio"><input type="radio" name="loc"><i></i><span>Off</span></label></dd></dl></div>')
      +'<p class="bottom-txt-alert cc-red">※ 잠금 설정된 단말의 전원이 재부팅이 된 경우 MDM 을 통해서 잠금 해제 및 위치 확인 기능을 사용 할 수 없습니다.<br>※ 분실 잠금 기능은 실제로 단말기를 분실한 경우로만 사용하는 것을 권장 드립니다.</p>',
      btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>적용</button>',
      mount:function(el,c){
@@ -1831,7 +1940,7 @@ function bulk(kind){
        el.querySelector("[data-ok]").addEventListener("click",function(){
          const reg=el.querySelector("input[name=lk]:checked").value==="reg";
          ds.forEach(d=>{d.lost=reg;d.lostMsg=reg?ta.value:"";});
-         if(reg)done("m7");
+         if(reg){done("m7");if(ds.every(d=>d.platform==="iOS")&&el.querySelector("input[name=snd]:checked").value==="on")done("i10");}
          c();fin(reg?"분실 등록되었습니다. 단말현황에 “분실” 마크가 생성됩니다.":"분실 등록을 해제했습니다.","분실 등록/해제");});
      }});
     return;
@@ -1847,19 +1956,20 @@ function bulk(kind){
        ta.addEventListener("input",()=>{bb.textContent="("+new Blob([ta.value]).size+" / 4000 byte)";});
        el.querySelector("[data-ok]").addEventListener("click",function(){
          if(!ta.value.trim()){toast("메시지를 입력해 주세요.","no");return;}
-         const win=ds.filter(d=>d.platform==="Windows").length;
-         c();fin("메시지를 전송했습니다."+(win?" (Windows "+win+"대는 미지원으로 제외)":""),"메시지",true);});
+         const win=ds.filter(d=>d.platform==="Windows"||d.asm).length;
+         if(win===ds.length){toast("※ ASM, Windows 단말은 지원하지 않습니다. (선택한 "+ds.length+"대 모두 미지원)","no");return;}
+         c();fin("메시지를 전송했습니다."+(win?" (ASM·Windows "+win+"대는 미지원으로 제외)":""),"메시지",true);});
      }});
     return;
   }
   if(kind==="find"){
-    const bad=ds.filter(d=>d.platform!=="Android");
-    if(bad.length===ds.length){toast("단말 찾기는 Android, AMAndroid 단말에서만 사용할 수 있습니다.","no");return;}
+    const bad=ds.filter(d=>d.platform!=="Android"&&d.platform!=="AMAndroid");
+    if(bad.length===ds.length){toast(ds.every(d=>d.platform==="iOS")?"단말 찾기는 Android 단말에서만 됩니다. iPad는 「분실 등록/해제」에서 소리알림을 On으로 켜면 소리가 울립니다.":"단말 찾기는 Android, AMAndroid 단말에서만 사용할 수 있습니다.","no");return;}
     infoPop('<div style="width:64px;height:64px;border-radius:50%;background:var(--main);color:#fff;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">'+I.warn+'</div><p class="alert--st1">해당 단말의 알람을 실행 하였습니다.</p><p class="alert--st2">알람이 울리는 단말을 확인해주세요.<br>(벨 소리는 1분 가량 울린 후 종료되며 무음 설정이어도 울립니다)</p>',"단말 찾기");
     return;
   }
   if(kind==="mute"){
-    const sam=ds.filter(d=>d.platform==="Android");
+    const sam=ds.filter(d=>d.platform==="Android"||d.platform==="AMAndroid");
     if(!sam.length){toast("소리 끄기는 삼성 Android 단말에만 제공되는 기능입니다.","no");return;}
     alertPop("소리 끄기","<p style='text-align:center'>선택한 단말의 소리를 끄시겠습니까?</p>","확인",function(){
       sam.forEach(d=>d.mute=true);save();render();
@@ -1981,6 +2091,7 @@ function popProcHist(){
 const DAYS=["일","월","화","수","목","금","토"];
 /* 정책 한 건의 "무엇이 설정되어 있는가"를 상자들로 — 단말 상세 정책탭과 통합설정 상세가 함께 씁니다 */
 function polBoxes(p,box){
+  if(p.platform&&p.platform!=="Windows")return polBoxesX(p,box);
   const nm=ids=>(ids||[]).map(a=>{const x=S.apps.filter(y=>y.id===a)[0];return x?x.n:a;}).join(", ")||"등록된 내용이 없습니다.";
   const lb={none:"설정 안함(모든 앱 접속 허용)",black:"Black List",white:"White List"};
   const BL=[["camera","카메라"],["bluetooth","Bluetooth"],["usb","외장 메모리"],["registry","레지스트리"],["gps","GPS"],["hotspot","모바일 핫스팟"],["factory","공장 초기화"]];
@@ -2027,15 +2138,17 @@ function pgSetup(){
 }
 function popOsSelect(){
   const os=[["Android","#2FA84F","A","Android 기기에 대한 통합 설정을 시작합니다.<br>(8단계 : 차단 및 초기화 → 사용 시간 → 배포<br>앱·콘텐츠 → 앱 제어 → 예외 앱 → 사이트 → 확인)","os.android"],["iOS","#3B3B3D","","iOS 기기에 대한 통합 설정을 시작합니다.<br>(9단계 : 차단 → 배포 앱 → Web Clip → 앱·사이트<br>제어 → 배경/화면 제어 → Wi-Fi → 내용 확인)","os.ios"],
-   ["Windows","#0F6CBD","W","Windows 기기에 대한 통합 설정을 시작합니다.<br>(6단계 : 차단 → 사용 시간 → 배포 앱<br>→ 앱 제어 → 사이트 제어 → 내용 확인)","os.windows"]];
+   ["Windows","#0F6CBD","W","Windows 기기에 대한 통합 설정을 시작합니다.<br>(6단계 : 차단 → 사용 시간 → 배포 앱<br>→ 앱 제어 → 사이트 제어 → 내용 확인)","os.windows"],
+   ["AMAndroid","#1A73E8","AMA","AMA 기기에 대한 통합 설정을 시작합니다.<br>(5단계 : 차단 → 사용 시간 → 앱 배포 및<br>제어 → 사이트 제어 → 내용 확인)","os.ama"]];
   pop({title:"신규 통합 설정 OS 선택",w:"w900",
-   body:'<div class="os-choice-group">'+os.map(o=>'<label class="os-choice'+(o[0]==="Android"?" active-radio":"")+'" data-os="'+o[0]+'" data-h="'+o[4]+'"><figure style="background:'+o[1]+'">'+(o[2]||"")+"</figure><h4>"+o[0]+"</h4><p>"+o[3]+'</p><label class="label-radio"><input type="radio" name="pos" value="'+o[0]+'"'+(o[0]==="Android"?" checked":"")+'><i></i></label></label>').join("")+"</div>",
+   body:'<div class="os-choice-group">'+os.map(o=>'<label class="os-choice'+(o[0]==="Android"?" active-radio":"")+'" data-os="'+o[0]+'" data-h="'+o[4]+'"><figure style="background:'+o[1]+'">'+(o[2]||"")+"</figure><h4>"+(o[0]==="AMAndroid"?"AMA":o[0])+"</h4><p>"+o[3]+'</p><label class="label-radio"><input type="radio" name="pos" value="'+o[0]+'"'+(o[0]==="Android"?" checked":"")+'><i></i></label></label>').join("")+"</div>",
    btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>확인</button>',
    mount:function(el,close){
      el.addEventListener("click",e=>{const c=e.target.closest("[data-os]");if(c){el.querySelectorAll(".os-choice").forEach(x=>x.classList.remove("active-radio"));c.classList.add("active-radio");c.querySelector("input").checked=true;}});
      el.querySelector("[data-ok]").addEventListener("click",function(){
        const v=el.querySelector("input[name=pos]:checked").value;close();
-       if(v!=="Windows"){toast(v+" 통합 설정은 이 연수용 시뮬레이터에서 다루지 않습니다. Windows를 선택하세요. (실제 시스템도 Android가 기본 선택이라, 디벗 작업 때는 Windows로 바꾸는 것부터가 실무입니다)","no");return;}
+       if(platOS().indexOf(v)<0){toast((v==="AMAndroid"?"AMA":v)+" 통합 설정은 다른 기종 실습에서 만듭니다. 지금은 "+PLATS[PLAT].n+" 실습이라 "+platOS().map(x=>x==="AMAndroid"?"AMA":x).join("·")+"를 고르세요. 기종은 위쪽 [기종] 단추로 바꿉니다.","no");return;}
+       if(v!=="Windows"){wzNew(v);render();return;}
        WZ={step:1,name:"",block:{camera:false,bluetooth:false,usb:false,registry:true,gps:false,hotspot:false,factory:false},mdmDel:false,
          time:{on:false,days:{}},selDays:[],buf:{mode:"free",slots:[["09:00","14:00"]]},
          deploy:[],appCtl:{mode:"none",list:[]},siteCtl:{mode:"none",auto:false,opt:"list",list:[]},lsel:[],rsel:[],applySel:[],applyOrg:"all"};
@@ -2047,27 +2160,33 @@ function hhmm(){const o=[];for(let h=0;h<24;h++)for(let m=0;m<60;m+=10)o.push(St
 function dualPanel(o){
   const key=o.key||(x=>x.id);
   const L=o.items.filter(x=>o.chosen.indexOf(key(x))<0),R=o.items.filter(x=>o.chosen.indexOf(key(x))>=0);
-  const cw={app4:'<col style="width:52px"><col style="width:96px"><col style="width:58px"><col><col>',app2:'<col style="width:52px"><col><col>',site:'<col style="width:52px"><col style="width:150px"><col>'}[o.cols];
-  const th={app4:"<th></th><th>배포 방식</th><th>아이콘</th><th class='l'>앱 이름</th><th class='l'>패키지 이름</th>",app2:"<th></th><th class='l'>앱 이름</th><th class='l'>패키지 이름</th>",site:"<th></th><th>사이트 이름</th><th class='l'>사이트 주소</th>"}[o.cols];
+  const cw={app4:'<col style="width:52px"><col style="width:96px"><col style="width:58px"><col><col>',app2:'<col style="width:52px"><col><col>',site:'<col style="width:52px"><col style="width:150px"><col>',cnt:'<col style="width:52px"><col><col style="width:110px">',wc:'<col style="width:52px"><col style="width:160px"><col>',wifi:'<col style="width:52px"><col><col style="width:100px">'}[o.cols];
+  const th={app4:"<th></th><th>배포 방식</th><th>아이콘</th><th class='l'>앱 이름</th><th class='l'>패키지 이름</th>",app2:"<th></th><th class='l'>앱 이름</th><th class='l'>패키지 이름</th>",site:"<th></th><th>사이트 이름</th><th class='l'>사이트 주소</th>",
+    cnt:"<th></th><th class='l'>콘텐츠 이름</th><th>용량</th>",wc:"<th></th><th>이름</th><th class='l'>URL</th>",wifi:"<th></th><th class='l'>SSID</th><th>보안 유형</th>"}[o.cols];
   const colsN=o.cols==="app4"?5:3;
-  const noTx=o.cols==="site"?"등록된 사이트가 없습니다.":"등록된 앱이 없습니다.";
+  const noTx={site:"등록된 사이트가 없습니다.",cnt:"등록된 콘텐츠가 없습니다.",wc:"등록된 웹 클립이 없습니다.",wifi:"등록된 Wi-Fi가 없습니다."}[o.cols]||"등록된 앱이 없습니다.";
+  const unit={site:"사이트",cnt:"콘텐츠",wc:"웹 클립",wifi:"Wi-Fi"}[o.cols]||"앱";
   const row=(x,side)=>{
     const k=key(x),s=(side==="l"?WZ.lsel:WZ.rsel).indexOf(k)>=0;
     const cells=o.cols==="app4"?"<td>"+esc(x.via)+'</td><td><span class="app-ico-sq">'+esc((x.n||"?").charAt(0))+'</span></td><td class="l">'+esc(x.n)+'</td><td class="l mono">'+esc(x.pkg)+"</td>"
       :o.cols==="app2"?'<td class="l">'+esc(x.n)+'</td><td class="l mono">'+esc(x.pkg)+"</td>"
+      :o.cols==="cnt"?'<td class="l"><b>'+esc(x.n)+"</b></td><td>"+esc(x.vol||"-")+"</td>"
+      :o.cols==="wc"?'<td><b>'+esc(x.n)+'</b></td><td class="l">'+esc(x.url)+"</td>"
+      :o.cols==="wifi"?'<td class="l"><b>'+esc(x.ssid)+"</b></td><td>"+esc(x.enc)+"</td>"
       :'<td><b>'+esc(x.n)+'</b></td><td class="l">'+esc(x.a)+"</td>";
     return '<tr class="'+(s?"sel":"")+'"><td><label class="label-check-circle" style="gap:0"><input type="checkbox" data-dual="'+side+'" data-aid="'+esc(k)+'"'+(s?" checked":"")+'><i style="width:19px;height:19px"></i></label></td>'+cells+"</tr>";};
   const pan=(t,arr,side,selN,extra)=>'<div class="blu-cont-bg"><h2 class="blu-title">'+t+"</h2>"
    +'<div style="display:flex;gap:8px;margin-bottom:8px;align-items:center"><span style="font-size:13px;font-weight:700;flex:0 0 auto">검색</span><input type="text" class="input--st" placeholder="'+o.ph+'" style="flex:1;height:34px"><button class="btn-ico-search" style="width:34px;height:34px">'+I.srch+"</button></div>"
-   +'<div style="font-size:12.5px;margin-bottom:6px;display:flex;align-items:center">'+(o.cols==="site"?"사이트":"앱")+' <b class="cc-blue" style="margin:0 4px">'+arr.length+'</b> \\ 선택 <b class="cc-red" style="margin-left:4px">'+selN+"</b>"+(extra||"")+"</div>"
+   +'<div style="font-size:12.5px;margin-bottom:6px;display:flex;align-items:center">'+unit+' <b class="cc-blue" style="margin:0 4px">'+arr.length+'</b> \\ 선택 <b class="cc-red" style="margin-left:4px">'+selN+"</b>"+(extra||"")+"</div>"
    +'<div class="list-st--table scroll-y" style="max-height:435px"><table class="tbl"><colgroup>'+cw+'</colgroup><thead><tr>'+th+"</tr></thead><tbody>"
    +(arr.length?arr.map(x=>row(x,side)).join(""):'<tr><td colspan="'+colsN+'" style="padding:30px">'+noTx+"</td></tr>")+"</tbody></table></div></div>";
-  const addBtn=o.newBtn?'<span style="margin-left:auto"><button class="btn--st small btn-major-outline" data-wsitenew>+ 신규등록</button></span>':"";
+  const addBtn=o.newBtn?'<span style="margin-left:auto"><button class="btn--st small btn-major-outline" '+(o.newBtn==="webclip"?"data-wcnew":"data-wsitenew")+'>+ 신규등록</button></span>':"";
   return '<div class="blu-change-wrap">'+pan(o.left,L,"l",WZ.lsel.length,addBtn)
    +'<div class="blu-change-move-btns"><button class="btn-add-arr" data-dm="add">추가 ›</button><button class="btn-remove-arr" data-dm="rm">‹ 삭제</button></div>'
    +pan(o.right,R,"r",WZ.rsel.length)+"</div>";
 }
 function wizard(){
+  if(wzX())return wizardX();
   const st=WZ.step,p2=n=>String(n).padStart(2,"0");
   if(st===7)return wizApply();
   const tabsH='<div class="tsw-steps">'+WSTEP.map((s,i)=>'<button type="button" class="btn-tsw'+(i+1===st?" on":(i+1<st?" done":""))+'" data-ws="'+(i+1)+'">'+s+"</button>").join("")+"</div>";
@@ -2181,11 +2300,11 @@ function popSiteWz(){
 }
 function wizApply(){
   const oid=WZ.applyOrg||"all";
-  const all=S.dev.filter(d=>d.platform==="Windows"&&(oid==="all"||d.org===oid));
+  const all=S.dev.filter(d=>d.platform===wzPlat()&&d.conn!=="미설치"&&d.conn!=="설치 중"&&(oid==="all"||d.org===oid));
   const list=all.slice(0,100);
   const sel=WZ.applySel.length;
   return {head:head("통합 설정"),
-   body:'<div class="wz-head">통합 설정 추가(Windows) — 적용 <i class="tooltip-i" data-pageguide>?</i></div>'
+   body:'<div class="wz-head">'+wzTitle()+' — 적용 <i class="tooltip-i" data-pageguide>?</i></div>'
     +'<div class="wz-body" style="border-top:1px solid var(--line)" data-h="wz.apply">'
     +'<div class="msg-box msg-i">단말목록 화면에서 적용하고자 하는 단말을 선택 시 대상 단말에 파란색 박스 테두리가 표시되며 선택 대상임을 표시합니다. 단말 별, 그룹 별, 조직 별 통합설정을 적용 할 수 있습니다.</div>'
     +'<div style="display:flex;align-items:center;gap:12px;margin-bottom:10px;flex-wrap:wrap"><select class="select--st" data-worg style="height:36px"><option value="all">조직 전체</option>'
@@ -2203,7 +2322,17 @@ function wizApply(){
 }
 function wzCommit(){if(!WZ)return;const n=$("#wzName");if(n)WZ.name=n.value;const m=$("#wzMdm");if(m)WZ.mdmDel=m.checked;}
 function wzSaveOnly(quiet){
-  if(!WZ.name.trim()){toast("통합 설정 이름을 입력해 주세요.","no");WZ.step=6;render();return null;}
+  if(!WZ.name.trim()){toast("통합 설정 이름을 입력해 주세요.","no");WZ.step=wzN();render();return null;}
+  if(wzX()){
+    const p=POLX("p"+Date.now(),WZ.name.trim(),WZ.os,{regUser:S.ui.user,created:now().replace(/-/g,"/"),updated:now().replace(/-/g,"/"),block:Object.assign({},WZ.block),
+      resetBoot:Object.assign({},WZ.resetBoot),time:{on:WZ.time.on,days:WZ.time.days},deploy:WZ.deploy.slice(),content:WZ.content.slice(),except:WZ.except.slice(),
+      appCtl:{mode:WZ.appCtl.mode,opt:WZ.appCtl.opt,list:WZ.appCtl.list.slice()},siteCtl:{mode:WZ.siteCtl.mode,opt:WZ.siteCtl.opt,list:WZ.siteCtl.list.slice()},
+      ama:{loc:WZ.ama.loc,tz:WZ.ama.tz,appMode:WZ.ama.appMode,adv:Object.assign({},WZ.ama.adv),list:WZ.ama.list.map(x=>Object.assign({},x))},
+      ios:JSON.parse(JSON.stringify(WZ.ios)),targets:[]});
+    S.pol.push(p);polSavedX(p);
+    if(!quiet){WZ=null;save();render();toast("통합 설정을 저장했습니다.","ok");}
+    return p;
+  }
   const p=POL("p"+Date.now(),WZ.name.trim(),"Windows",{regUser:S.ui.user,created:now().replace(/-/g,"/"),updated:now().replace(/-/g,"/"),
    block:WZ.block,mdmDel:WZ.mdmDel,time:{on:WZ.time.on,days:WZ.time.days},deploy:WZ.deploy.slice(),
    appCtl:{mode:WZ.appCtl.mode,list:WZ.appCtl.list.slice()},siteCtl:{mode:WZ.siteCtl.mode,auto:!!WZ.siteCtl.auto,opt:WZ.siteCtl.opt,list:WZ.siteCtl.list.slice()},targets:[]});
@@ -2223,8 +2352,12 @@ function applyPolTo(p,ids){
   return {ok:ok,pd:pd};
 }
 function popApply(ids){
-  if(!S.pol.filter(p=>p.platform==="Windows").length){toast("먼저 Windows 통합 설정을 만들어 주세요.","no");return;}
-  const pols=S.pol;let cur=pols[0].id;
+  const plats=S.dev.filter(d=>ids.indexOf(d.id)>=0).map(d=>d.platform).filter((v,i,a)=>a.indexOf(v)===i);
+  if(plats.length>1){toast("통합 설정은 같은 플랫폼 단말끼리만 적용할 수 있습니다. ("+plats.join(", ")+"이 섞여 있습니다)","no");return;}
+  const plat=plats[0]||"Windows";
+  const pols=S.pol.filter(p=>p.platform===plat);
+  if(!pols.length){toast("먼저 "+plat+" 통합 설정을 만들어 주세요.","no");return;}
+  let cur=pols[0].id;
   const list=()=>pols.map(p=>'<tr class="'+(cur===p.id?"sel":"")+'"><td><label class="label-radio" style="gap:0"><input type="radio" name="ap" value="'+p.id+'"'+(cur===p.id?" checked":"")+'><i style="width:19px;height:19px"></i></label></td><td>'+osIco(p.platform)+'</td><td class="l">'+esc(p.name)+"</td></tr>").join("");
   pop({title:"통합 설정 적용",w:"w900",
    body:'<div style="font-size:13.5px;margin-bottom:12px">📱 선택된 <b class="cc-red">'+ids.length+'</b>대 <button class="btn--st small pill" style="float:right" data-toggleinfo>상세 보기</button></div>'
@@ -2237,9 +2370,9 @@ function popApply(ids){
      const detail=function(){
        const p=pols.filter(x=>x.id===cur)[0];
        const nm=a=>a.map(x=>{const y=S.apps.filter(z=>z.id===x)[0];return y?y.n:x;}).join(", ")||"없음";
-       el.querySelector("#apDb").innerHTML="<b class='cc-blue'>"+esc(p.name)+"</b><br>기능 차단 : "+esc(WBLOCKS.filter(b=>p.block[b.k]).map(b=>b.n).join(", ")||"없음")
-        +"<br>사용 시간 : "+(p.time.on?"설정함":"사용 안함")+"<br>배포 앱 : "+esc(nm(p.deploy))
-        +"<br>앱 제어 : "+({none:"설정 안함",black:"Black List",white:"White List"})[p.appCtl.mode]
+       el.querySelector("#apDb").innerHTML="<b class='cc-blue'>"+esc(p.name)+"</b><br>기능 차단 : "+esc((p.platform==="Windows"?WBLOCKS.map(b=>[b.k,b.n]):blkList(p.platform)).filter(b=>p.block[b[0]]).map(b=>b[1]).join(", ")||"없음")
+        +"<br>사용 시간 : "+(p.time&&p.time.on?"설정함":"사용 안함")+"<br>배포 앱 : "+esc(nm(p.deploy))
+        +"<br>앱 제어 : "+({none:"설정 안함",black:"Black List",white:"White List",all:"전체 차단"})[p.appCtl.mode]
         +"<br>사이트 제어 : "+({none:"설정 안함",black:"Black List",white:"White List"})[p.siteCtl.mode];
        el.querySelector("#apD").hidden=false;el.querySelector("#apEmpty").hidden=true;
      };
@@ -2262,7 +2395,7 @@ function popPolDetail(id){
   const ok=applied(p),ng=tg.length-ok;
   const pct=tg.length?Math.round(ok/tg.length*100):0;
   pop({title:"통합 설정 상세",w:"w900",
-   body:'<div class="blu-cont-bg" style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:10px">'+osIco(p.platform)+'<b style="font-size:16px">'+esc(p.name)+'</b><button class="btn--st small pill btn-major-outline" style="margin-left:auto">수정</button></div>'
+   body:'<div class="blu-cont-bg" style="margin-bottom:14px"><div style="display:flex;align-items:center;gap:10px">'+osIco(p.platform)+'<b style="font-size:16px">'+esc(p.name)+'</b><button class="btn--st small pill btn-major-outline" style="margin-left:auto" data-poledit>수정</button></div>'
     +'<div style="margin-top:10px;font-size:12.5px;color:var(--tx2)">👤 '+esc(p.regUser)+' &nbsp;&nbsp; 등록 '+esc(p.created)+' <span class="cc-red">ㅣ 수정</span> '+esc(p.updated)+"</div></div>"
     +'<div class="blu-cont-bg" data-h="setup.cnt"><h2 class="blu-title">'+I.gear+' 통합 설정 적용 현황</h2>'
     +'<div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap"><span style="font-size:13.5px;font-weight:700">'+tg.length+"대중 "+ok+'대 적용됨</span>'
@@ -2274,8 +2407,8 @@ function popPolDetail(id){
     +'<div class="blu-cont-bg"><h2 class="blu-title">'+I.gear+' 이 통합 설정의 내용</h2>'
     +(p.platform==="Windows"
       ?polBoxes(p,(ti,inner)=>'<div style="border:1px solid var(--line2);border-radius:5px;padding:13px 15px;margin-bottom:10px"><div style="font-weight:700;color:var(--main);margin-bottom:8px;font-size:13.5px">'+ti+"</div><div style=\"font-size:13px\">"+inner+"</div></div>")
-      :'<div class="no-data-st" style="border:0">'+esc(p.platform)+' 정책의 상세 항목은 이 실습기에서 재현하지 않았습니다. 오늘 실습은 Windows 정책으로 진행합니다.</div>')
-    +'<p class="bottom-txt-alert">※ 위자드 6단계(차단 및 초기화 → 사용 시간 → 배포 앱 → 앱 제어 → 사이트 제어 → 내용 확인)에서 고른 값이 그대로 보입니다. 바꾸려면 위 [수정]을 누르세요.</p></div>',
+      :polBoxesX(p,(ti,inner)=>'<div style="border:1px solid var(--line2);border-radius:5px;padding:13px 15px;margin-bottom:10px"><div style="font-weight:700;color:var(--main);margin-bottom:8px;font-size:13.5px">'+ti+"</div><div style=\"font-size:13px\">"+inner+"</div></div>"))
+    +'<p class="bottom-txt-alert">※ 위자드에서 고른 값이 그대로 보입니다. 바꾸려면 위 [수정]을 누르세요.</p></div>',
    btns:'<button class="btn--st pill" data-close>닫기</button><button class="btn--st pill btn-red" data-del>정책 삭제</button>',
    mount:function(el,close){
      const re=el.querySelector("[data-re]");
@@ -2292,6 +2425,7 @@ function popPolDetail(id){
          toast("재배포 완료 — "+fx+"대 적용"+(st?", 미설치·미등록 "+st+"대는 에이전트 설치 전까지 적용 불가":""),st?"":"ok");});
      });
      el.querySelector("[data-status]").addEventListener("click",function(){close();popPolStatus(p.id);});
+     el.querySelector("[data-poledit]").addEventListener("click",function(){close();popPolEdit(p.id);});
      el.querySelector("[data-del]").addEventListener("click",function(){
        alertPop("통합 설정 삭제","<p><b>"+esc(p.name)+"</b> 정책을 삭제합니다. 적용된 단말은 “정책제외” 상태가 됩니다.</p>","삭제",function(){
          S.dev.forEach(d=>{if(d.policy===p.name){d.policy="정책제외";d.pending=false;}});
@@ -2329,27 +2463,33 @@ function popPolStatus(id){
 
 /* ============ 앱 관리 (16장) ============ */
 function pgApps(){
-  const t=S.ui.tab.app||"win";
-  const TB=[["and","Android"],["vpp","iOS(VPP)"],["ias","iOS(App Store)"],["win","Windows"],["winms","Windows(MS Store)"]];
-  const f={and:a=>a.os==="Android",vpp:a=>false,ias:a=>a.os==="iOS",win:a=>a.os==="Windows"&&a.via==="In House",winms:a=>a.os==="Windows"&&a.via==="MS Store"}[t];
+  const t=S.ui.tab.app||({win:"win",and:"and",ios:"vpp"})[PLAT];
+  const TB=[["and","Android"],["andps","Android(Play Store)"],["vpp","iOS(VPP)"],["ias","iOS(App Store)"],["win","Windows"],["winms","Windows(MS Store)"]];
+  const f={and:a=>a.os==="Android"&&a.via==="In House",andps:a=>a.os==="Android"&&(a.via==="Play Store"||a.via==="Web App"),vpp:a=>a.os==="iOS"&&a.via==="VPP",ias:a=>a.os==="iOS"&&a.via==="App Store",win:a=>a.os==="Windows"&&a.via==="In House",winms:a=>a.os==="Windows"&&a.via==="MS Store"}[t];
   const list=S.apps.filter(f);
   return {head:head("앱 관리","apps.tab",tabs(TB,t,"apptab","apps.tab")),
    body:'<div class="content-data-filter"><div class="filter-search"><label class="filter-search-tit">앱 검색</label>'
     +'<div class="input-clear-wrap"><input type="text" class="input--st" placeholder="앱 이름, 패키지 이름 검색"></div><button class="btn-ico-search">'+I.srch+"</button></div>"
     +'<div class="filter-sort"><div class="filter-sort-total">'+I.app+' <span>앱</span><b class="cc-blue"><strong>'+list.length+"</strong>개</b></div>"
-    +'<div class="filter-right"><select class="select--st" style="height:34px"><option>전체</option><option selected>우리 학교</option><option>타 학교</option></select><button class="btn-ico" data-act="refresh">'+I.rf+"</button></div></div></div>"
+    +'<div class="filter-right"><select class="select--st" style="height:34px"><option>전체</option><option selected>우리 학교</option><option>타 학교</option></select><button class="btn-ico" data-act="refresh" title="새로고침">'+I.rf+"</button></div></div></div>"
+    +(t==="vpp"?'<div class="vpp-bar"><span>장소</span><select class="select--st" style="height:32px"><option>전체</option><option selected>디지털튜터학교_location</option></select><button class="btn--st small pill btn-major-outline" data-act="vpp-sync">VPP 앱 동기화</button><button class="btn--st small pill btn-major-outline" data-act="vpp-dev">단말 앱 동기화</button><span class="vpp-at">VPP 앱 동기화 '+esc(S.vppAt||"-")+(S.vppPending?' · <b class="cc-orange">요청 처리 중 — 새로고침(↻)</b>':"")+"</span></div>":"")
     +(list.length?'<div class="list-card-wrap">'+list.map(function(a){
        const n=S.dev.filter(d=>(d.apps||[]).indexOf(a.id)>=0).length;
        return '<div class="app-card" data-h="apps.card"><div class="top"><span class="app-ic" style="background:'+(a.os==="Windows"?"#0F6CBD":a.os==="Android"?"#2FA84F":"#3B3B3D")+'">'+esc(a.n.slice(0,1))+'</span><div style="min-width:0"><div class="nm">'+esc(a.n)+'</div><div class="meta">'+esc(a.ver)+"<br>"+esc(a.reg)+"</div></div></div>"
         +'<div class="meta mono" style="margin:4px 0 0">'+esc(a.pkg)+"</div>"
-        +'<div class="btns"><button class="btn--st small pill btn-major-outline" data-appins="'+a.id+'">설치 현황'+(n?"("+n+")":"")+'</button><button class="btn--st small pill" data-appmod="'+a.id+'">수정</button><button class="btn--st small pill btn-dark" data-appdel2="'+a.id+'">삭제</button></div></div>';
+        +(a.via==="VPP"?'<div class="lic">라이선스 <b>'+vppUsed(a)+"/"+a.lic+"</b> · Location 디지털튜터학교_location</div>":a.via==="Play Store"||a.via==="Web App"?'<div class="lic"><span class="tag tag-line">'+(a.via==="Play Store"?"Google Play":"Web App")+"</span></div>":a.pub?'<div class="lic">'+esc(a.pub)+"</div>":"")
+        +'<div class="btns">'+(a.via==="VPP"?'<button class="btn--st small pill btn-major-outline" data-vppinfo="'+a.id+'">VPP 앱 정보</button><button class="btn--st small pill" data-appins="'+a.id+'">설치현황'+(n?"("+n+")":"")+"</button>"
+          :'<button class="btn--st small pill btn-major-outline" data-appins="'+a.id+'">설치 현황'+(n?"("+n+")":"")+'</button><button class="btn--st small pill" data-appmod="'+a.id+'">수정</button><button class="btn--st small pill btn-dark" data-appdel2="'+a.id+'">삭제</button>')+"</div></div>";
      }).join("")+"</div>"
-    :'<div class="no-data-st">등록된 앱이 없습니다.'+(t==="vpp"?"<br><span style='font-size:13px'>iOS(VPP)는 ASM 토큰 등록 후 사용합니다(연수용 시뮬레이터 미구현).</span>":"")+"</div>")
+    :'<div class="no-data-st">등록된 앱이 없습니다.'+(t==="vpp"?"<br><span style='font-size:13px'>ASM에서 「받기」한 앱을 [VPP 앱 동기화]로 가져옵니다.</span>":t==="andps"?"<br><span style='font-size:13px'>AMA 단말용 Google Play · Web App을 등록합니다.</span>":"")+"</div>")
     +'<button class="btn-circle-fix-bottom" data-act="app-new" data-h="apps.plus" title="신규 앱 추가">+</button>'};
 }
 function popAppNew(){
-  const t=S.ui.tab.app||"win";
-  if(t!=="win"&&t!=="winms"){toast("이 연수용 시뮬레이터는 Windows / Windows(MS Store) 앱 등록만 제공합니다.","no");return;}
+  const t=S.ui.tab.app||({win:"win",and:"and",ios:"vpp"})[PLAT];
+  if(t==="and"){popAppNewAnd();return;}
+  if(t==="andps"){popAppNewPlay();return;}
+  if(t==="vpp"){infoPop("<p class='alert--st1'>iOS(VPP) 앱은 여기서 등록하지 않습니다.</p><p class='alert--st2'>Apple School Manager(school.apple.com) › 앱에서 「사용권 구입 → 다음으로 할당(학교 위치) → 받기」를 한 뒤,<br>이 화면의 [VPP 앱 동기화]로 가져옵니다. 무료 앱도 수량을 정해 「받기」합니다.</p>");return;}
+  if(t==="ias"){toast("iOS(App Store) 앱 등록은 이 실습기에서 다루지 않습니다. 학교 iPad는 Apple ID 없이 설치되는 iOS(VPP)를 권장합니다.","no");return;}
   const ms=t==="winms";let picked=null;
   const notice='<div class="opt-bx"><b>앱 등록 시 유의 사항</b><div style="border:1px solid var(--line);background:#fff;border-radius:4px;padding:10px 12px;margin:8px 0;font-size:12.5px;color:var(--tx2)">저작권법에 의해 보호받는 저작물은 무단 배포 및 복제 시 저작 권법에 의해 법적 조치를 취할 수 있음을 유의하시길 바랍니다.</div>'
    +'<label class="label-check"><input type="checkbox" id="agree"><i></i><span>[필수] 유의 사항을 확인하였습니다.</span></label></div>';
@@ -2399,7 +2539,7 @@ function popAppNew(){
 }
 function popAppIns(id){
   const a=S.apps.filter(x=>x.id===id)[0];if(!a)return;
-  const tg=S.dev.filter(d=>d.platform===a.os);
+  const tg=S.dev.filter(d=>appOS(d.platform)===a.os);
   pop({title:"앱 설치 현황",w:"w1150",
    body:'<div style="display:grid;grid-template-columns:.85fr 1.15fr;gap:16px">'
     +'<div class="blu-cont-bg"><h2 class="blu-title">앱 상세 정보</h2>'
@@ -2416,11 +2556,15 @@ function popAppIns(id){
      logHist("앱 배포",tg.length,tg);save();close();render();toast("전체 단말 설치 및 업데이트 명령을 전송했습니다.","ok");});}});
 }
 function popAppDeploy(isDeploy,ds){
-  const plat=ds[0].platform;
-  const all=S.apps.filter(a=>a.os===plat);
+  const plat=appOS(ds[0].platform);
+  if(ds.some(d=>appOS(d.platform)!==plat)){toast("앱 배포·삭제는 같은 OS 단말끼리만 할 수 있습니다.","no");return;}
+  let dtab="all";
+  const allA=S.apps.filter(a=>a.os===plat),all0=allA;
+  let all=allA;
   let chosen=[];
   const draw=el=>{
-    const L=all.filter(a=>chosen.indexOf(a.id)<0),R=all.filter(a=>chosen.indexOf(a.id)>=0);
+    all=plat==="iOS"&&dtab!=="all"?all0.filter(a=>a.via===(dtab==="vpp"?"VPP":"App Store")):all0;
+    const L=all.filter(a=>chosen.indexOf(a.id)<0),R=all0.filter(a=>chosen.indexOf(a.id)>=0);
     el.querySelector("#dpL").innerHTML=L.map(a=>'<tr><td><label class="label-check-circle" style="gap:0"><input type="checkbox" data-dl="'+a.id+'"><i style="width:19px;height:19px"></i></label></td><td><span class="app-ic" style="background:#0F6CBD;margin:0 auto;width:28px;height:28px;font-size:12px">'+esc(a.n.slice(0,1))+'</span></td><td class="l">'+esc(a.n)+'</td><td class="l mono">'+esc(a.pkg)+"</td></tr>").join("")||'<tr><td colspan="4" style="padding:26px">등록된 앱이 없습니다.</td></tr>';
     el.querySelector("#dpR").innerHTML=R.map(a=>'<tr><td><label class="label-check-circle" style="gap:0"><input type="checkbox" data-dr="'+a.id+'"><i style="width:19px;height:19px"></i></label></td><td><span class="app-ic" style="background:#0F6CBD;margin:0 auto;width:28px;height:28px;font-size:12px">'+esc(a.n.slice(0,1))+'</span></td><td class="l">'+esc(a.n)+'</td><td class="l mono">'+esc(a.pkg)+"</td></tr>").join("")||'<tr><td colspan="4" style="padding:26px">등록된 앱이 없습니다.</td></tr>';
   };
@@ -2446,7 +2590,7 @@ function popAppDeploy(isDeploy,ds){
     return;
   }
   pop({title:"앱 배포",w:"w1150",
-   body:'<div class="blu-change-wrap"><div class="blu-cont-bg"><h2 class="blu-title">앱 전체</h2>'
+   body:'<div class="blu-change-wrap"><div class="blu-cont-bg"><h2 class="blu-title">앱 전체</h2>'+(plat==="iOS"?'<div class="top-tab-btns" style="margin-bottom:8px"><button class="active" data-dptab="all">전체</button><button data-dptab="vpp">iOS(VPP)</button><button data-dptab="ias">iOS(AppStore)</button></div>':"")
     +'<div style="display:flex;gap:8px;margin-bottom:8px"><input type="text" class="input--st" placeholder="앱 이름 검색" style="flex:1;height:34px"><button class="btn-ico-search" style="width:34px;height:34px">'+I.srch+"</button></div>"
     +'<div class="list-st--table scroll-y" style="max-height:300px"><table class="tbl"><thead><tr><th style="width:46px"></th><th style="width:60px">아이콘</th><th class="l">앱 이름</th><th class="l">패키지 이름</th></tr></thead><tbody id="dpL"></tbody></table></div></div>'
     +'<div class="blu-change-move-btns"><button class="btn-add-arr" data-add>추가 ›</button><button class="btn-remove-arr" data-rm>‹ 삭제</button></div>'
@@ -2457,12 +2601,15 @@ function popAppDeploy(isDeploy,ds){
    btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>배포</button>',
    mount:function(el,close){
      draw(el);
+     el.addEventListener("click",function(e){const b=e.target.closest("[data-dptab]");if(b){dtab=b.getAttribute("data-dptab");el.querySelectorAll("[data-dptab]").forEach(x=>x.classList.toggle("active",x===b));draw(el);coachPaint();}});
      el.querySelector("[data-add]").addEventListener("click",function(){$$(".popup-area-bg [data-dl]:checked").forEach(c=>{chosen.push(c.getAttribute("data-dl"));});draw(el);});
      el.querySelector("[data-rm]").addEventListener("click",function(){$$(".popup-area-bg [data-dr]:checked").forEach(c=>{chosen=chosen.filter(x=>x!==c.getAttribute("data-dr"));});draw(el);});
      el.querySelector("[data-ok]").addEventListener("click",function(){
        if(!chosen.length){toast("배포할 앱을 선택해 주세요.","no");return;}
        ds.forEach(d=>{d.apps=d.apps||[];chosen.forEach(a=>{if(d.conn==="연결"&&d.apps.indexOf(a)<0)d.apps.push(a);});});
        if(chosen.some(a=>{const x=S.apps.filter(y=>y.id===a)[0];return x&&(x.id==="w1"||x.id==="w7");}))done("m13");
+       if(plat==="iOS"&&ds.length>=20&&chosen.some(a=>{const x=S.apps.filter(y=>y.id===a)[0];return x&&x.via==="VPP";}))done("i5");
+       chosen.forEach(a=>{const x=S.apps.filter(y=>y.id===a)[0];if(x&&x.via==="VPP"){x.asg=x.asg||[];ds.forEach(d=>{if(d.conn==="연결"&&x.asg.indexOf(d.id)<0&&x.asg.length<x.lic)x.asg.push(d.id);});}});
        logHist("앱 배포",ds.length,ds);save();close();render();toast("앱 배포 명령을 전송했습니다. 단말 설치 완료 시 “설치 앱” 목록에 표시됩니다.","ok");});
    }});
 }
@@ -2717,7 +2864,7 @@ function pgGroup(){
 function popGrpNew(){
   pop({title:"단말 그룹 추가",
    body:'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>플랫폼 선택</dt><dd>'
-    +["Android","iOS","Windows"].map(o=>'<label class="label-radio"><input type="radio" name="gos" value="'+o+'"'+(o==="Windows"?" checked":"")+'><i></i><span>'+osIco(o)+"</span></label>").join(" ")+"</dd></dl></div>"
+    +["Android","iOS","Windows"].map(o=>'<label class="label-radio"><input type="radio" name="gos" value="'+o+'"'+(o===({win:"Windows",and:"Android",ios:"iOS"})[PLAT]?" checked":"")+'><i></i><span>'+osIco(o)+"</span></label>").join(" ")+"</dd></dl></div>"
    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>그룹이름</dt><dd><input type="text" class="input--st" id="gN" style="width:100%" placeholder="예: 2학년_학생"></dd></dl></div>'
    +'<div class="opt-bx"><dl class="opd-dl"><dt>그룹 설명</dt><dd style="margin-top:8px"><textarea class="textarea--st" id="gD" placeholder="예: 2학년 학생 그룹"></textarea></dd></dl></div>',
    btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>추가</button>',
@@ -2932,10 +3079,25 @@ const FAQ=[
  ["앱 배포 했는데 단말에 앱이 설치 되지 않습니다.","모든 단말에서 안 되면 앱 등록 시 설치·동작 확인 후 등록한 앱인지 확인이 필요합니다. 특정 단말만 안 되면 설정 &gt; 어플리케이션 &gt; “특별한 접근” &gt; “모든 파일 접근 권한” 해제 여부를 확인하세요."],
  ["통합설정으로 App 과 사이트를 차단하려면 어떻게 하나요?","차단 목록 관리가 어렵다면 White List 사용을 추천합니다. 앱은 패키지명을 확인해 허용 앱에 등록하고, 사이트는 정확한 URL을 허용 사이트에 등록 후 정책을 적용합니다. 이 경우 실시간 DB 연동 유해 차단은 함께 사용할 수 없습니다."]
 ];
+const FAQ_X={
+ and:[["학생이 잠금 비밀번호를 잊었어요.","단말을 골라 「초기화 → 고급 → 비밀번호 초기화」를 적용합니다. 단, 단말이 재부팅된 뒤에는 최초 비밀번호를 1회 입력하기 전까지 초기화할 수 없어 제조사 서비스센터로 보내야 합니다."],
+  ["공장 초기화 뒤 에이전트는 어떻게 다시 까나요?","공장 초기화를 하면 에이전트도 지워집니다. 단말의 Chrome(삼성 인터넷 가능)으로 https://mdm.sen.go.kr/down 에 들어가 제조사에 맞는 설치 파일을 받습니다. 설치 중 「승인 대기 중 입니다.」가 뜨면 단말 현황에서 시리얼을 조회합니다(조회되지 않으면 라이선스 없는 단말 — 1666-6493)."],
+  ["에이전트가 정상인지 단말에서 확인하려면?","에이전트 앱의 [연결]을 눌러 단말 인증·FCM 등록·기기관리자·KPE 인증 4가지가 모두 체크되어 있고, 「최근 서버 접속 시간」이 지금 시각인지 봅니다. 하나라도 풀려 있으면 인터넷 연결을 확인한 뒤 MDM을 다시 설치합니다."],
+  ["앱 배포가 안 됩니다.","모든 단말에서 안 되면 등록한 APK가 정상인지 단말에 직접 설치해 확인합니다. 특정 단말만 안 되면 설정 › 애플리케이션 › 특별한 접근 › 「모든 파일 접근 권한」이 해제되지 않았는지 봅니다."],
+  ["White List 앱의 패키지명은 어디서 찾나요?","Play 스토어 앱 주소에서 id= 뒤부터 &amp;hl 앞까지가 패키지명입니다(예: kr.or.keris.dt2018). White List를 쓰면 실시간 DB 연동 차단은 쓸 수 없습니다."],
+  ["AMA 정책이 단말에 늦게 들어와요.","단말에서 수동으로 동기화합니다. 삼성: 설정 › 보안 및 개인정보 보호 › 업무용 정책 정보 › 내 직장 기기 ⋮ › 정책 동기화. 그 밖의 제조사: 설정 › 개인정보 보호 › 직장용 정책 정보에서 동기화합니다."],
+  ["AMA에서 앱이 안 깔려요.","3단계 고급 설정의 「설치 차단」이 켜져 있으면 필수 설치·설치 허용 앱도 설치되지 않습니다. 유료 앱과 Google Play에서 검색되지 않는 앱은 AMA로 배포할 수 없습니다. 레노버 P11·K10Plus는 AMA를 지원하지 않습니다."]],
+ ios:[["해마다 꼭 해야 하는 일이 있나요?","APNs 인증서, Content(VPP) 토큰, ASM 연장을 매년 갱신합니다. ASM 이용약관을 수락하지 않으면 토큰을 연장해도 오류가 납니다."],
+  ["ASM에서 받은 앱이 목록에 안 보여요.","앱 관리 › iOS(VPP)의 장소(Location)가 ASM에서 「다음으로 할당」한 학교 위치와 같아야 합니다. [VPP 앱 동기화] 뒤 새로고침(↻)을 누릅니다."],
+  ["앱을 최신 버전으로 올리려면?","한 앱만: 단말 현황에서 iPad를 골라 「앱 배포」로 해당 VPP 앱을 다시 배포합니다. 전체: 앱 관리 › iOS(VPP) › [단말 앱 동기화] › 「모든앱(forced)」."],
+  ["iPad를 잃어버렸어요(교내).","「분실 등록/해제」에서 소리알림을 On으로 켜면 분실 모드와 함께 소리가 울려 찾기 쉽습니다. iPad는 메시지·단말 찾기를 지원하지 않습니다(ASM 단말)."],
+  ["관리형 Apple ID 비밀번호는 어떻게 정하나요?","ASM 계정 암호 정책을 그대로 두면 8자리가 만들어지므로 「4개 숫자」를 권장합니다. 첫 로그인 때 임시 비밀번호를 입력하고 새 4자리로 바꿉니다."],
+  ["기기에서 바꾼 이름이 MDM에 안 보여요.","단말을 골라 「동기화 → 단말 정보 동기화 → 단말 → MDM 서버」로 가져옵니다. 반대로 MDM에서 정한 이름을 기기로 보내려면 「MDM 서버 → 단말」을 고릅니다."]]
+};
 function popFaq(){
   pop({title:"FAQ — 사용자매뉴얼 32장",w:"w900",
    body:'<div class="msg-box msg-i" style="margin-bottom:12px"><b>MDM 기술지원센터</b> 1666-6493 · 상담 가능 시간 평일 08:00~12:30 / 13:30~18:00<br>교육 영상 : youtu.be/DDUUxtlg6qY (교육) · youtu.be/6OpydEN5Ovk (기능 시연) — YouTube에서 “ArgosMDM” 검색 <span style="color:#8A97A5">(33장 고객 지원 정보)</span></div>'
-    +FAQ.map((f,i)=>'<div class="qa'+(i===0?" open":"")+'"><button data-qa="'+i+'">'+esc(f[0])+'</button><div class="a"><b class="cc-red">답 : </b>'+f[1]+"</div></div>").join(""),
+    +(FAQ_X[PLAT]||[]).map(f=>[f[0]+" ("+PLATS[PLAT].n+")",f[1]]).concat(FAQ).map((f,i)=>'<div class="qa'+(i===0?" open":"")+'"><button data-qa="'+i+'">'+esc(f[0])+'</button><div class="a"><b class="cc-red">답 : </b>'+f[1]+"</div></div>").join(""),
    btns:'<button class="btn--st pill btn-major" data-close>확인</button>',
    mount:el=>{el.addEventListener("click",e=>{const b=e.target.closest("[data-qa]");if(b)b.parentElement.classList.toggle("open");});}});
 }
@@ -2950,9 +3112,9 @@ function popCap(){
    ["공유 차단","O","N/A","N/A"],["AMA Android","O","N/A","N/A"]];
   const c=v=>v==="X"?'<span class="cc-red">X</span>':(v==="N/A"?'<span style="color:#8A97A5">N/A</span>':(v==="A"?'<b class="cc-red">A</b>':'<span class="cc-green">'+esc(v)+"</span>"));
   pop({title:"단말 제조사 별 제공 기능 — 사용자매뉴얼 31.2",w:"w900",
-   body:'<div class="msg-box msg-i" style="margin-bottom:12px">우리 연수의 초점인 <b>Windows 디벗(Surface Go 3 · 갤럭시북)</b> 열을 보세요. 비밀번호 초기화·앱/데이터 초기화는 <b class="cc-red">Windows 미지원(X)</b>이고, 분실 위치확인·앱/사이트 차단·앱 배포/삭제·공장 초기화는 지원(O)됩니다. Windows는 <b>OS Pro / Education</b>에서만 MDM 기능이 제공됩니다.</div>'
-    +'<div class="list-st--table scroll-y" style="max-height:440px"><table class="tbl"><thead><tr><th class="l">주요 제공 기능</th><th>Android</th><th>iOS(Apple)</th><th style="background:#033c66">Windows</th></tr></thead><tbody>'
-    +ROWS.map(r=>'<tr><td class="l">'+esc(r[0])+"</td><td>"+c(r[1])+"</td><td>"+c(r[2])+'</td><td style="background:#EAF4FE;font-weight:700">'+c(r[3])+"</td></tr>").join("")
+   body:'<div class="msg-box msg-i" style="margin-bottom:12px">'+(({and:'우리 실습 기종인 <b>Android 태블릿</b> 열을 보세요. 단말 사용 시간 설정·실시간 DB 유해 앱 차단·비밀번호 초기화·앱/데이터 초기화까지 가장 많은 기능을 지원합니다. 실시간 DB 유해 사이트 차단·사이트 차단은 <b>삼성 단말만</b> 됩니다(레노버 P11 = X).',ios:'우리 실습 기종인 <b>iPad(Apple)</b> 열을 보세요. 단말 사용 시간 설정·실시간 DB 유해 앱/사이트 차단은 <b class="cc-red">미지원(X)</b>이고, 앱·사이트 차단은 등록한 목록(Black/White List)으로 합니다. 정책은 감독(ASM 자동 등록) 단말에서만 적용됩니다.'})[PLAT]||'우리 연수의 초점인 <b>Windows 디벗(Surface Go 3 · 갤럭시북)</b> 열을 보세요. 비밀번호 초기화·앱/데이터 초기화는 <b class="cc-red">Windows 미지원(X)</b>이고, 분실 위치확인·앱/사이트 차단·앱 배포/삭제·공장 초기화는 지원(O)됩니다. Windows는 <b>OS Pro / Education</b>에서만 MDM 기능이 제공됩니다.')+'</div>'
+    +'<div class="list-st--table scroll-y" style="max-height:440px"><table class="tbl"><thead><tr><th class="l">주요 제공 기능</th>'+["Android","iOS(Apple)","Windows"].map((h,k)=>'<th'+(k===({and:0,ios:1,win:2})[PLAT]?' style="background:#033c66"':"")+">"+h+"</th>").join("")+'</tr></thead><tbody>'
+    +ROWS.map(r=>'<tr><td class="l">'+esc(r[0])+"</td>"+[1,2,3].map(k=>"<td"+(k-1===({and:0,ios:1,win:2})[PLAT]?' style="background:#EAF4FE;font-weight:700"':"")+">"+c(r[k])+"</td>").join("")+"</tr>").join("")
     +"</tbody></table></div>"
     +'<p class="bottom-txt-alert">※ 매뉴얼 31.2 표에는 「단말 사용 시간 설정」이 Windows X로 되어 있지만, Windows 통합설정 위자드(15.3.2)에는 사용 시간 설정 단계가 있습니다.<br>※ Android는 삼성 외 레노버·에이텍·아이브릿지·포유디지탈·Mpgio·다컴시스템 등 모델별로 일부 항목이 X·U(추후 제공)로 다릅니다. 삼성은 Android OS 13, 기타 제조사는 12까지 지원. <b>A</b> : 빠른 시일 내 제공 예정 / 위 표에 없는 제조사·모델은 MDM 기능 미제공.</p>',
    btns:'<button class="btn--st pill btn-major" data-close>확인</button>'});
@@ -2965,7 +3127,8 @@ function popDiff(){
     +r("접속 조건","실제 <b>mdm.sen.go.kr</b>은 학내 망 및 eVPN 연결 시에만 접속됩니다.")
     +r("데이터","단말·계정·공지·좌표는 모두 매뉴얼의 예시를 재현한 가상 데이터입니다.")
     +r("명령 전달","실제로는 단말의 에이전트가 서버와 통신할 때 명령을 받으므로 즉시 반영되지 않을 수 있습니다.")
-    +r("미구현","Android·iOS 통합설정 위자드, iOS(VPP)·ASM 토큰, Web Clip·배경화면 실제 등록, 지도(V-WORLD) 연동은 화면 안내만 제공합니다. (실서비스의 OS 선택은 Android·iOS·Windows 3종입니다)")
+    +r("기종","로그인 뒤 실습 기종(Windows · Android · iPad)을 고릅니다. 실제 MDM은 한 학교의 모든 기종을 한 화면에서 관리하지만, 학교마다 쓰는 기종이 달라 연수용으로 나눴습니다. 기종마다 실습 기록이 따로 저장됩니다.")
+    +r("미구현","AMA 신청·전환 화면, Argos의 「ASM」 메뉴, ASM(school.apple.com) 화면, APNs·VPP·ASM 토큰 연장, 지도(V-WORLD) 연동은 화면 안내만 제공합니다. iOS 차단 항목은 실제 47가지 중 매뉴얼에 나온 항목만 담았고, Google Play 검색 결과는 연수용 고정 목록입니다.")
     +r("파일 업로드","엑셀/CSV 업로드는 실제 파일 대신 예시 데이터로 처리 흐름만 재현합니다.")
     +r("화면 차이","실물처럼 좌측 메뉴는 아이콘으로 접혀 있고(☰ 또는 아이콘에 마우스를 올리면 메뉴 이름 확인) 상단 바는 짙은 남색입니다. 학교명·계정·대여자 등은 가상의 예시이고, 실서비스에는 학부모앱 메뉴가 없습니다.")
     +r("실물 반영","정책제외 표기, 졸업 조직 보관(총대수가 디벗 관리 시스템의 재학 대수보다 많은 이유), 미적용 재배포 사례(기본 정책 지정/적용 불일치), 3개월 비밀번호 변경 안내는 실물 확인 후 반영했습니다.")
@@ -2978,7 +3141,7 @@ function paintMi(){
   const n=MISSIONS.filter(m=>S.missions[m.id]).length;
   $("#fabBg").textContent=n+"/"+MISSIONS.length;
   $("#mpPr").style.width=Math.round(n/MISSIONS.length*100)+"%";
-  $("#mpB").innerHTML=MISSIONS.map((m,i)=>'<div class="mi'+(S.missions[m.id]?" done":"")+'" data-guide="'+m.id+'" style="cursor:pointer" title="누르면 화면 안내와 함께 진행합니다"><span class="ck">'+I.chk+'</span><span class="t"><b>'+esc(m.t)+"</b><span>"+esc(m.d)+'</span><span class="mi-foot"><span class="tg">'+esc(m.tg)+'</span>'+manLink(MAN.m[i][0],MAN.m[i][1],"📄 PDF","mi-pdf",'이 미션 매뉴얼(PDF) 내려받기')+"</span></span></div>").join("");
+  $("#mpB").innerHTML=MISSIONS.map((m,i)=>'<div class="mi'+(S.missions[m.id]?" done":"")+'" data-guide="'+m.id+'" style="cursor:pointer" title="누르면 화면 안내와 함께 진행합니다"><span class="ck">'+I.chk+'</span><span class="t"><b>'+esc(m.t)+"</b><span>"+esc(m.d)+'</span><span class="mi-foot"><span class="tg">'+esc(m.tg)+'</span>'+(MAN&&MAN.m[i]?manLink(MAN.m[i][0],MAN.m[i][1],"📄 PDF","mi-pdf",'이 미션 매뉴얼(PDF) 내려받기'):"")+"</span></span></div>").join("");
 }
 function exportChk(){
   const d=S.dev,L=[];
@@ -3006,9 +3169,11 @@ document.addEventListener("click",function(e){
   const t=e.target,h=s=>t.closest(s);let n;
   if(HELP&&h("[data-h]")&&!h("#btnHelp")&&!h("#helpOff")){e.preventDefault();e.stopPropagation();return;}
   if(h("#lgEye")){const pw=$("#loginPw"),sh=pw.type==="password";pw.type=sh?"text":"password";$("#lgEye").title=sh?"비밀번호 숨기기":"비밀번호 보기";return;}
-  if(h("#loginBtn")){$("#login").hidden=true;$("#app").hidden=false;$("#fab").hidden=false;
-    S.ui.user=$("#loginId").value.trim()||"mdm관리자";$("#topUser").textContent=S.ui.user;save();render();popPwExpire();return;}
-  if(h("#btnLogout")){coachStop();$("#app").hidden=true;$("#fab").hidden=true;$("#mp").hidden=true;$("#login").hidden=false;setHelp(false);return;}
+  if(h("#loginBtn")){$("#login").hidden=true;LOGIN_USER=$("#loginId").value.trim()||"mdm관리자";showPlatPick(false);return;}
+  if((n=h("[data-plat]"))){choosePlat(n.getAttribute("data-plat"));return;}
+  if(h("[data-ppclose]")){$("#platPick").hidden=true;return;}
+  if(h("#btnPlat")){coachStop();$("#mp").hidden=true;showPlatPick(true);return;}
+  if(h("#btnLogout")){coachStop();$("#platPick").hidden=true;$("#app").hidden=true;$("#fab").hidden=true;$("#mp").hidden=true;$("#login").hidden=false;setHelp(false);return;}
   if(h("#btnGnb")){S.ui.gnbOff=!S.ui.gnbOff;save();paintGnb();return;}
   if(h("#gnbDim")){S.ui.gnbOff=true;save();paintGnb();return;}
   if(h("#gnbUl [data-go]"))S.ui.gnbOff=true;   /* 펼친 메뉴는 화면을 덮으므로 이동하면 접는다 */
@@ -3038,7 +3203,7 @@ document.addEventListener("click",function(e){
   if(h("[data-act='filter']")){fltOpen=!fltOpen;render();return;}
   if(h("[data-act='fltclear']")){S.ui.f={conn:"",platform:"",vol:"",policy:""};S.ui.q="";render();return;}
   if(h("[data-act='search']")){S.ui.q=$("#devQ")?$("#devQ").value:"";save();render();return;}
-  if(h("[data-act='refresh']")){S.ui.q="";save();render();toast("화면을 갱신했습니다.");return;}
+  if(h("[data-act='refresh']")){if(S.ui.page==="apps"&&S.vppPending){applyVpp();return;}S.ui.q="";save();render();toast("화면을 갱신했습니다.");return;}
   if(h("[data-act='disp']")){popDisp();return;}
   if(h("[data-act='exdn']")){dlDevInfo();return;}
   if(h("[data-act='exup']")){popExcelRename();return;}
@@ -3053,9 +3218,9 @@ document.addEventListener("click",function(e){
   if(h("[data-act='wz-new']")){popOsSelect();return;}
   if(h("[data-wcancel]")){alertPop("닫으시겠습니까?","<p>입력한 통합 설정 내용이 모두 사라집니다.</p>","닫기",function(){WZ=null;render();},true);return;}
   if(h("[data-wprev]")){wzCommit();WZ.step--;render();return;}
-  if(h("[data-wnext]")){wzCommit();if(WZ.step===6&&!WZ.name.trim()){toast("통합 설정 이름을 입력해 주세요.","no");return;}WZ.step++;render();return;}
+  if(h("[data-wnext]")){wzCommit();if(WZ.step===wzN()&&!WZ.name.trim()){toast("통합 설정 이름을 입력해 주세요.","no");return;}WZ.step++;render();return;}
   if(h("[data-wsave]")){wzCommit();wzSaveOnly(false);return;}
-  if(h("[data-wapplyall]")){const oid2=WZ.applyOrg||"all";WZ.applySel=S.dev.filter(d=>d.platform==="Windows"&&(oid2==="all"||d.org===oid2)).map(d=>d.id);render();return;}
+  if(h("[data-wapplyall]")){const oid2=WZ.applyOrg||"all";WZ.applySel=S.dev.filter(d=>d.platform===wzPlat()&&d.conn!=="미설치"&&d.conn!=="설치 중"&&(oid2==="all"||d.org===oid2)).map(d=>d.id);render();return;}
   if((n=h("[data-wapply]"))){const id=n.getAttribute("data-wapply"),i=WZ.applySel.indexOf(id);
     if(i>=0)WZ.applySel.splice(i,1);else WZ.applySel.push(id);render();return;}
   if(h("[data-wrun]")){
@@ -3079,11 +3244,30 @@ document.addEventListener("click",function(e){
     render();toast(WZ.selDays.map(i=>DAYS[i]).join(", ")+"요일에 적용했습니다.","ok");return;}
   if((n=h("[data-dm]"))){
     const add=n.getAttribute("data-dm")==="add";
-    const L=WZ.step===3?WZ.deploy:(WZ.step===5?WZ.siteCtl.list:WZ.appCtl.list);
+    const L=wzDualList();
     if(add){WZ.lsel.forEach(id=>{if(L.indexOf(id)<0)L.push(id);});WZ.lsel=[];}
     else{WZ.rsel.forEach(id=>{const i=L.indexOf(id);if(i>=0)L.splice(i,1);});WZ.rsel=[];}
     render();return;}
   if(h("[data-wsitenew]")){popSiteWz();return;}
+  if(h("[data-wcnew]")){popWebclipNew();return;}
+  if(h("[data-amaadv]")){WZ.ama.advOpen=!WZ.ama.advOpen;render();return;}
+  if((n=h("[data-amatg]"))){const k=n.getAttribute("data-amatg");WZ.ama.adv[k]=!WZ.ama.adv[k];render();if(k==="noIns"&&WZ.ama.adv.noIns)toast("설치 차단을 켜면 필수 설치·설치 허용 앱도 설치되지 않습니다. 업데이트·USB 설치도 막힙니다.","no");return;}
+  if((n=h("[data-amasrc]"))){WZ.ama.src=n.getAttribute("data-amasrc");render();return;}
+  if(h("[data-gps]")){const q=(($("#gpQ")||{}).value||"").trim();WZ.ama.q=q;const ql=q.toLowerCase();WZ.ama.res=GPLAY.filter(g=>!ql||g.n.toLowerCase().indexOf(ql)>=0||g.pkg.indexOf(ql)>=0);render();return;}
+  if((n=h("[data-gpsel]"))){const g=GPLAY.filter(x=>x.g===n.getAttribute("data-gpsel"))[0];if(!g)return;if(g.paid){toast("유료 앱은 AMA로 배포할 수 없습니다.","no");return;}amaAdd({id:"m"+Date.now(),kind:"PlayStore",n:g.n,pkg:g.pkg});return;}
+  if(h("[data-webnew]")){popWebApp(function(w){WZ.ama.web.push(w);render();});return;}
+  if((n=h("[data-wasel]"))){const w=WZ.ama.web[+n.getAttribute("data-wasel")];if(w&&amaAdd({id:"m"+Date.now(),kind:"Web App",n:w.n,pkg:w.url}))done("a12");return;}
+  if((n=h("[data-poolsel]"))){amaAdd({id:"m"+Date.now(),kind:"PlayStore",n:n.getAttribute("data-pooln"),pkg:n.getAttribute("data-poolsel")});return;}
+  if((n=h("[data-amadel]"))){WZ.ama.list.splice(+n.getAttribute("data-amadel"),1);render();return;}
+  if((n=h("[data-amacfg]"))){popAmaCfg(+n.getAttribute("data-amacfg"));return;}
+  if((n=h("[data-hsrc]"))){WZ.ios.hsrc=n.getAttribute("data-hsrc");render();return;}
+  if((n=h("[data-hadd]"))){const v=n.getAttribute("data-hadd"),w=v.split(":")[0],nm=v.slice(w.length+1),arr=w==="dock"?WZ.ios.dock:WZ.ios.page1;
+    if(w==="dock"&&arr.length>=6){toast("Dock에는 최대 6개까지 놓을 수 있습니다.","no");return;}
+    if(arr.indexOf(nm)>=0){toast("이미 놓인 앱입니다.","no");return;}arr.push(nm);render();return;}
+  if((n=h("[data-hdel]"))){const v=n.getAttribute("data-hdel").split(":");(v[0]==="dock"?WZ.ios.dock:WZ.ios.page1).splice(+v[1],1);render();return;}
+  if(h("[data-act='vpp-sync']")){popVppSync();return;}
+  if(h("[data-act='vpp-dev']")){popVppDevSync();return;}
+  if((n=h("[data-vppinfo]"))){popVppInfo(n.getAttribute("data-vppinfo"));return;}
   if(h("[data-siteadd]")){const v=$("#wzSite").value.trim();if(!v){toast("사이트 주소를 입력해 주세요.","no");return;}WZ.siteCtl.list.push(v);render();return;}
   if((n=h("[data-sitedel]"))){WZ.siteCtl.list.splice(+n.getAttribute("data-sitedel"),1);render();return;}
   if((n=h("[data-polpick]"))){/* handled by change */}
@@ -3165,7 +3349,7 @@ document.addEventListener("change",function(e){
     S.ui.sel=all?S.ui.sel.filter(i=>g.dev.indexOf(i)<0):S.ui.sel.concat(g.dev.filter(i=>S.ui.sel.indexOf(i)<0));
     save();render();return;}
   if((n=t.closest("[data-f]"))){const k=n.getAttribute("data-f");S.ui.f[k]=n.value;S.ui.sel=[];
-    if(k==="conn"&&n.value==="미설치")done("m1");save();render();return;}
+    if(k==="conn"&&n.value==="미설치")done("m1");if(k==="conn"&&n.value==="설치 중")done("a1");if(k==="platform"&&n.value==="AMAndroid")done("a9");save();render();return;}
   if((n=t.closest("[data-act='sort']"))){S.ui.sort=n.value;save();render();return;}
   if((n=t.closest("[data-dual]"))){const side=n.getAttribute("data-dual"),id=n.getAttribute("data-aid");
     const arr=side==="l"?WZ.lsel:WZ.rsel,i=arr.indexOf(id);
@@ -3183,12 +3367,1022 @@ document.addEventListener("change",function(e){
   if(t.name==="siteauto"){WZ.siteCtl.auto=(t.value==="on");WZ.siteCtl.opt=WZ.siteCtl.auto?"db":"list";WZ.lsel=[];WZ.rsel=[];render();return;}
   if(t.closest&&t.closest("[data-worg]")){WZ.applyOrg=t.value;WZ.applySel=[];render();return;}
   if(t.name==="siteopt"){WZ.siteCtl.opt=t.value;render();return;}
+  if((n=t.closest("[data-rb]"))){WZ.resetBoot[n.getAttribute("data-rb")]=n.checked;return;}
+  if(t.name==="appopt"){WZ.appCtl.opt=t.value;render();return;}
+  if(t.name&&t.name.indexOf("amar_")===0){WZ.ama[t.name.slice(5)]=t.value;render();return;}
+  if(t.name==="amamode"){WZ.ama.appMode=t.value;const ok=t.value==="black"?["필수 설치","차단"]:t.value==="white"?["필수 설치","설치 허용"]:["필수 설치"];WZ.ama.list.forEach(x=>{if(ok.indexOf(x.inst)<0)x.inst="필수 설치";});render();return;}
+  if(t.name==="gptype"){WZ.ama.gpType=t.value;render();return;}
+  if((n=t.closest("[data-amaf]"))){const x=WZ.ama.list[+n.getAttribute("data-ai")];if(x)x[n.getAttribute("data-amaf")]=n.value;return;}
+  if((n=t.closest("[data-wall]"))){WZ.ios[n.getAttribute("data-wall")==="lock"?"wallLock":"wallHome"]=n.value;render();return;}
 });
 document.addEventListener("keydown",function(e){
   if(e.key==="Enter"&&e.target.id==="devQ"){S.ui.q=e.target.value;save();render();}
   if(e.key==="Enter"&&e.target.id==="loginPw"){$("#loginBtn").click();}
+  if(e.key==="Enter"&&e.target.id==="gpQ"){const b=document.querySelector("[data-gps]");if(b)b.click();}
   if(e.key==="Enter"&&e.target.id==="wzSite"){const b=document.querySelector("[data-siteadd]");if(b)b.click();}
 });
+
+/* ============ 실습 기종 — 학교마다 디벗 기종(Windows · Android · iPad)이 달라 기종을 골라 실습한다 ============
+   기종마다 단말·통합 설정·앱·미션·실습 기록이 따로다(저장 키도 따로). 근거: MDM매뉴얼_05_안드로이드_Argos·AMA, 04_아이패드_ASM_Argos */
+const PLATS={
+ win:{n:"Windows",full:"Windows 디벗",desc:"Surface Go 3 · 갤럭시 북 EDU",key:"ssam_mdm_sim_v2",c:"#0F6CBD"},
+ and:{n:"Android",full:"Android 태블릿",desc:"갤럭시 탭 — Argos 에이전트 · AMA 전환 단말",key:"ssam_mdm_and_v1",c:"#2FA84F"},
+ ios:{n:"iPad",full:"iPad",desc:"Apple School Manager(ASM) 자동 등록 iPad",key:"ssam_mdm_ios_v1",c:"#3B3B3D"}
+};
+let PLAT="win",LOGIN_USER="";
+try{const v=localStorage.getItem("ssam_mdm_plat");if(PLATS[v])PLAT=v;}catch(e){}
+function syncPlat(){MISSIONS={win:MISSIONS_WIN,and:MISSIONS_AND,ios:MISSIONS_IOS}[PLAT];MAN=MANS[PLAT]||null;}
+function platOS(){return PLAT==="and"?["Android","AMAndroid"]:PLAT==="ios"?["iOS"]:["Windows"];}
+function appOS(p){return p==="AMAndroid"?"Android":p;}
+
+/* ---- 공통 생성 도구 ---- */
+function rng(seed){let s=seed;return ()=>((s=(s*1103515245+12345)&0x7fffffff)/0x7fffffff);}
+const KFAM="김이박최정강조윤장임한오서신권황안송전홍유고문양손배백허남심노하곽성차주우구민류나진지엄채원천방공현";
+const KGIV=["민준","서연","도윤","하은","시우","지우","예준","서준","하준","지호","수아","지민","다은","은우","선우","윤서","시은","지안","채원","건우","현우","유준","서진","민서","예린","수빈","연우","정우","하린","주원","지유","태윤","소율","이안","시아","도현","나은","준우","가은","서윤"];
+function POLX(id,n,os,extra){return POL(id,n,os,Object.assign({block:{},resetBoot:{app:false,data:false},content:[],except:[],
+  appCtl:{mode:"none",opt:"db",list:[]},siteCtl:{mode:"black",opt:"db",list:[]},deploy:[],
+  ama:{loc:"none",tz:"none",appMode:"none",adv:{noDel:false,noIns:false},list:[]},
+  ios:{webclip:[],wallLock:"",wallHome:"",dock:[],page1:[],wifi:[]}},extra||{}));}
+
+/* ================= Android (Argos 에이전트 · AMA) ================= */
+const PA_DEF="서울교육청기본_Android_기본정책_(2024년 04월)",PA_AMA="AMA 단말 기본 정책";
+const ORG_AND=[
+ ["a01","01_1학년 학생용",60,"stu",1,"Android","Galaxy Tab S6 Lite (SM-P610)"],
+ ["a02","02_2학년 학생용",56,"stu",2,"Android","Galaxy Tab A8 (SM-X200)"],
+ ["a03","03_교사용",8,"tch",0,"Android","Galaxy Tab S6 Lite (SM-P610)"],
+ ["a04","04_3학년 AMA 전환",40,"stu",3,"AMAndroid","Galaxy Tab A8 (SM-X200)"],
+ ["a05","05_예비 및 AS",10,"spare",0,"Android","Galaxy Tab A8 (SM-X200)"]
+];
+const APPS_AND=[
+ {id:"ad1",os:"Android",via:"In House",n:"Android_디지털교과서",pkg:"kr.or.keris.dt2018",fmy:"-",ver:"2.3.3",reg:"systemadmin",pub:"공개"},
+ {id:"ad2",os:"Android",via:"In House",n:"Android_위두랑",pkg:"kr.or.keris.smartedu.ec",fmy:"-",ver:"3.1.0",reg:"systemadmin",pub:"공개"},
+ {id:"ad3",os:"Android",via:"In House",n:"Khan Academy Kids",pkg:"org.khankids.android",fmy:"-",ver:"8.0.3",reg:"dibeot_admin",pub:"비공개"},
+ {id:"ad4",os:"Android",via:"In House",n:"실감형콘텐츠",pkg:"com.keris.contarvr",fmy:"-",ver:"1.4.2",reg:"systemadmin",pub:"공개"},
+ {id:"ap1",os:"Android",via:"Play Store",n:"디지털교과서",pkg:"kr.or.keris.dt2018",fmy:"Google Play",ver:"2.3.3",reg:"dibeot_admin",pub:"비공개"},
+ {id:"ap2",os:"Android",via:"Play Store",n:"Google Chrome",pkg:"com.android.chrome",fmy:"Google Play",ver:"130.0",reg:"dibeot_admin",pub:"비공개"}
+];
+/* 앱 제어(차단·허용) 목록 — 앱 DB에서 고르는 화면이라 학교에 등록되지 않은 앱도 나온다 */
+const CTL_AND=[{id:"c1",n:"카카오톡",pkg:"com.kakao.talk"},{id:"c2",n:"YouTube",pkg:"com.google.android.youtube"},{id:"c3",n:"인스타그램",pkg:"com.instagram.android"},
+ {id:"c4",n:"틱톡",pkg:"com.zhiliaoapp.musically"},{id:"c5",n:"탕탕특공대",pkg:"com.dxx.firenow"},{id:"c6",n:"삼성 인터넷",pkg:"com.sec.android.app.sbrowser"},
+ {id:"c7",n:"Chrome",pkg:"com.android.chrome"},{id:"c8",n:"디지털교과서",pkg:"kr.or.keris.dt2018"},{id:"c9",n:"위두랑",pkg:"kr.or.keris.smartedu.ec"},{id:"c10",n:"EBS 초등",pkg:"kr.co.ebs.primary"}];
+/* 실시간 DB가 자동으로 막는 앱 — 「차단 예외 앱」에서 풀어 줄 후보 */
+const DBAPPS=[{id:"x1",n:"배달의민족",pkg:"com.sampleapp"},{id:"x2",n:"넷플릭스",pkg:"com.netflix.mediaclient"},{id:"x3",n:"쿠팡플레이",pkg:"com.coupang.mobile.play"},
+ {id:"x4",n:"트위치",pkg:"tv.twitch.android.app"},{id:"x5",n:"로블록스",pkg:"com.roblox.client"}];
+/* Google Play 검색 결과(연수용 고정 목록) */
+const GPLAY=[{g:"g1",n:"디지털교과서",pkg:"kr.or.keris.dt2018",by:"KERIS"},{g:"g2",n:"실감형콘텐츠",pkg:"com.keris.contarvr",by:"KERIS"},
+ {g:"g3",n:"EBS 초등",pkg:"kr.co.ebs.primary",by:"EBS"},{g:"g4",n:"EBSi 고교강의",pkg:"kr.co.ebs.ebsi",by:"EBS"},
+ {g:"g5",n:"Google Chrome",pkg:"com.android.chrome",by:"Google LLC"},{g:"g6",n:"YouTube",pkg:"com.google.android.youtube",by:"Google LLC"},
+ {g:"g7",n:"탕탕특공대",pkg:"com.dxx.firenow",by:"Habby"},{g:"g8",n:"Khan Academy Kids",pkg:"org.khankids.android",by:"Khan Academy"},
+ {g:"g9",n:"네이버 웨일",pkg:"com.naver.whale",by:"NAVER Corp."},{g:"g10",n:"Minecraft",pkg:"com.mojang.minecraftpe",by:"Mojang",paid:true}];
+const CONTENTS_AND=[{n:"토도수학",url:"https://cdn.example/todomath",ver:"1",rd:"2024.03.04 09:10",md:"2024.03.04 09:10",vol:"100.00 Byte"},
+ {n:"디토랜드",url:"https://cdn.example/ditoland",ver:"1",rd:"2024.03.11 13:20",md:"2024.03.11 13:20",vol:"59.95 MB"},
+ {n:"24 기초학력진단",url:"https://cdn.example/basic24",ver:"1",rd:"2024.03.18 10:02",md:"2024.03.18 10:02",vol:"1.20 MB"},
+ {n:"2024주간업무링크",url:"https://cdn.example/weekly",ver:"1",rd:"2024.04.01 08:40",md:"2024.04.01 08:40",vol:"0.50 KB"},
+ {n:"MDM 사용자 이름 변경",url:"https://cdn.example/rename",ver:"1",rd:"2024.04.08 15:30",md:"2024.04.08 15:30",vol:"2.10 MB"}];
+const SITE_WHITE_EXTRA=[{tp:"White List",n:"EBS 온라인 클래스",a:"www.ebsoc.co.kr",rd:"2024/03/04 09:00",md:""},{tp:"White List",n:"디지털교과서",a:"webdt.edunet.net",rd:"2024/03/04 09:01",md:""}];
+
+function freshAnd(){
+  const o=freshWin();               /* 계정·대여자·게시글·화면 설정 등 뼈대는 Windows와 같게 */
+  const r=rng(20261101),ri=(a,b)=>a+Math.floor(r()*(b-a+1)),p2=n=>String(n).padStart(2,"0");
+  const L="ABCDEFGHJKLMNPRSTVWXYZ",up=()=>L[Math.floor(r()*L.length)],dg=k=>{let s="";for(let i=0;i<k;i++)s+=Math.floor(r()*10);return s;};
+  const hex=()=>"0123456789abcdef"[Math.floor(r()*16)]+"0123456789abcdef"[Math.floor(r()*16)];
+  const kn=()=>KFAM[Math.floor(r()*KFAM.length)]+KGIV[Math.floor(r()*KGIV.length)];
+  const dt=d=>{const t=new Date(2026,9,31-d,ri(8,17),ri(0,59));return t.getFullYear()+"-"+p2(t.getMonth()+1)+"-"+p2(t.getDate())+" "+p2(t.getHours())+":"+p2(t.getMinutes());};
+  const dev=[];let n=0;
+  ORG_AND.forEach(function(og){
+    const [oid,,cnt,kind,grade,plat,model]=og;
+    const per=Math.ceil(cnt/2);
+    for(let i=0;i<cnt;i++){
+      const cls=Math.floor(i/per)+1,no=i%per+1,st=kn();
+      const name=kind==="stu"?(""+grade+p2(cls)+p2(no)+"_"+st):kind==="tch"?("교사_"+p2(i+1)):("예비_"+p2(i+1));
+      const d=DEV({id:"d"+(++n),name:name,user:kind==="stu"?st:"",platform:plat,maker:"삼성전자",model:model,os:"Android 13",build:"One UI 5.1",
+        serial:"R54"+up()+dg(3)+up()+up()+up()+up(),mac:["50:50:a4",hex(),hex(),hex()].join(":"),org:oid,group:"그룹 없음",
+        policy:kind==="spare"?"정책제외":(plat==="AMAndroid"?PA_AMA:PA_DEF),policyAt:"2026-03-0"+ri(3,6)+" "+p2(ri(9,16))+":"+p2(ri(0,59)),
+        totGB:64,freeGB:ri(18,46),agentVer:"1.3.61",ssid:"MDM_5G",battery:ri(35,96),regDate:"202"+(grade===2?"5":"6")+"-03-0"+ri(2,5)+" "+p2(ri(9,16))+":"+p2(ri(0,59)),
+        apps:plat==="AMAndroid"?["ap1"]:["ad1","ad2"],conn:"연결",lastAccess:dt(ri(0,2)),lastAlive:dt(ri(0,2))});
+      const z=r();
+      if(kind==="spare"){
+        const sp=["설치 중","설치 중","설치 중","설치 중","미설치","미설치","미설치","미연결","미연결","연결"][i];d.conn=sp;
+      }else if(z<0.06){d.conn="미연결";d.lastAccess=dt(ri(6,20));d.lastAlive=d.lastAccess;if(kind==="stu")d.pending=true;}
+      if(d.conn==="설치 중"||d.conn==="미설치"){d.policy="";d.policyAt="";d.lastAccess="-";d.lastAlive="-";d.agentVer=d.conn==="설치 중"?"1.3.61(승인 대기)":"-";d.apps=[];d.freeGB=0;}
+      dev.push(d);
+    }
+  });
+  /* 1학년에 설치 중 2대 — 「승인 대기 중」으로 멈춘 단말 */
+  [7,33].forEach(i=>{const d=dev[i];d.conn="설치 중";d.policy="";d.policyAt="";d.lastAccess="-";d.lastAlive="-";d.agentVer="1.3.61(승인 대기)";d.apps=[];d.freeGB=0;d.pending=false;});
+  dev[20].multi=true;dev[61].perm=true;
+  o.orgs=ORG_AND.map(x=>({id:x[0],n:x[1],d:""}));
+  o.dev=dev;
+  const BAND={appstore:true,swupdate:true,factory:true,tether:true,usb:true,multiuser:true,secfolder:true,rename:true,othermdm:true};
+  o.pol=[POL("p1",P_IOS,"iOS"),POL("p2","Windows_기본 정책(2024년 04월)","Windows"),
+   POLX("pa1",PA_DEF,"Android",{block:BAND,deploy:["ad1","ad2"],created:"2024/04/01 10:00",updated:"2024/04/01 10:00"}),
+   POLX("pa2","공장초기화 차단","Android",{block:{factory:true},siteCtl:{mode:"none",opt:"db",list:[]},regUser:"dibeot_admin",created:"2025/03/05 09:12",updated:"2026/03/03 16:40"}),
+   POLX("pa3",PA_AMA,"AMAndroid",{block:{wallpaper:true,factory:true,tetherCfg:true,roaming:true,nfc:true,vpn:true,netreset:true,account:true,userAdd:true,userDel:true,userIcon:true,defer:true},
+     ama:{loc:"force",tz:"auto",appMode:"deploy",adv:{noDel:false,noIns:false},list:[{id:"m1",kind:"PlayStore",n:"디지털교과서",pkg:"kr.or.keris.dt2018",inst:"필수 설치",perm:"허용",upd:"기본",cfg:"설정 안함"}]},
+     regUser:"dibeot_admin",created:"2026/03/02 11:05",updated:"2026/03/02 11:05"})];
+  o.pol.forEach(p=>{p.targets=dev.filter(d=>d.policy===p.name||(d.pending&&p.name===PA_DEF&&d.platform==="Android")).map(d=>d.id);});
+  o.apps=APPS_AND.map(a=>Object.assign({},a));
+  o.grp=[{os:"Android",n:"1학년 1반",d:"1학년 1반 학생 단말",reg:"ssam_admin",dev:dev.filter(d=>d.org==="a01"&&/^101/.test(d.name)).map(d=>d.id)}];
+  dev.forEach(d=>{if(o.grp[0].dev.indexOf(d.id)>=0)d.group="1학년 1반";});
+  o.data.contents=CONTENTS_AND.map(x=>Object.assign({},x)).concat(o.data.contents);
+  o.data.site=SITE_WHITE_EXTRA.map(x=>Object.assign({},x)).concat(o.data.site);
+  const ama=dev.filter(d=>d.org==="a04");
+  o.hist=[{no:63881204,fn:"정책 배포",cnt:ama.length,ok:ama.length,fail:0,user:"dibeot_admin",dt:"2026-03-02 11:06:10",devs:ama.map((d,i)=>[d.name,d.serial,"처리성공","2026-03-02 11:06:"+p2(20+i%40)])},
+    {no:63880117,fn:"단말 정보 동기화",cnt:1,ok:1,fail:0,user:"dibeot_admin",dt:"2026-10-30 09:12:03",devs:[[dev[0].name,dev[0].serial,"처리성공","2026-10-30 09:12:15"]]}];
+  o.missions={};o.ui.org="all";o.ui.tab={app:"and"};
+  return o;
+}
+
+/* ================= iPad (ASM + Argos) ================= */
+const PI_STU="[학생용] iOS 유해 사이트 차단 및 장치 제한 설정 정책",PI_DEF="서울교육청_IOS_기본 정책(2024년 04월)";
+const ORG_IOS=[["i01","01_1학년 학생",48,"stu",1,"iPad (9세대)","iPadOS 17.7",64],["i02","02_2학년 학생",46,"stu",2,"iPad (10세대)","iPadOS 18.1",64],
+ ["i03","03_교사",6,"tch",0,"iPad Air (5세대)","iPadOS 18.1",256],["i04","04_연수단말",4,"etc",0,"iPad (9세대)","iPadOS 17.7",64]];
+const APPS_IOS=[
+ {id:"iv1",os:"iOS",via:"VPP",n:"Keynote",pkg:"com.apple.Keynote",fmy:"-",ver:"13.2",reg:"systemadmin",lic:120,size:"712.4MB"},
+ {id:"iv2",os:"iOS",via:"VPP",n:"Numbers",pkg:"com.apple.Numbers",fmy:"-",ver:"13.2",reg:"systemadmin",lic:120,size:"598.1MB"},
+ {id:"iv3",os:"iOS",via:"VPP",n:"Pages",pkg:"com.apple.Pages",fmy:"-",ver:"13.2",reg:"systemadmin",lic:120,size:"640.9MB"},
+ {id:"iv4",os:"iOS",via:"VPP",n:"디지털교과서 2018",pkg:"kr.or.keris.dt2018",fmy:"-",ver:"2.3.3",reg:"systemadmin",lic:110,size:"88.2MB"},
+ {id:"iv5",os:"iOS",via:"VPP",n:"스쿨워크",pkg:"com.apple.schoolwork.ClassKitApp",fmy:"-",ver:"2.4",reg:"systemadmin",lic:110,size:"23.6MB"},
+ {id:"iv6",os:"iOS",via:"VPP",n:"Microsoft 365",pkg:"com.microsoft.officemobile",fmy:"-",ver:"2.88",reg:"systemadmin",lic:60,size:"451.0MB"},
+ {id:"is1",os:"iOS",via:"App Store",n:"GoodNotes 6",pkg:"com.goodnotes.app",fmy:"-",ver:"6.5",reg:"iostest"},
+ {id:"is2",os:"iOS",via:"App Store",n:"Google Classroom",pkg:"com.google.Classroom",fmy:"-",ver:"4.4",reg:"iostest"}
+];
+const VPP_NEW={id:"iv7",os:"iOS",via:"VPP",n:"교실",pkg:"com.apple.classroom",fmy:"-",ver:"3.7",reg:"systemadmin",lic:10,size:"23.6MB"};
+const IOS_BASEAPPS=["Safari","카메라","사진","설정","메모","파일","시계","App Store"];
+function freshIos(){
+  const o=freshWin();
+  const r=rng(20261102),ri=(a,b)=>a+Math.floor(r()*(b-a+1)),p2=n=>String(n).padStart(2,"0");
+  const A="ABCDEFGHJKLMNPQRSTUVWXYZ0123456789",sn=()=>{let s="";for(let i=0;i<12;i++)s+=A[Math.floor(r()*A.length)];return s;};
+  const hex=()=>"0123456789abcdef"[Math.floor(r()*16)]+"0123456789abcdef"[Math.floor(r()*16)];
+  const kn=()=>KFAM[Math.floor(r()*KFAM.length)]+KGIV[Math.floor(r()*KGIV.length)];
+  const dt=d=>{const t=new Date(2026,9,31-d,ri(8,17),ri(0,59));return t.getFullYear()+"-"+p2(t.getMonth()+1)+"-"+p2(t.getDate())+" "+p2(t.getHours())+":"+p2(t.getMinutes());};
+  const dev=[];let n=0;
+  ORG_IOS.forEach(function(og){
+    const [oid,,cnt,kind,grade,model,os,tot]=og;const per=Math.ceil(cnt/2);
+    for(let i=0;i<cnt;i++){
+      const cls=Math.floor(i/per)+1,no=i%per+1,st=kn();
+      const name=kind==="stu"?(""+grade+p2(cls)+p2(no)+"_"+st):kind==="tch"?("교사_"+p2(i+1)):("연수_"+p2(i+1));
+      const d=DEV({id:"d"+(++n),name:name,user:kind==="stu"?st:"",platform:"iOS",asm:kind!=="tch",maker:"Apple",model:model,os:os,build:os.replace("iPadOS ",""),
+        serial:sn(),mac:["6c:7e:67",hex(),hex(),hex()].join(":"),org:oid,group:"그룹 없음",
+        policy:kind==="stu"?PI_STU:PI_DEF,policyAt:"2026-03-0"+ri(3,6)+" "+p2(ri(9,16))+":"+p2(ri(0,59)),
+        totGB:tot,freeGB:Math.round(tot*(0.2+r()*0.55)),agentVer:kind==="tch"?"2.0.3":"-(ASM 자동 등록)",ssid:"MDM_School",battery:ri(30,97),
+        regDate:"202"+(grade===2?"5":"6")+"-03-0"+ri(2,5)+" "+p2(ri(9,16))+":"+p2(ri(0,59)),
+        apps:kind==="tch"?["iv1","iv2","iv3","iv6"]:["iv4","iv5"],conn:"연결",lastAccess:dt(ri(0,2)),lastAlive:dt(ri(0,2))});
+      if(r()<0.05){d.conn="미연결";d.lastAccess=dt(ri(6,18));d.lastAlive=d.lastAccess;}
+      dev.push(d);
+    }
+  });
+  /* 이름이 기본값 「iPad」로 남은 단말 — 이름 붙이기 실습용 */
+  [3,9,15,40].forEach(i=>{const d=dev[i];d.name="iPad";d.user="";});
+  /* 교사가 기기에서 이름을 바꿔 둔 단말 — 「단말 → MDM 서버」 이름 동기화 실습용 */
+  const tch=dev.filter(d=>d.org==="i03");tch[0].name="iPad";tch[0].devName="교사용 iPad (과학실)";
+  /* VPP로 배정됐지만 아직 설치되지 않은 앱이 있는 단말 — 「앱 설치 정보 동기화」 실습용 */
+  [5,12,22,30,52].forEach(i=>{dev[i].appMiss=true;});
+  dev[60].conn="미설치";dev[60].policy="";dev[60].policyAt="";dev[60].lastAccess="-";dev[60].lastAlive="-";dev[60].apps=[];dev[60].freeGB=0;
+  o.orgs=ORG_IOS.map(x=>({id:x[0],n:x[1],d:""}));
+  o.dev=dev;
+  o.pol=[POLX("pi1",PI_DEF,"iOS",{block:{appDelete:true,sysAppDel:true,factory:true,osDefer:true},siteCtl:{mode:"black",opt:"list",list:[]},created:"2024/04/01 10:00",updated:"2024/04/01 10:00"}),
+   POLX("pi2",PI_STU,"iOS",{block:{appInstall:true,appDelete:true,airdrop:true,gameCenter:true,gameFriend:true,multiGame:true,sysAppDel:true,factory:true,rename:true,storeInstall:true,wallChange:true,osDefer:true,forceJoin:true,noLeave:true,remoteLock:true},
+     siteCtl:{mode:"black",opt:"list",list:["*youtube*"]},deploy:["iv4","iv5"],ios:{webclip:["EBS 온라인 클래스"],wallLock:"학교 공식 배경",wallHome:"",dock:["Safari","스쿨워크","디지털교과서 2018"],page1:[],wifi:["MDM_School"]},
+     regUser:"dibeot_admin",created:"2026/03/03 14:20",updated:"2026/09/01 10:05"}),
+   POL("p2","Windows_기본 정책(2024년 04월)","Windows"),POL("p3","Android_기본정책_(2024년 04월)","Android")];
+  o.pol.forEach(p=>{p.targets=dev.filter(d=>d.policy===p.name).map(d=>d.id);});
+  o.apps=APPS_IOS.map(a=>Object.assign({},a));
+  o.apps.forEach(a=>{if(a.via==="VPP")a.asg=dev.filter(d=>d.apps.indexOf(a.id)>=0).map(d=>d.id);});
+  o.grp=[{os:"iOS",n:"학생 그룹",d:"1학년 학생 iPad",reg:"ssam_admin",dev:dev.filter(d=>d.org==="i01").map(d=>d.id)},
+    {os:"iOS",n:"선생님 그룹",d:"교사 iPad",reg:"ssam_admin",dev:tch.map(d=>d.id)}];
+  dev.forEach(d=>{o.grp.forEach(g=>{if(g.dev.indexOf(d.id)>=0)d.group=g.n;});});
+  o.data.wifi.push({ssid:"DTS_Class_5G",proxy:"None",enc:"WPA2",rd:"2025-03-04 08:30:00",md:"2025-03-04 08:30:00"});
+  o.data.webclip.push({n:"디지털교과서 웹뷰어",url:"https://webdt.edunet.net",rd:"2025-03-04 08:40:00",md:"2025-03-04 08:40:00"});
+  o.data.wall.push({n:"1학년 잠금화면",f:"grade1_lock.jpg",sz:"1.2 MB",rd:"2026-03-02 09:00:00",md:"2026-03-02 09:00:00"});
+  o.data.site=SITE_WHITE_EXTRA.map(x=>Object.assign({},x)).concat(o.data.site);
+  o.vppAt="2026-10-28 18:20";o.vppPending=false;
+  const stu=dev.filter(d=>d.org==="i01");
+  o.hist=[{no:63884410,fn:"앱 배포",cnt:stu.length,ok:stu.length,fail:0,user:"dibeot_admin",dt:"2026-03-05 10:30:12",devs:stu.slice(0,12).map((d,i)=>[d.name,d.serial,"처리성공","2026-03-05 10:30:"+p2(20+i)])},
+    {no:63884012,fn:"정책 배포",cnt:stu.length,ok:stu.length,fail:0,user:"dibeot_admin",dt:"2026-03-03 14:21:40",devs:stu.slice(0,12).map((d,i)=>[d.name,d.serial,"처리성공","2026-03-03 14:21:"+p2(45+i)])}];
+  o.missions={};o.ui.org="all";o.ui.tab={app:"vpp"};
+  return o;
+}
+
+/* ================= 통합 설정 위자드 — Android 8단계 · AMA 5단계 · iOS 9단계 =================
+   단계 이름·항목 이름은 매뉴얼 화면 그대로(A p29–38, B p27–46, C p64–76). Windows 위자드(wizard())는 그대로 두고 여기로 갈라진다 */
+const ANDBLK=[[
+ ["camera","카메라","차단 선택 시 카메라 사용을 차단합니다."],["appstore","App Store","차단 선택 시 앱 스토어(Google Play, Galaxy Store) 앱을 숨김 처리합니다."],
+ ["bluetooth","Bluetooth","차단 선택 시 Bluetooth를 비활성화합니다."],["browser","브라우저","차단 선택 시 브라우저(Samsung Internet, Chrome, Whale, Firefox 등) 앱을 숨김 처리합니다."],
+ ["sdcard","외장 메모리","차단 선택 시 외장 메모리에 삽입된 SD Card를 숨김 처리합니다."],["youtube","Youtube","차단 선택 시 YouTube, YouTube music, YouTube Kids 등 앱을 숨김 처리합니다."],
+ ["swupdate","소프트웨어 업데이트","차단 선택 시 소프트웨어 업데이트 다운로드 및 설치 버튼을 비활성화합니다."],["factory","공장 초기화","차단 선택 시 공장 초기화 메뉴 비활성화 및 하드웨어키를 통한 공장 초기화를 차단합니다."],
+ ["share","공유","차단 선택 시 단말 내부 콘텐츠(사진, 파일, URL 등) 공유 및 Quick Share, Nearby Share 기능을 차단합니다. (삼성전자 단말에 한함)"]
+],[
+ ["gps","GPS","차단 선택 시 GPS 기능을 비활성화하고 위치 관련 기능을 차단합니다."],["mic","마이크","차단 선택 시 마이크를 사용한 녹음 기능을 차단합니다."],
+ ["screenshot","스크린샷","차단 선택 시 화면 캡처 및 미러링, 화면 녹화 등의 기능을 차단합니다."],["tether","테더링","차단 선택 시 모바일 핫스팟 및 테더링 기능을 비활성화합니다."],
+ ["usb","USB","차단 선택 시 USB 연결 및 OTG 메모리 등을 차단합니다."],["multiuser","멀티유저","차단 선택 시 사용자 추가 차단 및 기존 사용자를 삭제하는 기능을 제공합니다."],
+ ["secfolder","보안 폴더","차단 선택 시 삼성 단말에서 제공하는 보안 폴더를 숨김 처리합니다."],["rename","이름 변경","차단 선택 시 스마트 단말 관리 에이전트 앱에서 이름 변경을 차단합니다."],
+ ["othermdm","타사 MDM 활성화","Argos Agent와 충돌을 방지하기 위해 타사 MDM 기기 관리자 앱 활성화 차단을 권장합니다."]
+]];
+/* [키, 이름, 설명, 표시(0 허용/차단 · 1 비활성/활성 · 2 안함/사용)] */
+const AMABLK=[
+ ["단말 및 기능",[["camera","카메라","차단 선택 시 카메라 사용을 차단합니다."],["capture","스크린 캡처","차단 선택 시 단말 화면 캡처를 차단합니다. (화면 녹화도 함께 막힙니다)"],["wallpaper","배경화면 변경","차단 선택 시 단말 배경화면 변경을 차단합니다."],
+   ["factory","공장 초기화","차단 선택 시 단말 공장 초기화를 차단합니다. (메뉴 초기화와 리커버리 모드 초기화 모두)"],["sdcard","SD 카드","차단 선택 시 외장메모리(USB, 외장하드 등) 를 비활성화합니다."],["usbTransfer","USB 전송","차단 선택 시 USB 파일 전송을 차단합니다."],
+   ["volume","볼륨 조절","차단 선택 시 볼륨 조절을 차단합니다."],["mic","마이크","차단 선택 시 마이크 사용을 차단합니다."]]],
+ ["연결",[["bluetooth","Bluethooth","차단 선택 시 Bluetooth 사용을 차단합니다."],["btCfg","Bluetooth 설정 변경","차단 시에도 Bluetooth는 여전히 켜고 끌 수 있으며 이미 연결된 이어폰, 스피커 등은 연결이 유지됩니다."],
+   ["tetherCfg","테더링 설정 변경","차단 선택 시 테더링 설정 변경을 차단합니다."],["roaming","데이터 로밍","차단 선택 시 데이터 로밍을 차단합니다."],["nfc","NFC 설정 변경","차단 선택 시 NFC 설정 변경을 차단합니다."],
+   ["vpn","VPN 설정 변경","차단 선택 시 VPN 설정 변경을 차단합니다."],["netreset","네트워크 설정 초기화","차단 선택 시 네트워크 설정의 옵션 초기화를 차단합니다."],["locShare","위치 공유 차단","차단 선택 시 위치 공유를 차단합니다. (앱에서 위치 공유 등)"]],
+   ["loc","위치 모드 설정",[["none","설정 안함"],["force","강제 사용(권장)"],["block","강제 차단 모드"]],"강제 사용 : 위치 설정이 강제로 활성화 되며 사용자가 끌 수 없습니다."]],
+ ["계정 및 사용자",[["account","계정 수정","차단 선택 시 구글 등 소셜 미디어 혹은 Exchange 계정의 추가, 수정 및 삭제를 차단합니다."],["userAdd","사용자 추가","차단 선택 시 사용자 추가를 차단합니다."],
+   ["userDel","사용자 삭제","차단 선택 시 사용자 삭제를 차단합니다."],["userIcon","사용자 아이콘 변경","차단 선택 시 사용자 아이콘 변경을 차단합니다."]]],
+ ["기타 설정",[["devOpt","개발자 설정","차단 선택 시 개발자 설정(안전모드 부팅 포함)을 차단합니다."],["unknownApp","신뢰할 수 없는 앱","차단 선택 시 알 수 없는 소스의 앱 설치를 차단합니다."],
+   ["easterEgg","이스터에그 게임","차단 선택 시 이스터에그 게임을 차단합니다."],["lockScreen","잠금화면","차단 선택 시 전원 버튼을 눌렀을 때 잠금화면 없이 바로 바탕화면이 나옵니다."]],
+   ["tz","자동 타임존 설정",[["none","설정 안함"],["auto","자동 시간대 설정(권장)"]],"자동 시간대 설정 : 자동 시간대로 설정되며 사용자가 변경할 수 없습니다."]],
+ ["전화 통신",[["sms","문자 메시지","차단 선택 시 문자 메시지를 차단합니다."],["call","발신 전화","차단 선택 시 발신 전화를 차단합니다."]]],
+ ["업데이트 설정",[["defer","연기","사용 시 자동 업데이트를 일정 기간 연기합니다. (최대 30일)",2]]]
+];
+const IOSBLK=[
+ ["단말 기능",[["camera","카메라","차단시 카메라를 비활성화하고 해당 아이콘이 홈 스크린에서 제거됩니다."],["facetime","FaceTime(영상통화)","차단시 FaceTime(영상통화) 앱을 비활성화 합니다."],
+   ["appInstall","앱 설치","차단시 App Store, iTunes, Configurator 등 모든 경로의 앱 설치 차단"],["appDelete","앱 삭제","차단시 단말의 앱제거를 비활성화 합니다."],
+   ["airdrop","AirDrop(파일 공유)","차단시 AirDrop(파일공유)을 비활성화합니다."],["pairing","외부 PC 페어링","차단시 관리자PC를 제외하고 Pairing을 사용하지 않도록 설정합니다."],
+   ["usbMode","USB 제한 모드","차단시 단말이 잠긴 상태에서 항상 USB 액세서리에 연결할 수 있습니다."],["usbFile","USB 파일 연결","차단시 Files 앱에서 연결된 USB 장치에 연결할 수 없습니다."]]],
+ ["어플리케이션",[["gameCenter","Game Center","차단시 Game Center를 비활성화 합니다."],["gameFriend","게임 친구 추가","차단시 Game Center 친구 추가를 막습니다."],["multiGame","멀티 게임","차단시 여러 사람이 함께하는 게임을 막습니다."],["sysAppDel","시스템 앱 삭제","차단시 기본(시스템) 앱 삭제를 막습니다."]]],
+ ["iCloud",[["keychain","iCloud Keychain","차단시 iCloud 키체인 동기화를 막습니다."]]],
+ ["보안",[["touchUnlock","Touch ID 단말 해제","차단시 Touch ID로 잠금을 해제하지 못하게 합니다."],["pwChange","비밀번호 변경","차단시 단말 암호 변경을 막습니다."],["bioChange","Touch ID / Face ID 변경","차단시 지문·얼굴 등록 변경을 막습니다."]]],
+ ["사용자 설정",[["account","계정 설정","차단시 계정 설정을 비활성화 합니다."],["factory","공장 초기화","차단시 공장 초기화를 비활성화 합니다."],["rename","단말 이름 변경","차단시 단말의 이름을 변경할 수 없도록 설정합니다."],
+   ["storeInstall","스토어 앱 설치","차단시 App Store만 차단되며, iTunes, Configurator 등 다른 경로의 앱 설치는 가능."],["wallChange","단말 배경 화면 변경","차단시 사용자가 배경화면을 변경할 수 없도록 설정합니다."]]],
+ ["ClassRoom",[["capture","화면 캡처","차단시 디스플레이의 스크린샷 저장 및 화면 기록 캡처를 비활성화합니다. 또한 Classroom 앱이 원격 화면을 관찰하지 못하도록 합니다."],["screenShare","화면 공유","차단시 Classroom 앱에 의한 원격 화면 관찰을 비활성화 합니다."],
+   ["forceJoin","수업 강제 참여","활성시 학생에게 묻지않고 선생님의 요청에 자동으로 권한을 부여합니다.",1],["noLeave","임의 수업 이탈 금지","활성시 Classroom 을 통해 관리되지 않는 과정에 등록한 학생은 과정을 종료하려고 할 때 교사에게 허가를 요청합니다.",1],
+   ["remoteLock","앱 및 단말 원격 잠금 권한 부여","활성시 교사가 학생에게 메시지를 표시하지 않고 앱이나 단말을 원격 잠금할 수 있습니다.",1],["remoteWatch","학생 단말 원격 모니터링","활성시 교사가 학생 화면을 원격으로 관찰할 수 있습니다.",1]]],
+ ["업데이트",[["osDefer","OS 업데이트 연기(90일)","차단시 OS 업데이트 설치를 최대 90일 연기합니다."]]]
+];
+const BLKLABEL=[["허용","차단"],["비활성","활성"],["안함","사용"]];
+/* 평평한 [키,이름] 목록 — 칩·상세 표시용 */
+function blkList(os){
+  if(os==="Android")return ANDBLK[0].concat(ANDBLK[1]);
+  const G=os==="AMAndroid"?AMABLK:os==="iOS"?IOSBLK:[];
+  return G.reduce((a,g)=>a.concat(g[1]),[]);
+}
+const STEPX={
+ Android:[["blk","차단 및 초기화"],["time","사용 시간 설정"],["deploy","배포 앱"],["content","배포 콘텐츠"],["appctl","앱 제어"],["except","차단 예외 앱"],["site","사이트 제어"],["confirm","내용 확인"]],
+ AMAndroid:[["blk","차단"],["time","사용 시간 설정"],["amaapp","앱 배포 및 제어"],["site","사이트 제어"],["confirm","내용 확인"]],
+ iOS:[["blk","차단 및 초기화"],["deploy","배포 앱"],["webclip","웹 클립"],["appctl","앱 제어"],["site","사이트 제어"],["wall","배경화면"],["home","화면 제어"],["wifi","Wi-Fi"],["confirm","내용 확인"]]
+};
+function wzX(){return !!(WZ&&WZ.os&&WZ.os!=="Windows");}
+function wzN(){return wzX()?STEPX[WZ.os].length:6;}
+function wzKey(){return wzX()?(STEPX[WZ.os][WZ.step-1]||[""])[0]:["block","time","deploy","appctl","site","confirm"][WZ.step-1];}
+function wzPlat(){return WZ&&WZ.os?WZ.os:"Windows";}
+function wzTitle(){return WZ.os==="iOS"?"통합 설정 위자드(iOS)":"통합 설정 추가("+wzPlat()+")";}
+function wzNew(os){
+  WZ={os:os,step:1,name:"",block:{},mdmDel:false,resetBoot:{app:false,data:false},time:{on:false,days:{}},selDays:[],buf:{mode:"allow",slots:[["08:00","13:00"]]},
+    deploy:[],content:[],appCtl:{mode:"none",opt:"db",list:[]},except:[],siteCtl:{mode:"none",opt:"db",list:[]},
+    ama:{loc:"none",tz:"none",appMode:"none",adv:{noDel:false,noIns:false},advOpen:false,src:"gp",gpType:"gp",q:"",res:null,list:[],web:[]},
+    ios:{webclip:[],wallLock:"",wallHome:"",dock:[],page1:[],wifi:[],hsrc:"app"},lsel:[],rsel:[],applySel:[],applyOrg:"all"};
+}
+/* 지금 단계의 좌우 목록(추가 ›/‹ 삭제가 움직이는 배열) */
+function wzDualList(){
+  const k=wzKey();
+  if(!wzX())return WZ.step===3?WZ.deploy:(WZ.step===5?WZ.siteCtl.list:WZ.appCtl.list);
+  return {deploy:WZ.deploy,content:WZ.content,appctl:WZ.appCtl.list,except:WZ.except,site:WZ.siteCtl.list,webclip:WZ.ios.webclip,wifi:WZ.ios.wifi}[k]||[];
+}
+function swRowX(x){
+  const on=!!WZ.block[x[0]],lb=BLKLABEL[x[3]||0];
+  return '<dl class="obl-dl"><dt><b>'+esc(x[1])+"</b><p>"+esc(x[2])+"</p></dt>"
+   +'<dd class="obl-sw"><button type="button" class="swx'+(on?" on":"")+'" data-blk="'+x[0]+'"><i></i></button><span class="swx-t'+(on?" on":"")+'">'+(on?lb[1]:lb[0])+"</span></dd></dl>";
+}
+function timeStepX(notes){
+  const p2=n=>String(n).padStart(2,"0");
+  const days=DAYS.map(function(dn,i){
+    const v=WZ.time.days[i],on=WZ.selDays.indexOf(i)>=0;
+    const inner=!v||v.mode==="free"?'<span class="wkd-non">제한 없음</span>':(v.mode==="block"?"<span>전일 제한</span>":v.slots.map(s=>"<span>"+s[0]+" ~ "+s[1]+"</span>").join(""));
+    return '<button type="button" class="wkd'+(on?" on":"")+'" data-day="'+i+'"><b>'+dn+'</b><span class="wkd-b">'+inner+"</span></button>";}).join("");
+  const HH=Array.from({length:24},(_,h)=>p2(h)),MM=["00","10","20","30","40","50"];
+  const rows=WZ.buf.slots.map(function(s,i){
+    const fh=s[0].split(":")[0],fm=s[0].split(":")[1],th2=s[1].split(":")[0],tm=s[1].split(":")[1];
+    const sl=(w,cur,list)=>'<select class="select--st tsel" data-slot="'+i+'" data-w="'+w+'">'+list.map(v=>"<option"+(v===cur?" selected":"")+">"+v+"</option>").join("")+"</select>";
+    return '<span class="time-wrap">'+sl("fh",fh,HH)+"<b>시</b><span>:</span>"+sl("fm",fm,MM)+'<b>분</b><i class="i-wave">~</i>'+sl("th",th2,HH)+"<b>시</b><span>:</span>"+sl("tm",tm,MM)+'<b>분</b><button type="button" class="btn-trash" data-sdel="'+i+'" title="삭제">🗑</button></span>';}).join("");
+  return '<h4 class="tsw-h4"><b>단말 사용 시간 설정</b><span class="tsw-sub">(설정한 요일과 시간 내에만 단말을 사용할 수 있도록 설정합니다.)</span>'
+   +'<span class="tsw-h4-r"><button type="button" class="swx'+(WZ.time.on?" on":"")+'" data-timeon><i></i></button><span class="swx-t'+(WZ.time.on?" on":"")+'">'+(WZ.time.on?"사용":"사용안함")+"</span></span></h4>"
+   +(WZ.time.on?
+    ('<dl class="set-date-title"><dt>사용 요일</dt><dd><button type="button" class="btn--st small" data-dp="week">주중(월~금)</button> <button type="button" class="btn--st small" data-dp="end">주말(토~일)</button><span style="font-size:12.5px;color:var(--tx3);margin-left:10px">선택한 요일: '+(WZ.selDays.length?WZ.selDays.map(i=>DAYS[i]).join(", "):"없음")+"</span></dd></dl>"
+    +'<div class="blu-cont-bg"><div class="wk-grid">'+days+"</div>"
+    +'<div style="display:flex;gap:10px;align-items:flex-start;flex-wrap:wrap"><b style="font-size:13px;padding-top:8px">사용 가능 시간</b><select class="select--st" id="wzBuf" style="height:34px">'
+    +["allow|허용 시간","block|전일 제한"].map(o=>{const q=o.split("|");return '<option value="'+q[0]+'"'+(WZ.buf.mode===q[0]?" selected":"")+">"+q[1]+"</option>";}).join("")+"</select>"
+    +'<span style="flex:1">'+(WZ.buf.mode==="allow"?rows:"")+"</span></div>"
+    +'<div style="display:flex;gap:8px;margin-top:6px;justify-content:flex-end">'+(WZ.buf.mode==="allow"?'<button type="button" class="btn--st small" data-sadd>+ 사용시간 추가</button>':"")+'<button type="button" class="btn--st small btn-major-outline" data-tapply>적용</button></div></div>')
+    :'<div class="blu-cont-bg" style="padding:34px;text-align:left"><span class="txtlb off">사용안함</span></div>')
+   +'<p class="bottom-txt-alert" style="color:var(--main)">'+notes.map(x=>"※ "+x).join("<br>")+"</p>";
+}
+function radios(name,cur,list){return list.map(o=>'<label class="label-radio"><input type="radio" name="'+name+'" value="'+o[0]+'"'+(cur===o[0]?" checked":"")+'><i></i><span>'+o[1]+"</span></label>").join("");}
+function shieldBox(t){return '<div class="blu-flex-center"><figure class="obj-block-all">'+I.shield+"<figcaption>"+t+"</figcaption></figure></div>";}
+/* 정책(또는 위자드 상태)을 「무엇이 설정되어 있는가」 상자들로 — 내용 확인·통합 설정 상세·단말 상세가 함께 쓴다 */
+function polBoxesX(p,box){
+  const b=p.block||{},nod='<span class="cc-gray">등록된 정보가 없습니다.</span>';
+  const chips=arr=>arr.length?'<div class="chips">'+arr.map(x=>'<span class="chip on">'+esc(x)+"</span>").join("")+"</div>":nod;
+  const appN=ids=>(ids||[]).map(a=>{const x=S.apps.filter(y=>y.id===a)[0]||CTL_AND.filter(y=>y.id===a)[0]||DBAPPS.filter(y=>y.id===a)[0];return x?x.n:a;});
+  const tm=p.time||{on:false,days:{}};
+  const timeBox=box("단말 사용 시간 설정",tm.on?'<div class="chips"><span class="chip on">사용함</span>'+Object.keys(tm.days).map(k=>'<span class="chip">'+DAYS[k]+"("+(tm.days[k].mode==="block"?"전일 제한":tm.days[k].mode==="allow"?tm.days[k].slots.map(s=>s[0]+" ~ "+s[1]).join(", "):"제한 없음")+")</span>").join("")+"</div>":'<span class="cc-gray">사용안함</span>');
+  const ac=p.appCtl||{mode:"none",list:[]},sc=p.siteCtl||{mode:"none",list:[]};
+  const lb={none:"설정 안함",black:"Black List",white:"White List",all:"전체 차단",deploy:"앱 배포"};
+  const siteBox=box("사이트 제어",sc.mode==="none"?nod:chips([lb[sc.mode]].concat(sc.mode==="black"&&sc.opt==="db"&&p.platform!=="iOS"?["실시간 DB 연동 유해 사이트 자동 차단"]:(sc.list||[]).map(String))));
+  if(p.platform==="Android"){
+    const rb=p.resetBoot||{};
+    return box("차단(차단 대상 앱, 기능)",chips(blkList("Android").filter(x=>b[x[0]]).map(x=>x[1])))
+     +box("단말 재부팅 시 초기화",chips([rb.app?"앱 초기화":"",rb.data?"데이터 초기화":""].filter(Boolean)))
+     +timeBox
+     +box("배포 앱",chips(appN(p.deploy)))
+     +box("배포 콘텐츠",chips(p.content||[]))
+     +box("앱 제어",ac.mode==="none"?nod:chips([lb[ac.mode]].concat(ac.mode==="black"?[ac.opt==="db"?"실시간 DB 연동 및 차단 앱 동시 차단":"차단 앱에 등록된 앱만 차단"]:[]).concat(appN(ac.list))))
+     +box("차단 예외 앱",chips(appN(p.except)))
+     +siteBox;
+  }
+  if(p.platform==="AMAndroid"){
+    const a=p.ama||{list:[],adv:{}};
+    const rd=[];
+    if(a.loc&&a.loc!=="none")rd.push("위치 모드 설정 : "+(a.loc==="force"?"강제 사용(권장)":"강제 차단 모드"));
+    if(a.tz==="auto")rd.push("자동 타임존 설정 : 자동 시간대 설정(권장)");
+    return box("차단(차단 대상 앱, 기능)",chips(blkList("AMAndroid").filter(x=>b[x[0]]).map(x=>x[0]==="defer"?"업데이트 연기":x[1]).concat(rd)))
+     +timeBox
+     +box("앱 배포 및 제어",(a.appMode&&a.appMode!=="none"?'<div class="chips"><span class="chip on">'+lb[a.appMode]+"</span>"+(a.adv&&a.adv.noDel?'<span class="chip on">삭제 차단</span>':"")+(a.adv&&a.adv.noIns?'<span class="chip on">설치 차단</span>':"")+"</div>":nod)
+       +(a.list&&a.list.length?'<div style="margin-top:6px;font-size:12.5px;line-height:1.8">'+a.list.map(x=>"• "+esc(x.n)+" <span class='cc-gray'>("+esc(x.kind==="Web App"?"Web App":"PlayStore")+")</span> — "+esc(x.inst)+" · 권한 "+esc(x.perm)+" · 업데이트 "+esc(x.upd)+(x.cfg&&x.cfg!=="설정 안함"?" · 관리형 구성 "+esc(x.cfg):"")).join("<br>")+"</div>":""))
+     +siteBox;
+  }
+  if(p.platform==="iOS"){
+    const io=p.ios||{};
+    return box("차단(차단 대상앱,기능)",chips(blkList("iOS").filter(x=>b[x[0]]).map(x=>x[1])))
+     +box("배포 앱",chips(appN(p.deploy)))
+     +box("배포 웹 클립",chips(io.webclip||[]))
+     +box("앱 제어",ac.mode==="none"?nod:chips([lb[ac.mode]].concat(appN(ac.list))))
+     +siteBox
+     +box("배경화면",chips([io.wallLock?"잠금 화면 : "+io.wallLock:"",io.wallHome?"홈 화면 : "+io.wallHome:""].filter(Boolean)))
+     +box("화면 제어",chips([(io.dock||[]).length?"Dock : "+io.dock.join(", "):"",(io.page1||[]).length?"1페이지 : "+io.page1.join(", "):""].filter(Boolean)))
+     +box("Wi-Fi",chips(io.wifi||[]));
+  }
+  return "";
+}
+function wizardX(){
+  const st=WZ.step,N=wzN(),k=wzKey(),os=WZ.os;
+  if(st===N+1)return wizApply();
+  const tabsH='<div class="tsw-steps">'+STEPX[os].map((s,i)=>'<button type="button" class="btn-tsw'+(i+1===st?" on":(i+1<st?" done":""))+'" data-ws="'+(i+1)+'">'+(i+1<st?"✓ ":"")+(i+1)+". "+s[1]+"</button>").join("")+"</div>";
+  let b="";
+  if(k==="blk"&&os==="Android"){
+    b='<h4 class="tsw-h4"><b>차단</b><span class="tsw-sub">(차단 대상 앱, 기능을 선택하세요.)</span></h4>'
+     +'<div class="obl-group">'+ANDBLK.map(col=>'<div class="obl-col">'+col.map(swRowX).join("")+"</div>").join("")+"</div>"
+     +'<h4 class="tsw-h4"><b>단말 재부팅 시 초기화</b></h4>'
+     +'<div class="blu-bx-plain" style="flex-direction:column;align-items:flex-start;gap:12px">'
+     +'<label class="label-check-circle"><input type="checkbox" data-rb="app"'+(WZ.resetBoot.app?" checked":"")+'><i></i><span><b>앱 초기화</b> — 배포 앱을 제외한 모든 앱을 일괄 삭제합니다.</span></label>'
+     +'<label class="label-check-circle"><input type="checkbox" data-rb="data"'+(WZ.resetBoot.data?" checked":"")+'><i></i><span><b>데이터 초기화</b> — 배포 콘텐츠를 제외한 모든 데이터를 삭제합니다.</span></label></div>'
+     +'<p class="bottom-txt-alert" style="color:#C0392B">※ 단말 부팅 시 앱 초기화 또는 데이터 초기화를 자동으로 수행합니다.<br>※ 해당 기능은 Android OS만 지원합니다.</p>';
+  }
+  if(k==="blk"&&(os==="AMAndroid"||os==="iOS")){
+    const G=os==="AMAndroid"?AMABLK:IOSBLK;
+    b='<h4 class="tsw-h4"><b>차단</b><span class="tsw-sub">(차단 대상 앱, 기능을 '+(os==="iOS"?"선택하세요":"선택해 주세요.")+")</span></h4>"
+     +G.map(function(g){
+       const rd=g[2]?'<dl class="obl-dl"><dt><b>'+esc(g[2][1])+"</b><p>"+esc(g[2][3])+'</p></dt><dd class="obl-sw" style="flex-wrap:wrap;gap:4px 12px">'+radios("amar_"+g[2][0],WZ.ama[g[2][0]],g[2][2])+"</dd></dl>":"";
+       const half=Math.ceil(g[1].length/2);
+       return '<div class="blk-grp"><div class="blk-gh">'+esc(g[0])+'</div><div class="obl-group"><div class="obl-col">'+g[1].slice(0,half).map(swRowX).join("")+"</div>"
+        +'<div class="obl-col">'+g[1].slice(half).map(swRowX).join("")+(rd&&g[1].length%2===0?"":"")+"</div></div>"+(rd?'<div class="obl-col" style="margin-top:10px">'+rd+"</div>":"")+"</div>";
+     }).join("")
+     +(os==="iOS"?'<p class="bottom-txt-alert">※ 실제 화면은 7개 묶음 총 47가지입니다. 이 실습기에는 매뉴얼에 나온 항목만 담았습니다. ※ 감독(ASM 자동 등록) 단말에서만 적용됩니다.</p>'
+       :'<p class="bottom-txt-alert">※ 공장 초기화를 하면 로그인된 모든 계정이 지워집니다. ※ 업데이트 연기는 최대 30일이며, 단말에서 직접 고르면 업그레이드할 수 있습니다.</p>');
+  }
+  if(k==="time")b=timeStepX(os==="AMAndroid"?["통제 시간에는 단말 화면이 비활성화됩니다.","네트워크가 끊겨도 설정한 시간에 맞춰 차단됩니다."]
+     :["중복된 시간은 병합되어 저장됩니다.","학교 수업 시간내 단말 사용 가능 시간은 학부모에게 노출되지 않습니다","스마트 단말 관리 에이전트 앱 버전 1.3.10 이상 부터 단말 사용 시간을 설정할 수 있습니다."]);
+  if(k==="deploy")b=dualPanel({left:"앱 전체",right:"배포 앱",items:S.apps.filter(a=>os==="iOS"?a.os==="iOS":(a.os==="Android"&&a.via==="In House")),chosen:WZ.deploy,cols:"app4",ph:"앱 이름, 패키지 이름 검색"})
+     +'<p class="bottom-txt-alert">※ “배포 앱”으로 지정 된 앱들은 단말에 필수적으로 설치 되어야 할 앱으로 지정 되며 단말에 자동 설치 됩니다.'+(os==="iOS"?" (VPP 앱은 Apple ID 없이 배정·설치됩니다)":"")+"</p>";
+  if(k==="content")b=dualPanel({left:"콘텐츠 전체",right:"배포 콘텐츠",items:S.data.contents,chosen:WZ.content,cols:"cnt",key:x=>x.n,ph:"콘텐츠 이름 검색"})
+     +'<p class="bottom-txt-alert">※ 배포 콘텐츠는 단말에 내려받아 두는 학습 자료입니다. 「데이터 초기화」를 해도 배포 콘텐츠는 지워지지 않습니다.</p>';
+  if(k==="appctl"){
+    const L=os==="iOS"?[["none","설정 안함(모든 앱 실행 허용)"],["white","White List (등록된 앱만 실행 허용)"],["black","Black List (등록된 앱만 실행 차단)"]]
+      :[["none","설정 안함(모든 앱 실행 허용)"],["black","Black List (등록된 앱만 실행 차단)"],["white","White List (등록된 앱만 실행 허용)"],["all","전체 차단 (모든 앱 실행 차단)"]];
+    const items=os==="iOS"?S.apps.filter(a=>a.os==="iOS").concat(CTL_IOS):CTL_AND.concat(S.apps.filter(a=>a.os==="Android"&&!CTL_AND.some(c=>c.pkg===a.pkg)));
+    const m=WZ.appCtl.mode;
+    b='<div class="wh-radio"><b>구분</b><span class="wh-radio-r">'+radios("appctl",m,L)+"</span></div>"
+     +(m==="black"&&os!=="iOS"?'<div class="wh-radio"><b>차단 옵션</b><span class="wh-radio-r">'+radios("appopt",WZ.appCtl.opt,[["db","실시간 DB 연동 및 차단 앱 동시 차단"],["list","차단 앱에 등록된 앱만 차단"]])+"</span></div>":"")
+     +(m==="none"?shieldBox("설치된 모든 앱을 실행을 허용합니다."):m==="all"?shieldBox("모든 앱의 실행을 차단합니다."):
+       dualPanel({left:m==="white"?"허용 앱 전체":"차단 앱 전체",right:m==="white"?"허용 앱":"차단 앱",items:items,chosen:WZ.appCtl.list,cols:"app2",ph:"앱 이름, 패키지 이름 검색"}))
+     +(m==="white"&&os!=="iOS"?'<p class="bottom-txt-alert" style="color:var(--main)">※ White List를 쓰면 실시간 DB 연동 차단은 쓸 수 없습니다. 패키지명은 Play 스토어 주소의 id= 뒤부터 &amp;hl 앞까지입니다(예: kr.or.keris.dt2018).</p>':"")
+     +'<p class="bottom-txt-alert cc-red">시스템 앱을 차단할 경우 단말에 문제가 생길 수 있으니 주의하세요.</p>';
+  }
+  if(k==="except"){
+    const on=WZ.appCtl.mode==="black"&&WZ.appCtl.opt==="db";
+    b=on?dualPanel({left:"자동 차단 앱",right:"차단 예외 앱",items:DBAPPS,chosen:WZ.except,cols:"app2",ph:"앱 이름, 패키지 이름 검색"})
+       +'<p class="bottom-txt-alert">※ 실시간 DB가 자동으로 막는 앱 가운데 수업에 필요한 앱을 「차단 예외 앱」으로 옮기면 실행을 허용합니다.</p>'
+      :'<div class="blu-flex-center" style="min-height:260px"><figure class="obj-block-all">'+I.shield+'<figcaption>차단 예외 앱은 「5. 앱 제어」에서 <b>Black List</b>와<br><b>실시간 DB 연동 및 차단 앱 동시 차단</b>을 고르면 설정할 수 있습니다.</figcaption></figure></div>';
+    b+='<p class="bottom-txt-alert cc-red">시스템 앱을 차단할 경우 단말에 문제가 생길 수 있으니 주의하세요.</p>';
+  }
+  if(k==="site"){
+    const m=WZ.siteCtl.mode,items=S.data.site.filter(s=>s.tp===(m==="white"?"White List":"Black List"));
+    const L=os==="iOS"?[["none","설정 안함(모든 사이트 접속 허용)"],["white","White List (등록된 사이트만 접속 허용)"],["black","Black List (등록된 사이트만 접속 차단)"]]
+      :[["none","설정 안함(모든 사이트 접속 허용)"],["black","Black List(등록된 사이트만 접속 차단)"],["white","White List (등록된 사이트만 접속 허용)"]];
+    b='<div class="wh-radio"><b>구분</b><span class="wh-radio-r">'+radios("sitectl",m,L)+"</span></div>"
+     +(m==="black"&&os!=="iOS"?'<div class="wh-radio"><b>차단 옵션</b><span class="wh-radio-r">'+radios("siteopt",WZ.siteCtl.opt,[["db","실시간 DB 연동 유해 사이트 자동 차단"],["list","차단 사이트에 등록된 사이트 차단"]])+"</span></div>":"")
+     +(m==="none"?shieldBox("모든 사이트를 실행 허용합니다."):(m==="black"&&WZ.siteCtl.opt==="db"&&os!=="iOS"?shieldBox("유해 사이트를 자동으로 차단합니다."):
+       dualPanel({left:"사이트 전체",right:m==="white"?"허용 사이트":"차단 사이트",items:items,chosen:WZ.siteCtl.list,cols:"site",key:x=>x.a,ph:"사이트 이름, 사이트 주소를 입력해 주세요.",newBtn:true})))
+     +'<p class="bottom-txt-alert cc-red">Black List로 사이트를 차단할 경우 해당 도메인 관련 접속이 모두 차단되므로 주의하세요.</p>'
+     +(os==="iOS"?'<p class="bottom-txt-alert">※ iOS 단말은 도메인과 경로(/)까지만 적용됩니다.</p>':'<p class="bottom-txt-alert">※ Android 단말은 도메인만 적용됩니다.</p>');
+  }
+  if(k==="amaapp")b=amaAppStep();
+  if(k==="webclip")b=dualPanel({left:"웹 클립 전체",right:"배포 웹 클립",items:S.data.webclip,chosen:WZ.ios.webclip,cols:"wc",key:x=>x.n,ph:"웹 클립 이름 검색",newBtn:"webclip"})
+     +'<p class="bottom-txt-alert">※ 웹 클립은 iPad 홈 화면에 만드는 웹 사이트 바로가기입니다. 「+ 신규등록」에서 이름, URL, 아이콘을 정해 만들 수 있습니다.</p>';
+  if(k==="wall"){
+    const opt=cur=>'<option value="">선택 안함</option>'+S.data.wall.map(w=>'<option'+(w.n===cur?" selected":"")+">"+esc(w.n)+"</option>").join("");
+    const pv=(t,v)=>'<div class="ipad-pv"><div class="ipad-scr'+(v?" has":"")+'">'+(v?'<span>'+esc(v)+"</span>":'<span class="cc-gray">기본 배경</span>')+"</div><b>"+t+"</b></div>";
+    b='<div class="wall-grid"><div class="blu-cont-bg"><h2 class="blu-title">잠금 화면 이미지</h2><select class="select--st" data-wall="lock" style="width:100%;height:36px">'+opt(WZ.ios.wallLock)+"</select>"+pv("잠금 화면",WZ.ios.wallLock)+"</div>"
+     +'<div class="blu-cont-bg"><h2 class="blu-title">홈 화면 이미지</h2><select class="select--st" data-wall="home" style="width:100%;height:36px">'+opt(WZ.ios.wallHome)+"</select>"+pv("홈 화면",WZ.ios.wallHome)+"</div></div>"
+     +'<p class="bottom-txt-alert">※ 배경 화면 이미지는 「데이터 관리 › 배경 화면」에 먼저 등록해 두고 여기서 고릅니다. 「단말 배경 화면 변경」을 차단하면 학생이 바꿀 수 없습니다.</p>';
+  }
+  if(k==="home")b=iosHomeStep();
+  if(k==="wifi")b=dualPanel({left:"Wi-Fi 전체",right:"배포 Wi-Fi",items:S.data.wifi,chosen:WZ.ios.wifi,cols:"wifi",key:x=>x.ssid,ph:"SSID 검색"})
+     +'<p class="bottom-txt-alert">※ 학교에서 이동수업 시 추가적으로 와이파이를 설정하는 경우에 씁니다. Wi-Fi 정보는 「데이터 관리 › Wi-Fi」에서 등록합니다.<br><b class="cc-red">※ 같은 SSID에 비밀번호만 바꿔 저장하면 단말의 Wi-Fi 연결이 풀리므로 주의하세요.</b></p>';
+  if(k==="confirm"){
+    const box=(t,inner)=>'<div class="rv-bx"><div class="rv-h">'+t+'</div><div class="rv-c">'+inner+"</div></div>";
+    b='<div class="rv-bx"><div class="rv-h">통합 설정 이름</div><div class="rv-c"><input type="text" class="input--st" id="wzName" maxlength="50" value="'+esc(WZ.name)+'" placeholder="통합 설정 이름을 입력해 주세요." style="width:100%"></div></div>'
+     +polBoxesX({platform:os,block:WZ.block,resetBoot:WZ.resetBoot,time:WZ.time,deploy:WZ.deploy,content:WZ.content,appCtl:WZ.appCtl,except:WZ.except,siteCtl:WZ.siteCtl,
+        ama:{loc:WZ.ama.loc,tz:WZ.ama.tz,appMode:WZ.ama.appMode,adv:WZ.ama.adv,list:WZ.ama.list},ios:WZ.ios},box)
+     +'<p class="bottom-txt-alert">※ 「저장 후 나가기」로 저장하거나 「다음」으로 적용할 단말을 고릅니다.</p>';
+  }
+  return {head:head("통합 설정"),
+   body:'<div class="wz-head">'+wzTitle()+' <i class="tooltip-i" data-pageguide>?</i></div>'+tabsH
+    +'<p class="wz-note">선택한 플랫폼에 따라 제공되는 기능이 달라 통합설정 위자드 화면이 다르게 표시됩니다. 모든 기능을 설정할 필요는 없으며 건너뛰기도 가능합니다.</p>'
+    +'<div class="wz-body">'+b+"</div>"
+    +'<div class="wz-foot"><button class="btn--st pill" data-wcancel>취소</button><span class="right">'
+    +(st>1?'<button class="btn--st pill btn-major-outline" data-wprev>이전</button>':"")
+    +(st===N?'<button class="btn--st pill btn-major-outline" data-wsave>저장 후 나가기</button><button class="btn--st pill btn-major" data-wnext>다음</button>'
+      :'<button class="btn--st pill btn-major-outline" data-wnext>다음</button>')+"</span></div>"};
+}
+const CTL_IOS=[{id:"ci1",n:"YouTube",pkg:"com.google.ios.youtube"},{id:"ci2",n:"카카오톡",pkg:"com.iwilab.KakaoTalk"},{id:"ci3",n:"인스타그램",pkg:"com.burbn.instagram"},{id:"ci4",n:"틱톡",pkg:"com.zhiliaoapp.musically"},{id:"ci5",n:"Safari",pkg:"com.apple.mobilesafari"}];
+/* ---- AMA 3단계 「앱 배포 및 제어」 (B p34–43) ---- */
+function amaAppStep(){
+  const A=WZ.ama,m=A.appMode,on=m!=="none";
+  const instOpt=m==="black"?["필수 설치","차단"]:m==="white"?["필수 설치","설치 허용"]:["필수 설치"];
+  const sel=(f,i,cur,opts)=>'<select class="select--st" style="height:30px;min-width:92px" data-amaf="'+f+'" data-ai="'+i+'">'+opts.map(o=>"<option"+(o===cur?" selected":"")+">"+o+"</option>").join("")+"</select>";
+  const res=(A.res||[]);
+  let left="";
+  if(A.src==="gp"){
+    left='<div style="display:flex;gap:16px;margin-bottom:8px">'+radios("gptype",A.gpType,[["gp","Google Play"],["web","Web App"]])+"</div>"
+     +(A.gpType==="gp"
+      ?'<p class="bottom-txt-alert" style="margin:0 0 8px">Google Play에서는 \'선택\' 버튼을 클릭하면 해당 앱이 관리 앱 목록에 추가됩니다.</p>'
+       +'<div class="gp-box"><div class="gp-top"><span class="gp-logo">▶ Google Play</span><input type="text" class="input--st" id="gpQ" value="'+esc(A.q)+'" placeholder="앱 검색" style="flex:1;height:34px"><button class="btn-ico-search" data-gps style="width:34px;height:34px">'+I.srch+"</button></div>"
+       +(res.length?'<div class="gp-res">'+res.map(g=>'<div class="gp-it"><span class="app-ic" style="background:#2FA84F">'+esc(g.n.slice(0,1))+'</span><div class="gp-tx"><b>'+esc(g.n)+"</b><span>"+esc(g.by)+(g.paid?' · <b class="cc-red">유료</b>':"")+'</span></div><button class="btn--st small pill btn-major-outline" data-gpsel="'+g.g+'">선택</button></div>').join("")+"</div>"
+        :'<div class="no-data-st" style="padding:30px 10px;border:0">앱 이름을 넣고 검색하세요. (예: 디지털교과서, ebs, chrome)</div>')+"</div>"
+      :'<div class="gp-box"><div class="gp-top"><b style="font-size:13px">웹 앱</b><button class="btn--st small btn-major-outline" style="margin-left:auto" data-webnew>+ 웹 앱 만들기</button></div>'
+       +(A.web.length?'<div class="gp-res">'+A.web.map((w,i)=>'<div class="gp-it"><span class="app-ic" style="background:#1A73E8">'+esc(w.n.slice(0,1))+'</span><div class="gp-tx"><b>'+esc(w.n)+"</b><span>"+esc(w.url)+" · "+esc(w.disp)+'</span></div><button class="btn--st small pill btn-major-outline" data-wasel="'+i+'">선택</button></div>').join("")+"</div>"
+        :'<div class="no-data-st" style="padding:30px 10px;border:0">만든 웹 앱이 없습니다. 「+ 웹 앱 만들기」로 만들면 약 1분 뒤 이 목록에 나타납니다.</div>')+"</div>");
+  }else{
+    const pool=A.src==="pool"?S.apps.filter(a=>a.os==="Android"&&a.via!=="In House"):["설정","카메라","갤러리","Samsung Notes","캘린더"].map((n,i)=>({id:"b"+i,n:n,pkg:"com.android."+["settings","camera","gallery","notes","calendar"][i]}));
+    left='<div class="gp-res" style="max-height:360px">'+pool.map(a=>'<div class="gp-it"><span class="app-ic" style="background:#5A6B7D">'+esc(a.n.slice(0,1))+'</span><div class="gp-tx"><b>'+esc(a.n)+"</b><span class='mono'>"+esc(a.pkg)+'</span></div><button class="btn--st small pill btn-major-outline" data-poolsel="'+esc(a.pkg)+'" data-pooln="'+esc(a.n)+'">선택</button></div>').join("")+"</div>";
+  }
+  const rows=A.list.map((x,i)=>"<tr><td>"+(x.kind==="Web App"?'<span class="tag tag-line">Web App</span>':'<span class="tag tag-line">PlayStore</span>')+'</td><td><span class="app-ic" style="background:'+(x.kind==="Web App"?"#1A73E8":"#2FA84F")+';width:26px;height:26px;font-size:11px;margin:0 auto">'+esc(x.n.slice(0,1))+'</span></td><td class="l"><b>'+esc(x.n)+'</b><div class="mono" style="font-size:11px;color:var(--tx3)">'+esc(x.pkg)+"</div></td>"
+    +"<td>"+sel("inst",i,x.inst,instOpt)+"</td><td>"+(x.kind==="Web App"?"-":sel("perm",i,x.perm,["묻기","허용","거부"]))+"</td><td>"+(x.kind==="Web App"?"-":sel("upd",i,x.upd,["기본","즉시 시도","연기"]))+"</td>"
+    +"<td>"+(x.kind==="Web App"?"-":'<button class="btn-link" data-amacfg="'+i+'">'+esc(x.cfg||"설정 안함")+"</button>")+'</td><td><button class="btn-trash" data-amadel="'+i+'" title="삭제">🗑</button></td></tr>').join("");
+  return '<div class="wh-radio"><b>구분</b><span class="wh-radio-r">'+radios("amamode",m,[["none","설정 안함(모든 앱 실행 허용)"],["deploy","앱 배포"],["black","Black List (등록된 앱만 실행 차단)"],["white","White List (등록된 앱만 실행 허용)"]])+"</span>"
+   +'<button class="btn--st small pill'+(on?" btn-major-outline":"")+'" data-amaadv'+(on?"":" disabled")+' style="margin-left:auto">'+(A.advOpen?"고급 설정 닫기":"고급 설정 열기")+"</button></div>"
+   +(on&&A.advOpen?'<div class="blu-bx-plain" style="flex-direction:column;align-items:stretch;gap:12px;margin-bottom:14px">'
+     +'<div style="display:flex;align-items:center;gap:12px"><b style="min-width:80px">삭제 차단</b><button type="button" class="swx'+(A.adv.noDel?" on":"")+'" data-amatg="noDel"><i></i></button><span class="lcc-txt">차단 시 모든 앱의 삭제가 제한됩니다. <span class="cc-gray">* 정책 적용 시점에 단말에 설치된 모든 앱에 대한 삭제 제한됨</span></span></div>'
+     +'<div style="display:flex;align-items:center;gap:12px"><b style="min-width:80px">설치 차단</b><button type="button" class="swx'+(A.adv.noIns?" on":"")+'" data-amatg="noIns"><i></i></button><span class="lcc-txt">차단 시 모든 앱의 설치가 제한됩니다. <b class="cc-red">* 필수 설치, 설치허용 모두 설치 불가</b></span></div></div>':"")
+   +(on?'<div class="ama-grid"><div class="blu-cont-bg"><div class="top-tab-btns" style="margin-bottom:10px">'
+       +[["gp","구글 플레이"],["pool","앱 관리 Pool"],["base","단말 기본 앱"]].map(t=>'<button class="'+(A.src===t[0]?"active":"")+'" data-amasrc="'+t[0]+'">'+t[1]+"</button>").join("")+"</div>"+left+"</div>"
+     +'<div class="blu-cont-bg"><h2 class="blu-title">관리 앱 목록 <span class="tsw-sub" style="font-weight:400">'+A.list.length+"개</span></h2>"
+     +'<div class="list-st--table scroll-x" style="max-height:420px"><table class="tbl"><thead><tr><th>구분</th><th>아이콘</th><th class="l">앱 이름</th><th>설치 타입</th><th>런타임 권한</th><th>업데이트 모드</th><th>관리형 구성</th><th></th></tr></thead><tbody>'
+     +(rows||'<tr><td colspan="8" style="padding:34px">왼쪽에서 앱을 「선택」하면 여기에 추가됩니다.</td></tr>')+"</tbody></table></div></div></div>"
+     :shieldBox("설치된 모든 앱의 실행을 허용합니다."))
+   +'<p class="bottom-txt-alert">※ Black List : 단말 Play 스토어에 모든 앱이 보이고 설치할 수 있습니다. White List : Play 스토어에 필수 설치·설치 허용 앱만 보이고, APK도 설치 허용 앱이 아니면 설치되지 않습니다.<br>※ 유료 앱과 Google Play에서 검색되지 않는 앱은 AMA로 배포할 수 없습니다.</p>';
+}
+function amaAdd(x){
+  const A=WZ.ama;
+  if(A.list.some(y=>y.pkg===x.pkg)){toast("이미 관리 앱 목록에 있는 앱입니다.","no");return false;}
+  A.list.push(Object.assign({inst:"필수 설치",perm:"묻기",upd:"기본",cfg:"설정 안함"},x));render();return true;
+}
+function popWebApp(cb){
+  pop({title:"새로운 웹 앱",
+   body:'<div class="opt-bx"><dl class="opd-dl d-flex"><dt><i class="i-necessary">*</i>제목</dt><dd style="flex:1"><input type="text" class="input--st" id="waT" placeholder="예: EBS 온라인 클래스" style="width:100%"></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt><i class="i-necessary">*</i>URL</dt><dd style="flex:1"><input type="text" class="input--st" id="waU" placeholder="https://" style="width:100%"></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl"><dt>표시</dt><dd style="margin-top:8px;display:flex;flex-direction:column;gap:8px">'
+    +[["전체 화면","웹 앱이 화면 전체를 사용합니다."],["일반","웹 앱에 휴대전화 탐색 메뉴와 상태 표시줄이 표시됩니다."],["간단한 UI","웹 앱에 URL 입력란, 새로고침 버튼이 표시됩니다."]].map((o,i)=>'<label class="label-radio"><input type="radio" name="waD" value="'+o[0]+'"'+(i===1?" checked":"")+'><i></i><span><b>'+o[0]+"</b> — "+o[1]+"</span></label>").join("")+"</dd></dl></div>"
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>아이콘</dt><dd style="display:flex;gap:10px;align-items:center"><button class="btn--st small" data-waicon>업로드 아이콘</button><span class="cc-gray" id="waIc" style="font-size:12.5px">512px 정사각형, png 또는 jpeg</span></dd></dl></div>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>만들기</button>',
+   mount:function(el,close){
+     el.querySelector("[data-waicon]").addEventListener("click",()=>{el.querySelector("#waIc").textContent="web_icon_512.png (업로드됨)";});
+     el.querySelector("[data-ok]").addEventListener("click",function(){
+       const t=el.querySelector("#waT").value.trim(),u=el.querySelector("#waU").value.trim();
+       if(!t||!u){toast("제목과 URL을 입력해 주세요.","no");return;}
+       close();cb({n:t,url:/^https?:\/\//.test(u)?u:"https://"+u,disp:el.querySelector("input[name=waD]:checked").value});
+       toast("웹 앱을 만들었습니다. 실제로는 게시까지 약 1분이 걸립니다(실습에서는 바로 목록에 나타납니다).","ok");});
+   }});
+}
+function popAmaCfg(i){
+  const x=WZ.ama.list[i];if(!x)return;
+  const chrome=x.pkg==="com.android.chrome";
+  pop({title:"관리형 구성 설정",w:"w900",
+   body:(chrome?'<div class="blu-bx-plain" style="margin-bottom:12px"><b>사용</b> <span class="lcc-txt">관리형 구성으로 앱의 설정값을 미리 정해 배포합니다.</span></div>'
+     +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>설정 이름</dt><dd style="flex:1"><input type="text" class="input--st" id="cfN" value="Chrome 기본설정" style="width:100%"></dd></dl></div>'
+     +'<div class="opt-bx"><dl class="opd-dl"><dt>Configure the home page URL <span class="tag tag-line" style="margin-left:6px">✓ 구성됨</span></dt><dd style="margin-top:8px"><input type="text" class="input--st" id="cfU" value="https://www.ebsoc.co.kr" style="width:100%"></dd></dl></div>'
+     :'<div class="no-data-st" style="border:0">'+esc(x.n)+' 앱은 관리형 구성 항목을 제공하지 않습니다. (예: Google Chrome은 홈페이지 주소를 고정할 수 있습니다)</div>'),
+   btns:'<button class="btn--st pill" data-close>취소</button>'+(chrome?'<button class="btn--st pill btn-major-outline" data-ok>저장</button>':""),
+   mount:function(el,close){const ok=el.querySelector("[data-ok]");if(ok)ok.addEventListener("click",function(){x.cfg=el.querySelector("#cfN").value.trim()||"Chrome 기본설정";close();render();toast("관리형 구성을 저장했습니다.","ok");});}});
+}
+/* ---- iOS 7단계 「화면 제어」 — 홈 화면 1페이지와 Dock 배치 ---- */
+function iosHomeStep(){
+  const io=WZ.ios,src=io.hsrc||"app";
+  const pool=src==="app"?S.apps.filter(a=>a.os==="iOS").map(a=>a.n):src==="base"?IOS_BASEAPPS:S.data.webclip.map(w=>w.n);
+  const ic=(n,where,i)=>'<span class="hs-ic" title="'+esc(n)+'"><span class="hs-g">'+esc(n.slice(0,1))+"</span><small>"+esc(n)+"</small>"+(where?'<button data-hdel="'+where+":"+i+'" title="빼기">×</button>':"")+"</span>";
+  return '<div class="home-grid"><div class="blu-cont-bg"><div class="top-tab-btns" style="margin-bottom:10px">'
+   +[["app","설치 앱"],["base","기본 앱"],["wc","웹 클립"]].map(t=>'<button class="'+(src===t[0]?"active":"")+'" data-hsrc="'+t[0]+'">'+t[1]+"</button>").join("")+"</div>"
+   +'<div class="hs-pool">'+pool.map(n=>'<div class="hs-row"><span class="hs-g">'+esc(n.slice(0,1))+'</span><span style="flex:1">'+esc(n)+'</span><button class="btn--st small" data-hadd="page:'+esc(n)+'">+ 페이지</button><button class="btn--st small" data-hadd="dock:'+esc(n)+'">+ Dock</button></div>').join("")+"</div></div>"
+   +'<div class="blu-cont-bg"><h2 class="blu-title">홈 화면 미리보기</h2><div class="ipad-home"><div class="hs-page">'+(io.page1.length?io.page1.map((n,i)=>ic(n,"page",i)).join(""):'<span class="cc-gray" style="font-size:12px">「+ 페이지」로 앱을 놓으세요</span>')+"</div>"
+   +'<div class="hs-dock">'+(io.dock.length?io.dock.map((n,i)=>ic(n,"dock",i)).join(""):'<span class="cc-gray" style="font-size:12px">Dock</span>')+"</div></div></div></div>"
+   +'<p class="bottom-txt-alert">※ 원하는 페이지 / 폴더 형태로 [설치앱, 기본앱, 웹클립] 레이아웃을 설정합니다. Dock에는 최대 6개까지 놓을 수 있습니다.</p>';
+}
+function popWebclipNew(){
+  pop({title:"웹 클립 신규등록",
+   body:'<div class="opt-bx"><dl class="opd-dl d-flex"><dt><i class="i-necessary">*</i>이름</dt><dd style="flex:1"><input type="text" class="input--st" id="wcN" placeholder="예: 학교 홈페이지" style="width:100%"></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt><i class="i-necessary">*</i>URL</dt><dd style="flex:1"><input type="text" class="input--st" id="wcU" placeholder="https://" style="width:100%"></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>아이콘</dt><dd><select class="select--st" id="wcI" style="height:34px"><option>기본 아이콘</option><option>학교 로고</option><option>책 모양</option></select></dd></dl></div>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>적용</button>',
+   mount:function(el,close){el.querySelector("[data-ok]").addEventListener("click",function(){
+     const n=el.querySelector("#wcN").value.trim(),u=el.querySelector("#wcU").value.trim();
+     if(!n||!u){toast("이름과 URL을 입력해 주세요.","no");return;}
+     if(S.data.webclip.some(w=>w.n===n)){toast("같은 이름의 웹 클립이 있습니다.","no");return;}
+     S.data.webclip.unshift({n:n,url:/^https?:\/\//.test(u)?u:"https://"+u,rd:now()+":00",md:now()+":00"});
+     if(WZ&&WZ.ios&&WZ.ios.webclip.indexOf(n)<0)WZ.ios.webclip.push(n);
+     save();close();render();toast("웹 클립을 만들어 배포 웹 클립에 넣었습니다.","ok");});}});
+}
+/* 저장된 정책으로 미션 완료 판단 */
+function polSavedX(p){
+  const b=p.block||{};
+  if(p.platform==="Android"){
+    if(b.camera&&b.youtube&&b.factory)done("a2");
+    if(p.resetBoot&&p.resetBoot.app&&p.deploy.length&&(p.content||[]).length)done("a3");
+    if(p.appCtl.mode==="black"&&p.appCtl.opt==="db"&&p.appCtl.list.indexOf("c1")>=0&&(p.except||[]).length)done("a4");
+    if(p.appCtl.mode==="white"&&p.appCtl.list.length&&p.siteCtl.mode==="white"&&p.siteCtl.list.length)done("a5");
+  }
+  if(p.platform==="AMAndroid"){
+    if(b.factory&&p.ama&&p.ama.loc==="force")done("a10");
+    if(p.ama&&p.ama.list.some(x=>x.pkg==="kr.or.keris.dt2018"&&x.inst==="필수 설치"&&x.perm==="허용"))done("a11");
+  }
+  if(p.platform==="iOS"&&p.ios&&p.ios.webclip.length&&p.ios.wallLock&&p.ios.wifi.length)done("i8");
+}
+
+/* ================= 기종 고르기 화면 ================= */
+const PLAT_SVG={
+ win:'<svg viewBox="0 0 132 96" aria-hidden="true"><rect x="18" y="8" width="96" height="62" rx="5" fill="#E8F1FB" stroke="#0F6CBD" stroke-width="3"/><g fill="#0F6CBD"><rect x="53" y="26" width="12" height="12" rx="1.5"/><rect x="67" y="26" width="12" height="12" rx="1.5"/><rect x="53" y="40" width="12" height="12" rx="1.5"/><rect x="67" y="40" width="12" height="12" rx="1.5"/></g><path d="M6 76h120l-8 10H14z" fill="#0F6CBD"/></svg>',
+ and:'<svg viewBox="0 0 132 96" aria-hidden="true"><rect x="8" y="10" width="116" height="76" rx="9" fill="#EAF7EE" stroke="#2FA84F" stroke-width="3"/><path d="M48 60a18 18 0 0 1 36 0z" fill="#2FA84F"/><circle cx="58" cy="52" r="2.4" fill="#fff"/><circle cx="74" cy="52" r="2.4" fill="#fff"/><path d="M53 40l-4-7M79 40l4-7" stroke="#2FA84F" stroke-width="3" stroke-linecap="round"/></svg>',
+ ios:'<svg viewBox="0 0 132 96" aria-hidden="true"><rect x="30" y="4" width="72" height="88" rx="9" fill="#F2F2F4" stroke="#3B3B3D" stroke-width="3"/><g fill="#3B3B3D" opacity=".85"><rect x="40" y="16" width="12" height="12" rx="3"/><rect x="60" y="16" width="12" height="12" rx="3"/><rect x="80" y="16" width="12" height="12" rx="3"/><rect x="40" y="36" width="12" height="12" rx="3"/><rect x="60" y="36" width="12" height="12" rx="3"/><rect x="80" y="36" width="12" height="12" rx="3"/></g><rect x="56" y="82" width="20" height="3" rx="1.5" fill="#3B3B3D"/></svg>'
+};
+function platDone(k){
+  if(k===PLAT&&S)return Object.keys(S.missions||{}).length;
+  try{const r=localStorage.getItem(PLATS[k].key);return r?Object.keys(JSON.parse(r).missions||{}).length:0;}catch(e){return 0;}
+}
+function showPlatPick(canClose){
+  const tot={win:MISSIONS_WIN.length,and:MISSIONS_AND.length,ios:MISSIONS_IOS.length};
+  const el=$("#platPick");
+  el.innerHTML='<div class="pp-box">'+(canClose?'<button class="pp-x" data-ppclose title="닫기">×</button>':"")
+   +'<span class="pp-k">연수용 시뮬레이터</span><h2>실습할 기종을 고르세요</h2>'
+   +"<p>학교마다 쓰는 디벗 기종이 다릅니다. 고른 기종의 단말 · 통합 설정 · 실습 미션으로 연수합니다.<br>기종마다 실습 기록이 따로 저장되며, 위쪽 [기종] 단추로 언제든 바꿀 수 있습니다.</p>"
+   +'<div class="pp-cards">'+Object.keys(PLATS).map(function(k){const P=PLATS[k];
+      return '<button type="button" class="pp-card'+(k===PLAT&&canClose?" cur":"")+'" data-plat="'+k+'" style="--pc:'+P.c+'">'+PLAT_SVG[k]+"<b>"+P.full+'</b><span class="pp-d">'+P.desc+'</span><span class="pp-m">실습 미션 '+tot[k]+"개 · 완료 "+platDone(k)+'</span><span class="pp-go">'+(k===PLAT&&canClose?"지금 실습 중 ›":"이 기종으로 실습 ›")+"</span></button>";}).join("")+"</div></div>";
+  el.hidden=false;
+}
+function choosePlat(k){
+  if(!PLATS[k])return;
+  $("#platPick").hidden=true;
+  if(k!==PLAT||!S){if(S)save();coachStop();WZ=null;PLAT=k;try{localStorage.setItem("ssam_mdm_plat",k);}catch(e){}syncPlat();S=load();fltOpen=false;}
+  if(LOGIN_USER)S.ui.user=LOGIN_USER;
+  $("#app").hidden=false;$("#fab").hidden=false;$("#mp").hidden=true;
+  $("#topUser").textContent=S.ui.user;paintPlatBtn();save();render();popPwExpire();
+}
+function paintPlatBtn(){const b=$("#btnPlat");if(b)b.innerHTML="기종: <b>"+PLATS[PLAT].n+"</b> ⇄";const h=$("#mpTitle");if(h)h.textContent="실습 미션 · "+PLATS[PLAT].n;}
+
+/* ================= 단말 현황 — 기종별 하단 기능 ================= */
+function fnsFor(){
+  const F={sync:["동기화","fn.sync"],reset:["초기화","fn.reset"],lost:["분실 등록/해제","fn.lost"],setting:["통합 설정 적용","fn.setting"],msg:["메시지","fn.msg"],find:["단말 찾기","fn.find"],
+    app:["앱 배포","fn.app"],appdel:["앱 삭제","fn.appdel"],osup:["OS 업데이트","fn.osup"],reboot:["재부팅","fn.reboot"],qr:["QR코드 인쇄","fn.qr"],mute:["소리 끄기","fn.mute"]};
+  const ks=PLAT==="ios"?["sync","reset","lost","setting","msg","find","app","appdel","osup"]
+    :PLAT==="and"?["sync","reset","lost","setting","msg","find","app","appdel","osup","reboot","qr","mute"]
+    :["sync","reset","lost","setting","msg","find","app","appdel","osup","reboot","qr","mute"];
+  return ks.map(k=>[k,F[k][0],F[k][1]]);
+}
+/* Android·AMA 초기화 — 「기본」(공장 초기화) / 「고급」(골라서 초기화) (A p24, B p24) */
+function popResetAnd(ds,cnt,fin){
+  let tab="basic";
+  const ADV=[["all","전체(일괄)",""],["pw","비밀번호 초기화","화면 잠금 비밀번호 설정이 되지 않은 상태로 초기화 합니다."],["data","데이터 초기화","Android 디렉토리, 배포 콘텐츠를 제외한 모든 데이터를 삭제합니다."],
+    ["app","앱 초기화","배포 앱을 제외한 모든 앱을 일괄 삭제합니다."],["basicapp","기본 앱 데이터 초기화","주소록, 캘린더, 시계 등의 기본 앱 데이터를 초기화 합니다."],["google","Google 계정 초기화","단말에 설정된 Google 계정을 로그아웃 합니다."],
+    ["wall","배경화면 초기화","배경화면을 기본값으로 되돌립니다."],["browser","브라우저 초기화","브라우저 기록·설정을 초기화합니다."],["home","홈/앱스 화면 초기화","홈 화면과 앱스 화면 배치를 처음 상태로 되돌립니다."]];
+  const body=()=>cnt+'<div class="top-tab-btns" style="margin-bottom:12px"><button class="'+(tab==="basic"?"active":"")+'" data-rtab="basic">기본</button><button class="'+(tab==="adv"?"active":"")+'" data-rtab="adv">고급</button></div>'
+   +(tab==="basic"?'<div class="opt-bx"><dl class="opd-dl"><dt><label class="label-check-circle"><input type="radio" name="rk" value="WIPE" checked><i></i><span>공장 초기화</span></label></dt><dd style="margin:6px 0 0 30px;color:var(--tx2);font-size:13px">공장 출시 상태로 초기화를 진행합니다. 모든 앱, 데이터 및 비밀번호가 초기화 됩니다. <b class="cc-red">(Agent 또한 삭제 됩니다.)</b></dd></dl></div>'
+     :'<div class="opt-bx" style="max-height:330px;overflow:auto">'+ADV.map(a=>'<label class="label-check-circle" style="display:flex;align-items:flex-start;gap:8px;padding:7px 0;border-bottom:1px solid var(--line2)"><input type="checkbox" data-rk="'+a[0]+'"><i></i><span><b>'+a[1]+"</b>"+(a[2]?'<br><small style="color:var(--tx2)">'+a[2]+"</small>":"")+"</span></label>").join("")+"</div>")
+   +'<p class="bottom-txt-alert">※ 비밀번호 초기화 : 단말이 재부팅된 경우 최초 비밀번호를 1회 입력하기 전까지 초기화할 수 없습니다(제조사 서비스센터로 보내야 합니다).<br><b class="cc-red">※ 공장 초기화를 진행하면 더 이상 데이터 복구가 안 됩니다. 에이전트도 지워지므로 다시 설치해야 합니다.</b></p>';
+  const P=pop({title:"단말 초기화",body:body(),btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>적용</button>',
+   mount:function(el,c){
+     el.addEventListener("click",function(e){const t=e.target.closest("[data-rtab]");if(t){tab=t.getAttribute("data-rtab");el.querySelector(".popup-content").innerHTML=body();coachPaint();}});
+     el.addEventListener("change",function(e){if(e.target.getAttribute("data-rk")==="all"){el.querySelectorAll("[data-rk]").forEach(x=>x.checked=e.target.checked);}});
+     el.querySelector("[data-ok]").addEventListener("click",function(){
+       if(tab==="basic"){c();
+         alertPop("단말 초기화",'<p class="alert--st1">공장 초기화를 하시겠습니까?</p><p class="alert--st2">공장 출시 상태로 모든 앱, 데이터가 삭제되고 비밀번호 및 모든 설정이 초기화 됩니다.<br>에이전트도 삭제되어 「미설치」 상태가 됩니다.</p>',"초기화",function(){
+           ds.forEach(d=>{d.conn="미설치";d.policy="";d.policyAt="";d.pending=false;d.apps=[];d.agentVer="-";d.freeGB=0;d.lastAccess="-";d.lastAlive="-";});
+           fin("초기화 명령을 전송했습니다. (Agent 삭제 → 미설치 상태)","단말 초기화");},true);
+         return;}
+       const ks=$$(".popup-area-bg [data-rk]:checked").map(x=>x.getAttribute("data-rk")).filter(x=>x!=="all");
+       if(!ks.length){toast("초기화할 항목을 선택해 주세요.","no");return;}
+       c();
+       const nm=ks.map(x=>(ADV.filter(a=>a[0]===x)[0]||[])[1]).join(", ");
+       alertPop("단말 초기화",'<p class="alert--st1">선택한 항목을 초기화 하시겠습니까?</p><p class="alert--st2">'+esc(nm)+"</p>","초기화",function(){
+         if(ks.indexOf("app")>=0)ds.forEach(d=>{const keep=[];S.pol.filter(p=>p.name===d.policy).forEach(p=>p.deploy.forEach(x=>keep.push(x)));d.apps=(d.apps||[]).filter(x=>keep.indexOf(x)>=0);});
+         if(ks.indexOf("pw")>=0)done("a7");
+         fin("초기화 명령을 전송했습니다. ("+nm+")","단말 초기화(고급)");});
+     });
+   }});
+  return P;
+}
+/* iPad 초기화 — 공장 초기화 / 비밀번호 초기화 두 가지 (C p69) */
+function popResetIos(ds,cnt,fin){
+  pop({title:"초기화 옵션 선택",body:cnt
+   +'<div class="opt-bx"><dl class="opd-dl"><dt><label class="label-check-circle"><input type="radio" name="rki" value="WIPE" checked><i></i><span>공장 초기화</span></label></dt><dd style="margin:6px 0 0 30px;color:var(--tx2);font-size:13px">공장 출시 상태로 초기화를 진행합니다. 앱, 데이터 및 비밀번호 모두 초기화 됩니다.</dd></dl></div>'
+   +'<div class="opt-bx"><dl class="opd-dl"><dt><label class="label-check-circle"><input type="radio" name="rki" value="PW"><i></i><span>비밀번호 초기화</span></label></dt><dd style="margin:6px 0 0 30px;color:var(--tx2);font-size:13px">설정된 비밀번호를 해제합니다.</dd></dl></div>'
+   +'<p class="bottom-txt-alert">※ ASM으로 등록된 iPad는 공장 초기화 후에도 자동 기기 등록(Zero Touch)으로 MDM에 다시 등록됩니다. 사용자는 국가 · Wi-Fi · 위치 서비스만 설정하면 됩니다.</p>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>초기화</button>',
+   mount:(el,c)=>{el.querySelector("[data-ok]").addEventListener("click",function(){
+     const k=el.querySelector("input[name=rki]:checked").value;c();
+     alertPop("초기화",'<p class="alert--st1">'+(k==="WIPE"?"공장 초기화를 하시겠습니까?":"비밀번호를 해제하시겠습니까?")+"</p>","확인",function(){
+       if(k==="WIPE")ds.forEach(d=>{d.apps=[];d.freeGB=Math.round(d.totGB*0.9);d.policyAt=now();});
+       fin(k==="WIPE"?"공장 초기화 명령을 전송했습니다. 초기 설정 뒤 자동으로 다시 등록됩니다.":"비밀번호 초기화 명령을 전송했습니다.",k==="WIPE"?"단말 초기화":"비밀번호 초기화");},k==="WIPE");});}});
+}
+/* iPad 동기화 — 단말 이름 방향(단말 → MDM 서버 / MDM 서버 → 단말), 앱 설치 정보 (C p54, 61) */
+function popSyncIos(ds,cnt,fin){
+  pop({title:"동기화 옵션 선택",body:cnt
+   +'<div class="opt-bx"><dl class="opd-dl"><dt><label class="label-check-circle"><input type="radio" name="iosy" value="info" checked><i></i><span>단말 정보 동기화</span></label></dt>'
+   +'<dd style="margin:6px 0 0 30px;color:var(--tx2);font-size:13px">단말기 이름, 용량, OS버전 등의 정보를 동기화'
+   +'<div style="display:flex;flex-direction:column;gap:6px;margin-top:8px">'+radios("iodir","d2s",[["d2s","단말 이름 동기화 : 단말 → MDM 서버"],["s2d","단말 이름 동기화 : MDM 서버 → 단말"]])+"</div></dd></dl></div>"
+   +'<div class="opt-bx"><dl class="opd-dl"><dt><label class="label-check-circle"><input type="radio" name="iosy" value="app"><i></i><span>앱 설치 정보 동기화</span></label></dt>'
+   +'<dd style="margin:6px 0 0 30px;color:var(--tx2);font-size:13px">설치된 모든 앱 정보를 동기화(시스템 앱 제외) VPP로 배정되었으나 iPad에 설치되지 않은 앱들도 자동으로 설치됩니다.</dd></dl></div>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>동기화</button>',
+   mount:(el,c)=>{el.querySelector("[data-ok]").addEventListener("click",function(){
+     const k=el.querySelector("input[name=iosy]:checked").value,dir=el.querySelector("input[name=iodir]:checked").value;c();
+     if(k==="info"){let ch=0;
+       ds.forEach(d=>{if(d.conn!=="연결")return;d.lastAccess=now();if(d.devName){if(dir==="d2s"){if(d.name!==d.devName){d.name=d.devName;ch++;}}else d.devName=d.name;}});
+       if(ch&&dir==="d2s")done("i2");
+       fin(ch?"단말에서 바꾼 이름 "+ch+"건을 MDM 서버로 가져왔습니다.":(dir==="s2d"?"MDM 서버의 이름을 단말로 보냈습니다.":"단말 정보를 동기화했습니다."),"단말 정보 동기화");}
+     else{let fx=0;ds.forEach(d=>{if(d.conn==="연결"&&d.appMiss){d.appMiss=false;fx++;}});
+       if(fx)done("i6");
+       fin(fx?"설치되지 않았던 VPP 앱 "+fx+"대를 자동 설치했습니다.":"앱 설치 정보를 동기화했습니다.","앱 설치 정보 동기화");}
+   });}});
+}
+
+/* ================= 앱 관리 — Android In House · Android(Play Store) · iOS(VPP) ================= */
+const APK_SAMPLE={file:"focuspangStudent_3.0.5.apk",n:"포커스팡 학생용",pkg:"kr.focuspang.student",ver:"3.0.5"};
+function popAppNewAnd(){
+  pop({title:"신규 앱 추가",w:"w900",
+   body:'<div class="opt-bx"><b>앱 등록 시 유의 사항</b><div style="border:1px solid var(--line);background:#fff;border-radius:4px;padding:10px 12px;margin:8px 0;font-size:12.5px;color:var(--tx2)">저작권법에 의해 보호받는 저작물은 무단 배포 및 복제 시 저작 권법에 의해 법적 조치를 취할 수 있음을 유의하시길 바랍니다.</div>'
+    +'<label class="label-check"><input type="checkbox" id="agree"><i></i><span>[필수] 약관 내용을 확인하였으며 동의합니다.</span></label></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>OS</dt><dd><label class="label-radio"><input type="radio" checked disabled><i></i><span>Android</span></label></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>배포 방식</dt><dd><label class="label-radio"><input type="radio" checked disabled><i></i><span>관리자용 (In House)</span></label></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>공개 설정</dt><dd>'+radios("apub","비공개",[["공개","공개"],["비공개","비공개"]])+'<span class="cc-gray" style="font-size:12px;margin-left:8px">ⓘ 공개 : 다른 학교도 이 앱을 쓸 수 있습니다.</span></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>앱 이름</dt><dd style="flex:1"><input type="text" class="input--st" id="anN" placeholder="앱 이름을 입력해 주세요." style="width:100%"></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>설치 파일</dt><dd style="flex:1;display:flex;gap:8px"><input type="text" class="input--st" id="anF" style="flex:1" placeholder=".apk 파일" readonly><button class="btn--st" data-apk title="파일 첨부">🔗</button></dd></dl></div>'
+    +'<p class="bottom-txt-alert">※ Android 단말에서 쓸 앱의 설치 파일(APK)은 MDM이 제공하지 않습니다. 단말에 먼저 설치해 동작을 확인한 뒤 등록하세요.<br>※ 「패키지 명이 중복 됩니다.」가 뜨면 「비공개」로 등록합니다.</p>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>등록</button>',
+   mount:function(el,close){
+     el.querySelector("[data-apk]").addEventListener("click",()=>{el.querySelector("#anF").value=APK_SAMPLE.file;if(!el.querySelector("#anN").value)el.querySelector("#anN").value=APK_SAMPLE.n;});
+     el.querySelector("[data-ok]").addEventListener("click",function(){
+       if(!el.querySelector("#agree").checked){toast("[필수] 약관 내용 동의에 체크해 주세요.","no");return;}
+       const n=el.querySelector("#anN").value.trim(),f=el.querySelector("#anF").value.trim(),pub=el.querySelector("input[name=apub]:checked").value;
+       if(!n||!f){toast("앱 이름과 설치 파일(.apk)을 넣어 주세요.","no");return;}
+       if(pub==="공개"){toast("패키지 명이 중복 됩니다. 다른 학교가 공개로 등록한 앱입니다 — 「비공개」로 등록해 주세요.","no");return;}
+       S.apps.push({id:"u"+Date.now(),os:"Android",via:"In House",n:n,pkg:APK_SAMPLE.pkg,fmy:"-",ver:APK_SAMPLE.ver,reg:S.ui.user,pub:pub});
+       done("a6");save();close();render();toast("앱을 등록했습니다. 단말 현황에서 단말을 골라 「앱 배포」로 설치합니다.","ok");});
+   }});
+}
+function popAppNewPlay(){
+  let type="gp",picked=null,res=GPLAY.filter(g=>/ebs/i.test(g.n)),web=null;
+  const right=()=>type==="gp"
+    ?'<div class="gp-box"><div class="gp-top"><span class="gp-logo">▶ Google Play</span><input type="text" class="input--st" id="gpQ2" value="ebs" style="flex:1;height:34px"><button class="btn-ico-search" data-gps2 style="width:34px;height:34px">'+I.srch+"</button></div>"
+      +'<div class="gp-res">'+res.map(g=>'<div class="gp-it'+(picked&&picked.g===g.g?" on":"")+'"><span class="app-ic" style="background:#2FA84F">'+esc(g.n.slice(0,1))+'</span><div class="gp-tx"><b>'+esc(g.n)+"</b><span>"+esc(g.by)+(g.paid?' · <b class="cc-red">유료</b>':"")+'</span></div><button class="btn--st small pill btn-major-outline" data-gpsel2="'+g.g+'">선택</button></div>').join("")+"</div></div>"
+    :'<div class="gp-box"><div class="gp-top"><b style="font-size:13px">웹 앱</b><button class="btn--st small btn-major-outline" style="margin-left:auto" data-webnew2>+ 새로운 웹 앱</button></div>'
+      +(web?'<div class="gp-res"><div class="gp-it on"><span class="app-ic" style="background:#1A73E8">'+esc(web.n.slice(0,1))+'</span><div class="gp-tx"><b>'+esc(web.n)+"</b><span>"+esc(web.url)+"</span></div></div></div>":'<div class="no-data-st" style="padding:30px 10px;border:0">「+ 새로운 웹 앱」으로 만드세요.</div>')+"</div>";
+  pop({title:"신규 앱 추가",w:"w1150",
+   body:'<div style="display:grid;grid-template-columns:1fr 1fr;gap:16px"><div>'
+    +'<div class="opt-bx"><b>앱 등록 시 유의 사항</b><div style="border:1px solid var(--line);background:#fff;border-radius:4px;padding:10px 12px;margin:8px 0;font-size:12.5px;color:var(--tx2)">저작권법에 의해 보호받는 저작물은 무단 배포 및 복제 시 저작 권법에 의해 법적 조치를 취할 수 있음을 유의하시길 바랍니다.</div>'
+    +'<label class="label-check"><input type="checkbox" id="agree"><i></i><span>[필수] 약관 내용을 확인하였으며 동의합니다.</span></label></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>OS</dt><dd><label class="label-radio"><input type="radio" checked disabled><i></i><span>Android</span></label></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>배포 방식</dt><dd><label class="label-radio"><input type="radio" checked disabled><i></i><span>Play Store</span></label></dd></dl></div>'
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>앱 유형</dt><dd>'+radios("aptype","gp",[["gp","Google Play"],["web","Web App"]])+"</dd></dl></div>"
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>공개 설정</dt><dd>'+radios("apub2","비공개",[["공개","공개"],["비공개","비공개"]])+"</dd></dl></div>"
+    +'<div class="opt-bx"><dl class="opd-dl d-flex"><dt>앱 이름</dt><dd style="flex:1"><input type="text" class="input--st" id="anN2" placeholder="오른쪽에서 앱을 선택하면 자동 기입" style="width:100%" readonly></dd></dl></div>'
+    +'</div><div id="gpRight">'+right()+"</div></div>"
+    +'<p class="bottom-txt-alert">※ 유료 앱은 배포할 수 없습니다. 앱을 선택하면 「필수 권한」을 확인한 뒤 등록됩니다.</p>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>등록</button>',
+   mount:function(el,close){
+     const redraw=()=>{el.querySelector("#gpRight").innerHTML=right();coachPaint();};
+     el.addEventListener("change",function(e){if(e.target.name==="aptype"){type=e.target.value;picked=null;el.querySelector("#anN2").value=web&&type==="web"?web.n:"";redraw();}});
+     el.addEventListener("click",function(e){
+       if(e.target.closest("[data-gps2]")){const q=(el.querySelector("#gpQ2").value||"").trim().toLowerCase();res=GPLAY.filter(g=>!q||g.n.toLowerCase().indexOf(q)>=0||g.pkg.indexOf(q)>=0);redraw();return;}
+       const s=e.target.closest("[data-gpsel2]");
+       if(s){const g=GPLAY.filter(x=>x.g===s.getAttribute("data-gpsel2"))[0];if(g.paid){toast("유료 앱은 배포할 수 없습니다.","no");return;}picked=g;el.querySelector("#anN2").value=g.n;redraw();toast("「"+g.n+"」 — 필수 권한을 확인했습니다. 「등록」을 누르세요.");return;}
+       if(e.target.closest("[data-webnew2]")){popWebApp(function(w){web=w;el.querySelector("#anN2").value=w.n;redraw();});}
+     });
+     el.querySelector("[data-ok]").addEventListener("click",function(){
+       if(!el.querySelector("#agree").checked){toast("[필수] 약관 내용 동의에 체크해 주세요.","no");return;}
+       if(type==="gp"&&!picked){toast("Google Play에서 앱을 검색해 「선택」해 주세요.","no");return;}
+       if(type==="web"&&!web){toast("「+ 새로운 웹 앱」으로 웹 앱을 만들어 주세요.","no");return;}
+       if(type==="gp"&&S.apps.some(a=>a.os==="Android"&&a.via==="Play Store"&&a.pkg===picked.pkg)){toast("이미 등록된 앱입니다.","no");return;}
+       S.apps.push(type==="gp"?{id:"u"+Date.now(),os:"Android",via:"Play Store",n:picked.n,pkg:picked.pkg,fmy:"Google Play",ver:"최신",reg:S.ui.user,pub:el.querySelector("input[name=apub2]:checked").value}
+         :{id:"u"+Date.now(),os:"Android",via:"Web App",n:web.n,pkg:web.url,fmy:"Web App",ver:"-",reg:S.ui.user,pub:"비공개"});
+       if(type==="gp")done("a13");
+       save();close();render();toast("앱을 등록했습니다. 카드에 「"+(type==="gp"?"Google Play":"Web App")+"」 표시가 붙습니다.","ok");});
+   }});
+}
+function vppUsed(a){return (a.asg||[]).length;}
+function popVppSync(){
+  alertPop("VPP 앱 동기화","<p>VPP 앱 동기화는 다소 시간이 소요 됩니다.<br>VPP 앱 동기화를 실행하시겠습니까?</p>","확인",function(){
+    S.vppPending=true;save();
+    infoPop("<p class='alert--st1'>VPP 앱 동기화 요청이 등록되었습니다.</p><p class='alert--st2'>완료 후 동기화 시간이 갱신됩니다. 오른쪽 위 새로고침(↻)을 눌러 확인하세요.</p>");});
+}
+function applyVpp(){
+  let add=0,up=0;
+  if(!S.apps.some(a=>a.id===VPP_NEW.id)){S.apps.push(Object.assign({asg:[]},VPP_NEW));add++;}
+  S.apps.forEach(a=>{if(a.via==="VPP"&&a.ver==="13.2"){a.ver="14.0";up++;}});
+  S.vppPending=false;S.vppAt=now();done("i3");save();render();
+  toast("VPP 앱 목록을 갱신했습니다 — 새 앱 "+add+"개, 버전 업데이트 "+up+"개 (ASM에서 「받기」한 앱이 들어왔습니다)","ok");
+}
+function popVppDevSync(){
+  pop({title:"단말 앱 동기화",body:'<div class="opt-bx"><dl class="opd-dl"><dt>동기화 옵션</dt><dd style="margin-top:8px;display:flex;flex-direction:column;gap:8px">'+radios("vds","forced",[["forced","모든앱(forced) — 설치된 모든 VPP 앱을 최신 버전으로 업데이트합니다."],["unforced","미설치 앱(unforced) — 배정됐지만 설치되지 않은 앱만 설치합니다."]])+"</dd></dl></div>"
+   +'<p class="bottom-txt-alert">[네트워크(Wi-Fi) 환경에 따라 소요시간이 발생할 수 있습니다.]</p>',
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-ok>확인</button>',
+   mount:(el,c)=>{el.querySelector("[data-ok]").addEventListener("click",function(){
+     const k=el.querySelector("input[name=vds]:checked").value;c();
+     alertPop("단말 앱 동기화","<p>단말 동기화를 실행하시겠습니까?</p>","확인",function(){
+       const on=S.dev.filter(d=>d.platform==="iOS"&&d.conn==="연결");on.forEach(d=>{d.appMiss=false;});
+       if(k==="forced")done("i9");logHist("단말 앱 동기화",on.length,on);save();render();
+       infoPop("<p class='alert--st1'>단말 동기화가 완료되었습니다.</p><p class='alert--st2'>"+(k==="forced"?"기기에 깔린 VPP 앱이 최신 버전으로 업데이트됩니다.":"배정됐지만 빠져 있던 앱이 설치됩니다.")+"</p>");});
+   });}});
+}
+function popVppInfo(id){
+  const a=S.apps.filter(x=>x.id===id)[0];if(!a)return;a.asg=a.asg||[];
+  let tab="asg";
+  const ios=S.dev.filter(d=>d.platform==="iOS"&&d.conn!=="미설치");
+  const orgN=d=>(S.orgs.filter(o=>o.id===d.org)[0]||{}).n||"-";
+  const body=()=>{
+    const list=ios.filter(d=>tab==="asg"?a.asg.indexOf(d.id)>=0:a.asg.indexOf(d.id)<0).slice(0,150);
+    return '<div style="display:grid;grid-template-columns:.8fr 1.2fr;gap:16px"><div class="blu-cont-bg"><h2 class="blu-title">앱 상세정보</h2>'
+     +'<div style="display:flex;align-items:center;gap:10px;margin-bottom:12px"><span class="app-ic" style="background:#3B3B3D;width:48px;height:48px;font-size:18px">'+esc(a.n.slice(0,1))+"</span><b>"+esc(a.n)+' <span class="tag tag-line">VPP</span></b></div>'
+     +'<div style="font-size:13px;line-height:2.1"><b class="cc-blue">라이선스</b> 총 '+a.lic+" (사용 중 "+vppUsed(a)+"/ 사용가능 "+(a.lic-vppUsed(a))+')<br><b class="cc-blue">패키지ID</b> <span class="mono">'+esc(a.pkg)+'</span><br><b class="cc-blue">버전</b> '+esc(a.ver)
+     +'<br><b class="cc-blue">가격</b> 0 원<br><b class="cc-blue">용량</b> '+esc(a.size||"-")+'<br><b class="cc-blue">Location</b> 디지털튜터학교_location</div></div>'
+     +'<div class="blu-cont-bg"><h2 class="blu-title">앱배정</h2><div class="top-tab-btns" style="margin-bottom:10px"><button class="'+(tab==="asg"?"active":"")+'" data-vtab="asg">배정된 단말</button><button class="'+(tab==="avail"?"active":"")+'" data-vtab="avail">배정 가능 단말</button></div>'
+     +'<div style="display:flex;gap:8px;margin-bottom:8px"><input type="text" class="input--st" placeholder="시리얼번호 검색" style="flex:1;height:34px"><button class="btn-ico-search" style="width:34px;height:34px">'+I.srch+"</button></div>"
+     +'<div style="font-size:12.5px;margin-bottom:6px">단말 <b class="cc-blue">'+list.length+'</b> 대</div>'
+     +'<div class="list-st--table scroll-y" style="max-height:300px"><table class="tbl"><thead><tr><th style="width:46px"></th><th>시리얼번호</th><th class="l">학교</th><th class="l">이름</th><th>상태</th></tr></thead><tbody>'
+     +(list.length?list.map(d=>'<tr><td><label class="label-check-circle" style="gap:0"><input type="checkbox" data-vchk="'+d.id+'"><i style="width:19px;height:19px"></i></label></td><td class="mono">'+esc(d.serial)+'</td><td class="l">전체 &gt; '+esc(orgN(d))+'</td><td class="l">'+esc(d.name)+"</td><td>"+connTag(d.conn)+"</td></tr>").join("")
+       :'<tr><td colspan="5" style="padding:30px">'+(tab==="asg"?"배정된 단말이 없습니다.":"배정 가능한 단말이 없습니다.")+"</td></tr>")+"</tbody></table></div>"
+     +'<div style="text-align:right;margin-top:10px">'+(tab==="avail"?'<button class="btn--st small pill btn-major" data-vassign>앱 배정</button>':'<button class="btn--st small pill btn-dark" data-vcancel>앱 배정 취소</button>')+"</div></div></div>"
+     +'<p class="bottom-txt-alert">※ 앱 배정 = 라이선스를 단말에 주고 설치합니다. 앱 배정 취소 = 라이선스를 거두고 앱을 지웁니다. ASM에서 「받기」한 수량만큼 배정할 수 있습니다.</p>';
+  };
+  pop({title:"VPP 앱 정보",w:"w1150",body:body(),btns:'<button class="btn--st pill" data-close>닫기</button>',
+   mount:function(el){
+     const redraw=()=>{el.querySelector(".popup-content").innerHTML=body();coachPaint();};
+     el.addEventListener("click",function(e){
+       const t=e.target.closest("[data-vtab]");if(t){tab=t.getAttribute("data-vtab");redraw();return;}
+       const ids=$$(".popup-area-bg [data-vchk]:checked").map(x=>x.getAttribute("data-vchk"));
+       if(e.target.closest("[data-vassign]")){
+         if(!ids.length){toast("배정할 단말을 선택해 주세요.","no");return;}
+         if(vppUsed(a)+ids.length>a.lic){toast("사용 가능한 라이선스가 부족합니다. ASM에서 수량을 더 「받기」 하세요.","no");return;}
+         ids.forEach(i=>{a.asg.push(i);const d=S.dev.filter(x=>x.id===i)[0];if(d){d.apps=d.apps||[];if(d.apps.indexOf(a.id)<0)d.apps.push(a.id);}});
+         a._asgn=true;logHist("앱 배포",ids.length,S.dev.filter(d=>ids.indexOf(d.id)>=0));save();render();redraw();toast("앱을 배정했습니다. 라이선스 "+vppUsed(a)+"/"+a.lic,"ok");return;}
+       if(e.target.closest("[data-vcancel]")){
+         if(!ids.length){toast("배정을 취소할 단말을 선택해 주세요.","no");return;}
+         a.asg=a.asg.filter(i=>ids.indexOf(i)<0);ids.forEach(i=>{const d=S.dev.filter(x=>x.id===i)[0];if(d)d.apps=(d.apps||[]).filter(x=>x!==a.id);});
+         if(a._asgn)done("i4");logHist("앱 삭제",ids.length,S.dev.filter(d=>ids.indexOf(d.id)>=0));save();render();redraw();toast("앱 배정을 취소했습니다. 라이선스 "+vppUsed(a)+"/"+a.lic,"ok");}
+     });
+   }});
+}
+
+/* ================= 통합 설정 상세 — 차단 항목 수정 (C p74–76) ================= */
+function popPolEdit(id){
+  const p=S.pol.filter(x=>x.id===id)[0];if(!p)return;
+  const box=(t,inner)=>'<div style="border:1px solid var(--line2);border-radius:5px;padding:13px 15px;margin-bottom:10px"><div style="display:flex;align-items:center;font-weight:700;color:var(--main);margin-bottom:8px;font-size:13.5px">'+t+(/^(차단|기능 차단)/.test(t)?'<button class="btn--st small pill btn-major-outline" style="margin-left:auto" data-editblk>수정</button>':"")+'</div><div style="font-size:13px">'+inner+"</div></div>";
+  const inner=()=>p.platform==="Windows"?polBoxes(p,box):polBoxesX(p,box);
+  pop({title:"통합 설정 상세",w:"w900",
+   body:'<div class="blu-cont-bg" style="margin-bottom:12px"><div style="display:flex;align-items:center;gap:10px">'+osIco(p.platform)+'<b style="font-size:16px">'+esc(p.name)+'</b></div><div style="margin-top:6px;font-size:12.5px;color:var(--tx2)">기본 설정 — 각 항목의 [수정]으로 바꿉니다.</div></div>'
+    +'<div id="peBody">'+inner()+"</div>",
+   btns:'<button class="btn--st pill" data-close>목록</button><button class="btn--st pill" data-copy>통합 설정 복사</button>',
+   mount:function(el,close){
+     el.addEventListener("click",function(e){
+       if(e.target.closest("[data-copy]")){const c=JSON.parse(JSON.stringify(p));c.id="p"+Date.now();c.name=p.name+" (복사)";c.targets=[];c.regUser=S.ui.user;c.created=c.updated=now().replace(/-/g,"/");S.pol.push(c);save();close();render();toast("통합 설정을 복사했습니다.","ok");return;}
+       if(e.target.closest("[data-editblk]")){close();popBlkEdit(p);}
+     });
+   }});
+}
+function popBlkEdit(p){
+  const os=p.platform,b=Object.assign({},p.block||{});
+  const groups=os==="Windows"?[["기능 차단",WBLOCKS.map(x=>[x.k,x.n,x.d])]]:os==="Android"?[["차단",ANDBLK[0].concat(ANDBLK[1])]]:(os==="AMAndroid"?AMABLK:IOSBLK);
+  const row=x=>{const on=!!b[x[0]],lb=BLKLABEL[x[3]||0];return '<dl class="obl-dl"><dt><b>'+esc(x[1])+"</b><p>"+esc(x[2])+'</p></dt><dd class="obl-sw"><button type="button" class="swx'+(on?" on":"")+'" data-eblk="'+x[0]+'"><i></i></button><span class="swx-t'+(on?" on":"")+'">'+(on?lb[1]:lb[0])+"</span></dd></dl>";};
+  const body=()=>groups.map(g=>'<div class="blk-grp"><div class="blk-gh">'+esc(g[0])+'</div><div class="obl-col">'+g[1].map(row).join("")+"</div></div>").join("");
+  pop({title:"차단 앱, 기능 수정",w:"w900",body:'<div id="beBody" style="max-height:58vh;overflow:auto">'+body()+"</div>",
+   btns:'<button class="btn--st pill" data-close>취소</button><button class="btn--st pill btn-major-outline" data-esave>저장</button>',
+   mount:function(el,close){
+     el.addEventListener("click",function(e){
+       const t=e.target.closest("[data-eblk]");
+       if(t){const k=t.getAttribute("data-eblk");b[k]=!b[k];const sc=el.querySelector("#beBody").scrollTop;el.querySelector("#beBody").innerHTML=body();el.querySelector("#beBody").scrollTop=sc;coachPaint();return;}
+       if(e.target.closest("[data-esave]")){p.block=b;p.updated=now().replace(/-/g,"/");
+         if(os==="iOS"&&b.account)done("i7");
+         save();close();render();toast("차단 항목을 저장했습니다. 적용된 단말에는 「선택된 통합 설정 적용」으로 다시 배포하세요.","ok");}
+     });
+   }});
+}
+
+/* ================= 기종별 실습 미션 ================= */
+const MISSIONS_AND=[
+ {id:"a1",t:"설치 중 단말 찾아내기",d:"단말 현황 → 검색필터 → 연결여부 「설치 중」. 에이전트 설치가 「승인 대기」로 멈춘 단말이 몇 대인지 확인하세요.",tg:"Android 05장 단말현황"},
+ {id:"a2",t:"Android 기본 차단 정책 만들기",d:"통합 설정 → + → Android → 1단계에서 카메라·Youtube·공장 초기화를 「차단」 → 8단계에서 이름을 적고 저장하세요.",tg:"Android 15.1 통합설정"},
+ {id:"a3",t:"공용 단말 재부팅 초기화",d:"Android 위자드 1단계 「앱 초기화」 + 3단계 배포 앱(Khan Academy Kids) + 4단계 배포 콘텐츠(토도수학)를 넣어 저장하세요.",tg:"Android 차단 및 초기화"},
+ {id:"a4",t:"카카오톡 차단 · 차단 예외 앱",d:"5단계 앱 제어를 Black List + 「실시간 DB 연동 및 차단 앱 동시 차단」으로 카카오톡을 막고, 6단계에서 배달의민족을 차단 예외 앱으로 넣어 저장하세요.",tg:"Android 앱 제어 · 예외 앱"},
+ {id:"a5",t:"수업용 White List",d:"5단계 앱 제어 White List에 디지털교과서, 7단계 사이트 제어 White List에 EBS 온라인 클래스를 넣어 저장하세요.",tg:"Android 앱 · 사이트 제어"},
+ {id:"a6",t:"APK 앱 등록(In House)",d:"앱 관리 → Android 탭 → + → 약관 동의, 「비공개」, 앱 이름, 설치 파일(.apk) → 등록하세요.",tg:"Android 16장 앱 관리"},
+ {id:"a7",t:"학생 비밀번호만 초기화",d:"단말 선택 → 초기화 → 「고급」 탭 → 비밀번호 초기화만 체크 → 적용하세요.",tg:"Android 11장 초기화"},
+ {id:"a8",t:"분실 등록과 위치 확인",d:"단말을 분실 등록(현재 위치 확인 On)한 뒤 ⋮ 상세 → 단말 위치 확인 → 주소 [확인]까지 하세요.",tg:"Android 12·13장 분실"},
+ {id:"a9",t:"AMA 단말만 보기",d:"단말 현황 → 검색필터 → 플랫폼 「AMAndroid」. AMA로 전환된 단말이 몇 대인지 확인하세요.",tg:"AMA 단말현황"},
+ {id:"a10",t:"AMA 기본 차단 정책",d:"통합 설정 → + → AMA → 1단계에서 공장 초기화·계정 수정 차단, 위치 모드 「강제 사용(권장)」 → 5단계에서 저장하세요.",tg:"AMA 1단계 차단"},
+ {id:"a11",t:"AMA 앱 필수 배포(Google Play)",d:"AMA 위자드 3단계 「앱 배포」 → Google Play에서 디지털교과서 선택 → 런타임 권한 「허용」, 업데이트 모드 「즉시 시도」 → 저장하세요.",tg:"AMA 3단계 앱 배포 및 제어"},
+ {id:"a12",t:"AMA Web App 만들기",d:"AMA 위자드 3단계 → Web App → + 웹 앱 만들기(제목·URL·표시 「일반」) → 만든 웹 앱을 「선택」해 관리 앱 목록에 넣으세요.",tg:"AMA Web App"},
+ {id:"a13",t:"Play Store 앱 등록",d:"앱 관리 → Android(Play Store) 탭 → + → 약관 동의 → Google Play에서 EBS 초등 「선택」 → 등록하세요.",tg:"AMA 앱 관리"}
+];
+const MISSIONS_IOS=[
+ {id:"i1",t:"iPad 이름 붙이기",d:"단말 현황 → 이름이 「iPad」로 남은 단말의 연필(✏) → 단말 이름 수정 → 저장하세요.",tg:"iPad 단말 이름 수정"},
+ {id:"i2",t:"기기에서 바꾼 이름 가져오기",d:"교사 iPad를 골라 동기화 → 단말 정보 동기화 「단말 → MDM 서버」 → 동기화하세요.",tg:"iPad 동기화"},
+ {id:"i3",t:"ASM 구매 앱 가져오기",d:"앱 관리 → iOS(VPP) → [VPP 앱 동기화] → 확인 → 새로고침(↻)으로 「교실」 앱이 들어온 것을 확인하세요.",tg:"iPad VPP 앱 동기화"},
+ {id:"i4",t:"앱 배정과 배정 취소",d:"VPP 앱 카드 → [VPP 앱 정보] → 「배정 가능 단말」에서 앱 배정 → 「배정된 단말」에서 앱 배정 취소까지 하세요.",tg:"iPad VPP 앱 정보"},
+ {id:"i5",t:"학생 그룹에 앱 일괄 배포",d:"단말 현황 → 그룹 모드 → 학생 그룹 → 앱 배포 → iOS(VPP)에서 Keynote → 추가 → 배포하세요.",tg:"iPad 앱 배포"},
+ {id:"i6",t:"빠진 앱 다시 설치",d:"「앱 누락」 표시 단말을 골라 동기화 → 앱 설치 정보 동기화 → 동기화하세요.",tg:"iPad 앱 설치 정보 동기화"},
+ {id:"i7",t:"학생 로그아웃 막기(정책 수정)",d:"통합 설정 → 학생용 정책 [상세] → [수정] → 차단 [수정] → 「계정 설정」 차단 → 저장하세요.",tg:"iPad 통합설정 수정"},
+ {id:"i8",t:"새 iOS 정책 9단계",d:"통합 설정 → + → iOS → 카메라·FaceTime 차단, 웹 클립(EBS), 잠금 화면 배경, Wi-Fi(MDM_School)를 넣어 저장하세요.",tg:"iPad 통합설정 위자드"},
+ {id:"i9",t:"전체 앱 업데이트",d:"앱 관리 → iOS(VPP) → [단말 앱 동기화] → 「모든앱(forced)」 → 확인하세요.",tg:"iPad 단말 앱 동기화"},
+ {id:"i10",t:"iPad 분실 — 소리로 찾기",d:"학생 iPad를 골라 분실 등록/해제 → 연락처 → 소리알림 「On」 → 적용하세요.",tg:"iPad 분실 등록"}
+];
+const _wzOpen=(os,label)=>[
+  {page:"setup",sel:'#gnbUl a[data-go="setup"]',t:"[통합 설정] 열기",d:"정책(통합 설정)을 만드는 곳입니다."},
+  {sel:'[data-act="wz-new"]',t:"우하단 [+] 누르기",d:"플랫폼 선택 창이 뜹니다."}].concat(os==="Android"?[]:[
+  {sel:'#popRoot .os-choice[data-os="'+os+'"]',t:"["+label+"] 고르기",d:"기본값이 Android 라 "+label+"로 바꿔야 합니다."}]).concat([
+  {sel:'#popRoot [data-ok]',t:"[확인] 누르기",d:label+" 위자드가 시작됩니다."}]);
+const _wzSave=(n,ws,ex)=>[
+  {sel:'[data-ws="'+n+'"]',t:"「"+n+". 내용 확인」 탭",d:"맨 위 단계 탭을 누르면 바로 그 단계로 갑니다. 건너뛴 단계는 설정하지 않은 것으로 저장됩니다."},
+  {sel:'#wzName',ev:"input",min:2,t:"통합 설정 이름 적기",d:"용도가 보이게 — 예: "+ex+"."},
+  {sel:'[data-wsave]',t:"[저장 후 나가기]",d:"저장하면 통합 설정 목록에 생깁니다. 「다음」을 누르면 바로 단말에 적용할 수도 있습니다."}];
+const _devOpen=(org,nm,why)=>[{page:"devices",sel:'#gnbUl a[data-go="devices"]',t:"[단말 현황] 열기",d:why},{sel:'#jstree [data-org="'+org+'"]',t:"조직 ["+nm+"] 선택",d:"이 조직의 단말로 실습합니다."}];
+Object.assign(COACH,{
+ a1:{n:"설치 중 단말 찾아내기",steps:[
+  {page:"devices",sel:'#gnbUl a[data-go="devices"]',t:"[단말 현황] 열기",d:"좌측 메뉴에서 단말 현황으로 갑니다."},
+  {sel:'[data-act="filter"]',t:"검색필터 펼치기",d:"필터 줄을 펼쳐야 연결여부 칸이 나타납니다."},
+  {sel:'select[data-f="conn"]',ev:"change",t:"연결여부를 「설치 중」으로",d:"「승인 대기 중 입니다.」로 멈춘 단말입니다. 시리얼이 조회되지 않으면 라이선스가 없는 단말이니 기술지원센터(1666-6493)에 문의합니다."}]},
+ a2:{n:"Android 기본 차단 정책 만들기",steps:_wzOpen("Android","Android").concat([
+  {sel:'[data-blk="camera"]',t:"카메라 「차단」",d:"스위치를 누르면 허용 ↔ 차단이 바뀝니다."},
+  {sel:'[data-blk="youtube"]',t:"Youtube 「차단」",d:"YouTube, YouTube music, YouTube Kids 앱이 숨겨집니다."},
+  {sel:'[data-blk="factory"]',t:"공장 초기화 「차단」",d:"메뉴와 하드웨어 키로 하는 공장 초기화를 모두 막습니다. 학생이 에이전트를 지우는 것을 막는 핵심 항목입니다."}]).concat(_wzSave(8,0,"1학년 기본 차단"))},
+ a3:{n:"공용 단말 재부팅 초기화",steps:_wzOpen("Android","Android").concat([
+  {sel:'[data-rb="app"]',ev:"change",t:"「앱 초기화」 체크",d:"재부팅할 때마다 배포 앱을 뺀 모든 앱이 지워집니다 — 여러 학생이 돌려 쓰는 단말에 씁니다."},
+  {sel:'[data-ws="3"]',t:"「3. 배포 앱」 탭",d:"재부팅 뒤에도 남아야 할 앱을 정합니다."},
+  {sel:'[data-dual="l"][data-aid="ad3"]',ev:"change",t:"Khan Academy Kids 체크",d:"왼쪽 「앱 전체」에서 고릅니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「배포 앱」으로 옮깁니다."},
+  {sel:'[data-ws="4"]',t:"「4. 배포 콘텐츠」 탭",d:"단말에 내려받아 둘 학습 자료입니다."},
+  {sel:'[data-dual="l"][data-aid="토도수학"]',ev:"change",t:"토도수학 체크",d:"「데이터 초기화」를 해도 배포 콘텐츠는 남습니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「배포 콘텐츠」로 옮깁니다."}]).concat(_wzSave(8,0,"공용 단말 재부팅 초기화"))},
+ a4:{n:"카카오톡 차단 · 차단 예외 앱",steps:_wzOpen("Android","Android").concat([
+  {sel:'[data-ws="5"]',t:"「5. 앱 제어」 탭",d:"앱 실행을 막거나 허용하는 단계입니다."},
+  {sel:'#contents input[name="appctl"][value="black"]',ev:"change",t:"구분 「Black List」",d:"등록한 앱만 실행을 막습니다. 차단 옵션은 「실시간 DB 연동 및 차단 앱 동시 차단」이 기본입니다."},
+  {sel:'[data-dual="l"][data-aid="c1"]',ev:"change",t:"카카오톡 체크",d:"「차단 앱 전체」에서 고릅니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「차단 앱」으로 옮깁니다."},
+  {sel:'[data-ws="6"]',t:"「6. 차단 예외 앱」 탭",d:"Black List + 실시간 DB 연동을 골랐을 때만 열리는 단계입니다."},
+  {sel:'[data-dual="l"][data-aid="x1"]',ev:"change",t:"배달의민족 체크",d:"실시간 DB가 자동으로 막는 앱 가운데 풀어 줄 앱을 고릅니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「차단 예외 앱」으로 옮깁니다."}]).concat(_wzSave(8,0,"메신저 차단"))},
+ a5:{n:"수업용 White List",steps:_wzOpen("Android","Android").concat([
+  {sel:'[data-ws="5"]',t:"「5. 앱 제어」 탭",d:"White List는 등록한 앱만 실행을 허용합니다."},
+  {sel:'#contents input[name="appctl"][value="white"]',ev:"change",t:"구분 「White List」",d:"White List를 쓰면 실시간 DB 연동 차단은 쓸 수 없습니다."},
+  {sel:'[data-dual="l"][data-aid="c8"]',ev:"change",t:"디지털교과서 체크",d:"패키지명 kr.or.keris.dt2018 — Play 스토어 주소의 id= 뒤부터 &hl 앞까지입니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「허용 앱」으로 옮깁니다."},
+  {sel:'[data-ws="7"]',t:"「7. 사이트 제어」 탭",d:"사이트도 허용 목록으로 묶습니다."},
+  {sel:'#contents input[name="sitectl"][value="white"]',ev:"change",t:"구분 「White List」",d:"등록한 사이트만 접속을 허용합니다."},
+  {sel:'[data-dual="l"][data-aid="www.ebsoc.co.kr"]',ev:"change",t:"EBS 온라인 클래스 체크",d:"목록에 없으면 「+ 신규등록」으로 넣습니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「허용 사이트」로 옮깁니다."}]).concat(_wzSave(8,0,"수업용 허용 목록"))},
+ a6:{n:"APK 앱 등록(In House)",steps:[
+  {page:"apps",sel:'#gnbUl a[data-go="apps"]',t:"[앱 관리] 열기",d:"배포할 앱을 먼저 등록합니다."},
+  {sel:'[data-apptab="and"]',t:"[Android] 탭",d:"Android 탭은 In House(설치 파일 등록)만 됩니다."},
+  {sel:'[data-act="app-new"]',t:"우하단 [+] 누르기",d:"신규 앱 추가 창이 열립니다."},
+  {sel:'#popRoot #agree',ev:"change",t:"[필수] 약관 동의",d:"체크하지 않으면 등록이 막힙니다."},
+  {sel:'#popRoot [data-apk]',t:"설치 파일 🔗 첨부",d:"APK는 MDM이 주지 않습니다. 단말에 먼저 설치해 동작을 확인한 파일을 올립니다."},
+  {sel:'#popRoot [data-ok]',t:"[등록] 누르기",d:"공개 설정은 「비공개」가 기본입니다. 「패키지 명이 중복 됩니다.」가 뜨면 비공개로 등록합니다."}]},
+ a7:{n:"학생 비밀번호만 초기화",steps:_devOpen("a01","01_1학년 학생용","잠금 비밀번호를 잊은 학생 단말이라고 생각해 봅시다.").concat([
+  {sel:'#contents [data-pick]',t:"단말 하나 선택",d:"고르기 전에는 아래 기능 버튼이 잠겨 있습니다."},
+  {sel:'#footerFix [data-fn="reset"]',t:"[초기화] 누르기",d:"화면 아래 기능 줄에 있습니다."},
+  {sel:'#popRoot [data-rtab="adv"]',t:"「고급」 탭",d:"「기본」은 공장 초기화(에이전트까지 삭제)입니다. 필요한 것만 고르려면 「고급」."},
+  {sel:'#popRoot input[data-rk="pw"]',ev:"change",t:"비밀번호 초기화 체크",d:"화면 잠금 비밀번호가 없는 상태로 되돌립니다. 단, 재부팅된 단말은 최초 비밀번호 1회 입력 전까지 안 됩니다."},
+  {sel:'#popRoot [data-ok]',t:"[적용] 누르기",d:"확인 창이 한 번 더 뜹니다."},
+  {sel:'#popRoot [data-ok]',t:"[초기화] 누르기",d:"명령이 단말로 전송됩니다."}])},
+ a8:{n:"분실 등록과 위치 확인",steps:_devOpen("a01","01_1학년 학생용","분실 신고가 들어왔다고 생각해 봅시다.").concat([
+  {sel:'#contents [data-pick]',t:"단말 하나 선택",d:"분실된 단말입니다."},
+  {sel:'#footerFix [data-fn="lost"]',t:"[분실 등록/해제] 누르기",d:"화면 아래 기능 줄에 있습니다."},
+  {sel:'#popRoot #lsTel',ev:"input",min:4,t:"연락처 적기",d:"Android는 「현재 위치 확인」을 On으로 둘 수 있습니다(기본 On)."},
+  {sel:'#popRoot [data-ok]',t:"[적용] 누르기",d:"카드에 붉은 「분실」 표시가 붙습니다."},
+  {sel:'#contents [data-detail][data-lostdev]',pin:"lost",t:"분실 단말의 ⋮ 상세",d:"방금 분실 등록한 단말입니다."},
+  {sel:'#popRoot [data-loc]',t:"[단말 위치 확인] 누르기",d:"위치 업데이트 일시·위도·경도·주소가 나옵니다."},
+  {sel:'#popRoot [data-addr]',t:"주소 [확인] 누르기",d:"여기까지 해야 미션이 완료됩니다."}])},
+ a9:{n:"AMA 단말만 보기",steps:[
+  {page:"devices",sel:'#gnbUl a[data-go="devices"]',t:"[단말 현황] 열기",d:"AMA로 전환된 단말은 파란 원 「AMA」 아이콘이 붙습니다."},
+  {sel:'[data-act="filter"]',t:"검색필터 펼치기",d:"플랫폼 칸이 나타납니다."},
+  {sel:'select[data-f="platform"]',ev:"change",t:"플랫폼을 「AMAndroid」로",d:"AMA 단말만 남습니다. 몇 대인가요?"}]},
+ a10:{n:"AMA 기본 차단 정책",steps:_wzOpen("AMAndroid","AMA").concat([
+  {sel:'[data-blk="factory"]',t:"공장 초기화 「차단」",d:"메뉴 초기화와 리커버리 모드 초기화를 모두 막습니다."},
+  {sel:'[data-blk="account"]',t:"계정 수정 「차단」",d:"구글 등 계정의 추가·수정·삭제를 막습니다."},
+  {sel:'#contents input[name="amar_loc"][value="force"]',ev:"change",t:"위치 모드 「강제 사용(권장)」",d:"위치 설정이 강제로 켜지고 사용자가 끌 수 없습니다 — 분실 위치 확인에 필요합니다."}]).concat(_wzSave(5,0,"AMA 단말 기본 정책"))},
+ a11:{n:"AMA 앱 필수 배포(Google Play)",steps:_wzOpen("AMAndroid","AMA").concat([
+  {sel:'[data-ws="3"]',t:"「3. 앱 배포 및 제어」 탭",d:"AMA는 Google Play 관리형 방식으로 앱을 배포합니다."},
+  {sel:'#contents input[name="amamode"][value="deploy"]',ev:"change",t:"구분 「앱 배포」",d:"앱 배포·Black List·White List 중에서 고릅니다."},
+  {sel:'#gpQ',ev:"input",min:2,re:/디지|교과서|keris|dt2018/i,t:"Google Play 검색어 「디지털」 입력",d:"디지털교과서를 찾습니다. 앱 이름의 일부(「디지털」)를 넣어야 다음 단계로 넘어갑니다."},
+  {sel:'[data-gps]',t:"돋보기(검색) 누르기",d:"Google Play 검색 결과가 나옵니다."},
+  {sel:'[data-gpsel="g1"]',t:"디지털교과서 [선택]",d:"선택한 앱이 오른쪽 「관리 앱 목록」에 들어갑니다."},
+  {sel:'select[data-amaf="perm"][data-ai="0"]',ev:"change",t:"런타임 권한 「허용」",d:"묻기 · 허용 · 거부 — 「허용」이면 학생에게 권한을 묻지 않습니다."},
+  {sel:'select[data-amaf="upd"][data-ai="0"]',ev:"change",t:"업데이트 모드 「즉시 시도」",d:"새 버전이 나오면 바로 업데이트합니다."}]).concat(_wzSave(5,0,"AMA 디지털교과서 필수 배포"))},
+ a12:{n:"AMA Web App 만들기",steps:_wzOpen("AMAndroid","AMA").concat([
+  {sel:'[data-ws="3"]',t:"「3. 앱 배포 및 제어」 탭",d:"웹 사이트를 앱처럼 배포할 수 있습니다."},
+  {sel:'#contents input[name="amamode"][value="deploy"]',ev:"change",t:"구분 「앱 배포」",d:"왼쪽에 앱을 고르는 칸이 열립니다."},
+  {sel:'#contents input[name="gptype"][value="web"]',ev:"change",t:"「Web App」 고르기",d:"구글 플레이 탭 안의 Web App입니다."},
+  {sel:'[data-webnew]',t:"[+ 웹 앱 만들기]",d:"「새로운 웹 앱」 창이 열립니다."},
+  {sel:'#popRoot #waT',ev:"input",min:2,t:"제목 입력",d:"예: EBS 온라인 클래스"},
+  {sel:'#popRoot #waU',ev:"input",min:6,t:"URL 입력",d:"예: https://www.ebsoc.co.kr — 표시는 「일반」이 기본입니다."},
+  {sel:'#popRoot [data-ok]',t:"[만들기] 누르기",d:"실제로는 게시까지 약 1분 걸립니다."},
+  {sel:'[data-wasel="0"]',t:"만든 웹 앱 [선택]",d:"관리 앱 목록에 「Web App」으로 들어가면 완료입니다."}])},
+ a13:{n:"Play Store 앱 등록",steps:[
+  {page:"apps",sel:'#gnbUl a[data-go="apps"]',t:"[앱 관리] 열기",d:"AMA 단말용 앱을 등록합니다."},
+  {sel:'[data-apptab="andps"]',t:"[Android(Play Store)] 탭",d:"AMA를 쓰면 이 탭이 생깁니다."},
+  {sel:'[data-act="app-new"]',t:"우하단 [+] 누르기",d:"신규 앱 추가 창이 열립니다."},
+  {sel:'#popRoot #agree',ev:"change",t:"[필수] 약관 동의",d:"체크하지 않으면 등록이 막힙니다."},
+  {sel:'#popRoot [data-gpsel2="g3"]',t:"EBS 초등 [선택]",d:"오른쪽 Google Play 검색 결과(검색어 ebs)에서 고릅니다. 유료 앱은 등록할 수 없습니다."},
+  {sel:'#popRoot [data-ok]',t:"[등록] 누르기",d:"카드에 「Google Play」 표시가 붙습니다."}]},
+ i1:{n:"iPad 이름 붙이기",steps:_devOpen("i01","01_1학년 학생","이름이 기본값 「iPad」로 남은 단말을 찾습니다.").concat([
+  {sel:'#contents [data-rename][data-ipad]',pin:"ipad",t:"연필(✏) 누르기",d:"이름이 「iPad」인 단말의 연필입니다."},
+  {sel:'#popRoot #rnU',ev:"input",min:2,t:"단말 이름 입력",d:"학교 규칙대로 — 예: 10148_김튜터"},
+  {sel:'#popRoot [data-ok]',t:"[저장] 누르기",d:"MDM 서버 → 단말로 이름이 내려갑니다."}])},
+ i2:{n:"기기에서 바꾼 이름 가져오기",steps:_devOpen("i03","03_교사","교사가 iPad 설정 › 일반 › 정보 › 이름에서 이름을 바꿔 둔 상황입니다.").concat([
+  {sel:'#contents [data-pick="d95"]',pin:"d95",t:"이름이 「iPad」인 교사 단말 선택",d:"기기에서는 「교사용 iPad (과학실)」로 바뀌어 있습니다."},
+  {sel:'#footerFix [data-fn="sync"]',t:"[동기화] 누르기",d:"동기화 옵션 창이 열립니다."},
+  {sel:'#popRoot input[name="iodir"][value="d2s"]',ev:"change",skipIf:()=>{const x=$('#popRoot input[name="iodir"][value="d2s"]');return !!(x&&x.checked);},t:"「단말 → MDM 서버」",d:"기기의 이름을 MDM으로 가져옵니다(기본값)."},
+  {sel:'#popRoot [data-ok]',t:"[동기화] 누르기",d:"카드 이름이 기기의 이름으로 바뀌면 완료입니다."}])},
+ i3:{n:"ASM 구매 앱 가져오기",steps:[
+  {page:"apps",sel:'#gnbUl a[data-go="apps"]',t:"[앱 관리] 열기",d:"ASM(school.apple.com)에서 「받기」한 앱을 가져옵니다."},
+  {sel:'[data-apptab="vpp"]',t:"[iOS(VPP)] 탭",d:"VPP = Apple ID 없이 배정·설치하는 학교 구매 앱입니다."},
+  {sel:'[data-act="vpp-sync"]',t:"[VPP 앱 동기화] 누르기",d:"장소(Location)가 앱의 Location과 같아야 합니다."},
+  {sel:'#popRoot [data-ok]',t:"[확인] 누르기",d:"동기화는 다소 시간이 걸립니다."},
+  {sel:'#popRoot .popup-btns [data-close]',t:"[확인] 누르기",d:"요청이 등록되었습니다."},
+  {sel:'[data-act="refresh"]',t:"새로고침(↻) 누르기",d:"「교실」 앱이 들어오고 Keynote·Numbers·Pages 버전이 올라갑니다."}]},
+ i4:{n:"앱 배정과 배정 취소",steps:[
+  {page:"apps",sel:'#gnbUl a[data-go="apps"]',t:"[앱 관리] 열기",d:"VPP 앱 한 개를 단말 한 대에 배정했다가 거둡니다."},
+  {sel:'[data-apptab="vpp"]',t:"[iOS(VPP)] 탭",d:"앱 카드에 라이선스(사용/총)가 보입니다."},
+  {sel:'[data-vppinfo]',t:"[VPP 앱 정보] 누르기",d:"앱 상세정보와 앱배정 칸이 나옵니다."},
+  {sel:'#popRoot [data-vtab="avail"]',t:"「배정 가능 단말」 탭",d:"아직 이 앱이 없는 단말입니다."},
+  {sel:'#popRoot [data-vchk]',ev:"change",t:"단말 하나 체크",d:"시리얼로 찾을 수도 있습니다."},
+  {sel:'#popRoot [data-vassign]',t:"[앱 배정] 누르기",d:"라이선스 사용 수가 1 늘어납니다."},
+  {sel:'#popRoot [data-vtab="asg"]',t:"「배정된 단말」 탭",d:"이번엔 거둬 봅니다."},
+  {sel:'#popRoot [data-vchk]',ev:"change",t:"단말 하나 체크",d:"앱 배정 취소 = 앱 삭제입니다."},
+  {sel:'#popRoot [data-vcancel]',t:"[앱 배정 취소] 누르기",d:"라이선스가 돌아옵니다."}]},
+ i5:{n:"학생 그룹에 앱 일괄 배포",steps:[
+  {page:"devices",sel:'#gnbUl a[data-go="devices"]',t:"[단말 현황] 열기",d:"그룹 단위로 한 번에 배포합니다."},
+  {sel:'[data-mode="grp"]',t:"[그룹 모드] 누르기",d:"만들어 둔 그룹이 카드로 보입니다."},
+  {sel:'#contents [data-grpsel="0"]',ev:"change",t:"「학생 그룹」 체크",d:"그룹 안의 단말이 모두 선택됩니다."},
+  {sel:'#footerFix [data-fn="app"]',t:"[앱 배포] 누르기",d:"화면 아래 기능 줄에 있습니다."},
+  {sel:'#popRoot [data-dptab="vpp"]',t:"「iOS(VPP)」 탭",d:"학교가 구매한 VPP 앱만 봅니다."},
+  {sel:'#popRoot [data-dl="iv1"]',t:"Keynote 체크",d:"라이선스가 넉넉한 앱입니다."},
+  {sel:'#popRoot [data-add]',t:"[추가 ›] 누르기",d:"오른쪽 배포 앱으로 옮깁니다."},
+  {sel:'#popRoot [data-ok]',t:"[배포] 누르기",d:"그룹 대수만큼 처리 이력에 기록됩니다."}]},
+ i6:{n:"빠진 앱 다시 설치",steps:_devOpen("i01","01_1학년 학생","VPP로 배정했는데 iPad에 설치되지 않은 앱이 있는 단말입니다.").concat([
+  {sel:'#contents [data-pick="d6"]',pin:"d6",t:"「앱 누락」 단말 선택",d:"카드에 붉은 「앱 누락」 표시가 있습니다."},
+  {sel:'#footerFix [data-fn="sync"]',t:"[동기화] 누르기",d:"동기화 옵션 창이 열립니다."},
+  {sel:'#popRoot input[name="iosy"][value="app"]',ev:"change",t:"「앱 설치 정보 동기화」",d:"배정됐지만 설치되지 않은 앱도 자동으로 설치됩니다."},
+  {sel:'#popRoot [data-ok]',t:"[동기화] 누르기",d:"「앱 누락」 표시가 사라지면 완료입니다."}])},
+ i7:{n:"학생 로그아웃 막기(정책 수정)",steps:[
+  {page:"setup",sel:'#gnbUl a[data-go="setup"]',t:"[통합 설정] 열기",d:"이미 쓰는 학생용 정책을 고칩니다."},
+  {sel:'[data-pol="pi2"]',t:"학생용 정책 [상세]",d:"[학생용] iOS 유해 사이트 차단 및 장치 제한 설정 정책입니다."},
+  {sel:'#popRoot [data-poledit]',t:"[수정] 누르기",d:"「통합 설정 상세」의 기본 설정이 나옵니다."},
+  {sel:'#popRoot [data-editblk]',t:"차단 [수정] 누르기",d:"「차단 앱, 기능 수정」 창이 열립니다."},
+  {sel:'#popRoot [data-eblk="account"]',t:"사용자 설정 › 계정 설정 「차단」",d:"학생이 관리형 Apple ID에서 로그아웃하지 못하게 합니다(설정에서 회색으로 막힘)."},
+  {sel:'#popRoot [data-esave]',t:"[저장] 누르기",d:"적용된 단말에는 「선택된 통합 설정 적용」으로 다시 배포합니다."}]},
+ i8:{n:"새 iOS 정책 9단계",steps:_wzOpen("iOS","iOS").concat([
+  {sel:'[data-blk="camera"]',t:"카메라 「차단」",d:"카메라 아이콘이 홈 화면에서 사라집니다."},
+  {sel:'[data-blk="facetime"]',t:"FaceTime 「차단」",d:"영상통화 앱을 막습니다."},
+  {sel:'[data-ws="3"]',t:"「3. 웹 클립」 탭",d:"홈 화면 바로가기를 배포합니다."},
+  {sel:'[data-dual="l"][data-aid="EBS 온라인 클래스"]',ev:"change",t:"EBS 온라인 클래스 체크",d:"없으면 「+ 신규등록」으로 이름·URL·아이콘을 정해 만듭니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「배포 웹 클립」으로 옮깁니다."},
+  {sel:'[data-ws="6"]',t:"「6. 배경화면」 탭",d:"잠금 화면과 홈 화면 이미지를 정합니다."},
+  {sel:'#contents select[data-wall="lock"]',ev:"change",t:"잠금 화면 이미지 고르기",d:"「데이터 관리 › 배경 화면」에 등록한 이미지에서 고릅니다."},
+  {sel:'[data-ws="8"]',t:"「8. Wi-Fi」 탭",d:"이동수업용 Wi-Fi를 미리 넣어 줍니다."},
+  {sel:'[data-dual="l"][data-aid="MDM_School"]',ev:"change",t:"MDM_School 체크",d:"같은 SSID에 비밀번호만 바꿔 저장하면 연결이 풀리니 주의합니다."},
+  {sel:'[data-dm="add"]',t:"[추가 ›] 누르기",d:"오른쪽 「배포 Wi-Fi」로 옮깁니다."}]).concat(_wzSave(9,0,"1학년 iPad 수업 설정"))},
+ i9:{n:"전체 앱 업데이트",steps:[
+  {page:"apps",sel:'#gnbUl a[data-go="apps"]',t:"[앱 관리] 열기",d:"모든 iPad의 VPP 앱을 최신 버전으로 올립니다."},
+  {sel:'[data-apptab="vpp"]',t:"[iOS(VPP)] 탭",d:"VPP 앱 동기화로 버전을 받은 뒤 단말 앱 동기화를 합니다."},
+  {sel:'[data-act="vpp-dev"]',t:"[단말 앱 동기화] 누르기",d:"동기화 옵션 창이 열립니다."},
+  {sel:'#popRoot [data-ok]',t:"「모든앱(forced)」으로 [확인]",d:"모든앱(forced)이 기본입니다. 미설치 앱(unforced)은 빠진 앱만 설치합니다."},
+  {sel:'#popRoot [data-ok]',t:"[확인] 누르기",d:"Wi-Fi 환경에 따라 시간이 걸릴 수 있습니다."}]},
+ i10:{n:"iPad 분실 — 소리로 찾기",steps:_devOpen("i01","01_1학년 학생","교내에서 잃어버린 iPad를 소리로 찾는 상황입니다.").concat([
+  {sel:'#contents [data-pick]',t:"단말 하나 선택",d:"분실된 학생 iPad입니다."},
+  {sel:'#footerFix [data-fn="lost"]',t:"[분실 등록/해제] 누르기",d:"iPad에는 「현재 위치 확인」 줄이 없습니다."},
+  {sel:'#popRoot #lsTel',ev:"input",min:4,t:"연락처 적기",d:"숫자만 입력합니다."},
+  {sel:'#popRoot input[name="snd"][value="on"]',ev:"change",t:"소리알림 「On」",d:"분실 즉시 소리알림을 켜면 교내에서 소리로 찾을 수 있습니다."},
+  {sel:'#popRoot [data-ok]',t:"[적용] 누르기",d:"카드에 「분실」 표시가 붙습니다."}])}
+});
+
 
 /* ============ 시작 ============ */
 function popCredit(){
@@ -3198,9 +4392,11 @@ function popCredit(){
 /* ---- 실습 미션 매뉴얼(PDF) 내려받기 — 파일은 깃허브 게시본의 manual/ 폴더 ----
    게시 주소에서는 같은 출처라 download 이름(한글)으로 저장되고, 다른 곳(내 PC 파일 등)에서는 새 탭으로 열린다 */
 const MAN_BASE=location.hostname==="songsamscience.github.io"?"manual/":"https://songsamscience.github.io/mdm-simulator/manual/";
-const MAN=/*MAN-START*/{"all":["MDM-mission-manual-all.pdf","MDM 실습 미션 매뉴얼(전체).pdf",68,21.9],"start":["00-start.pdf","00_표지와 시작하기.pdf",2,1.1],"m":[["mission-01.pdf","미션01_미설치 단말 찾아내기.pdf",3,1.2],["mission-02.pdf","미션02_사용자 이름 변경(개별).pdf",4,1.3],["mission-03.pdf","미션03_이름 일괄 변경 템플릿 받기.pdf",3,1.2],["mission-04.pdf","미션04_화면 표시 설정 바꾸기.pdf",4,1.3],["mission-05.pdf","미션05_조직 담당자 계정 만들기.pdf",6,1.7],["mission-06.pdf","미션06_단말 그룹 만들기.pdf",3,0.9],["mission-07.pdf","미션07_분실 등록.pdf",4,1.3],["mission-08.pdf","미션08_분실 단말 위치 확인.pdf",4,1.4],["mission-09.pdf","미션09_Windows 통합설정 만들기.pdf",7,1.8],["mission-10.pdf","미션10_통합설정 적용.pdf",4,1.3],["mission-11.pdf","미션11_미적용 재배포.pdf",3,1.0],["mission-12.pdf","미션12_MS Store 앱 등록.pdf",4,1.2],["mission-13.pdf","미션13_앱 배포.pdf",4,1.4],["mission-14.pdf","미션14_웹 사이트 Black List 등록.pdf",4,1.3],["mission-15.pdf","미션15_대여 단말 설정 후 대여하기.pdf",6,1.6],["mission-16.pdf","미션16_처리 이력 확인.pdf",3,1.0]]}/*MAN-END*/;
+const MANS=/*MAN-START*/{"win":{"all":["MDM-mission-manual-all.pdf","MDM 실습 미션 매뉴얼(전체).pdf",68,21.9],"start":["00-start.pdf","00_표지와 시작하기.pdf",2,1.1],"m":[["mission-01.pdf","미션01_미설치 단말 찾아내기.pdf",3,1.2],["mission-02.pdf","미션02_사용자 이름 변경(개별).pdf",4,1.3],["mission-03.pdf","미션03_이름 일괄 변경 템플릿 받기.pdf",3,1.2],["mission-04.pdf","미션04_화면 표시 설정 바꾸기.pdf",4,1.3],["mission-05.pdf","미션05_조직 담당자 계정 만들기.pdf",6,1.7],["mission-06.pdf","미션06_단말 그룹 만들기.pdf",3,0.9],["mission-07.pdf","미션07_분실 등록.pdf",4,1.3],["mission-08.pdf","미션08_분실 단말 위치 확인.pdf",4,1.4],["mission-09.pdf","미션09_Windows 통합설정 만들기.pdf",7,1.8],["mission-10.pdf","미션10_통합설정 적용.pdf",4,1.3],["mission-11.pdf","미션11_미적용 재배포.pdf",3,1.0],["mission-12.pdf","미션12_MS Store 앱 등록.pdf",4,1.2],["mission-13.pdf","미션13_앱 배포.pdf",4,1.4],["mission-14.pdf","미션14_웹 사이트 Black List 등록.pdf",4,1.3],["mission-15.pdf","미션15_대여 단말 설정 후 대여하기.pdf",6,1.6],["mission-16.pdf","미션16_처리 이력 확인.pdf",3,1.0]]},"and":null,"ios":null}/*MAN-END*/;
+let MAN=MANS.win;
 function manLink(f,dn,label,cls,title){return '<a class="'+(cls||"")+'" href="'+MAN_BASE+f+'" download="'+esc(dn)+'" target="_blank" rel="noopener"'+(title?' title="'+esc(title)+'"':"")+">"+label+"</a>";}
 function popManual(){
+  if(!MAN){infoPop("<p class='alert--st1'>"+PLATS[PLAT].n+" 실습 미션 매뉴얼은 준비 중입니다.</p>");return;}
   const A=MAN.all,B=MAN.start;
   pop({title:"실습 미션 매뉴얼 (PDF)",w:"w900",
    body:'<div class="msg-box msg-i">미션마다 단계별 화면과 확인할 점을 담은 안내서입니다. 전체본을 받거나 필요한 미션만 골라 받으세요.</div>'
@@ -3220,12 +4416,12 @@ function popCreditBox(){
       +'<br><a href="https://scienceisjo.github.io/growing-teachers/dibut/argos.html" target="_blank" rel="noopener">scienceisjo.github.io/growing-teachers/dibut/argos.html</a>')
     +r("일부 변경",'<b>아주중 송세호 선생님</b><br>디지털 튜터 수업을 위해 일부 내용을 변경했습니다.'
       +'<br><span style="color:var(--tx2);font-size:13px">실제 화면과 같은 배치(아이콘 메뉴·남색 상단 바), 학교명·계정 등 예시 정보의 가상화, 실습 미션 화면 안내 보완</span>')
-    +r("바탕 자료",'서울특별시교육청 스마트기기 통합관리시스템 <b>「Argos Edu Manager」</b>(mdm.sen.go.kr)의 화면 구성과 공식 사용자 매뉴얼(v4.1)')
+    +r("바탕 자료",'서울특별시교육청 스마트기기 통합관리시스템 <b>「Argos Edu Manager」</b>(mdm.sen.go.kr)의 화면 구성과 공식 사용자 매뉴얼(v4.1) · Android(Argos · AMA) · iPad(ASM) 사용자 매뉴얼')
     +"</tbody></table>"
     +'<div class="msg-box msg-d">연수·수업용 재현본입니다. 실제 단말·계정·정책에는 어떤 영향도 주지 않으며, 데이터는 전부 가상입니다.</div>',
    btns:'<button class="btn--st pill btn-major" data-close>확인</button>'});
 }
-function boot(){S=load();CREDIT=$("#app-credit");paintMi();popCredit();}
+function boot(){syncPlat();S=load();CREDIT=$("#app-credit");paintMi();paintPlatBtn();popCredit();}
 if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",boot);else boot();
 window.addEventListener("beforeunload",save);
 })();
