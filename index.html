@@ -1336,7 +1336,8 @@ function coachPaint(){
     +'<div class="c-s">노랗게 반짝이는 곳을 누르면 다음 단계로 넘어갑니다 ('+(GD.i+1)+"/"+g.steps.length+")</div>";
   document.querySelectorAll(".gd-hl").forEach(function(e){e.classList.remove("gd-hl");});
   let el;
-  if(tp){el=[].slice.call(tp.querySelectorAll(".popup-btns [data-close]")).filter(function(b){return b.offsetWidth;})[0]||tp.querySelector(".popup-head .x");}
+  /* 「확인」·「닫기」를 짚고, 닫기 단추가 「취소」뿐이면(다 한 뒤 「취소」는 헷갈린다) 위쪽 ×를 짚는다 */
+  if(tp){el=[].slice.call(tp.querySelectorAll(".popup-btns [data-close]")).filter(function(b){return b.offsetWidth&&!/취소/.test(b.textContent);})[0]||tp.querySelector(".popup-head .x");}
   else{
     if(st.page&&S.ui.page!==st.page)return;
     /* 이미 원하는 값이면(예: 전에 「사용자 이름」으로 바꿔 둠) 다시 골라도 change 가 안 나 멈춘다 → 건너뜀 */
