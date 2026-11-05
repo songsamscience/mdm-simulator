@@ -610,6 +610,10 @@ body.helpmode #helpBar{display:flex}
   .footer-fix{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;min-height:0;padding:8px 12px}
   .footer-fix>*{flex:0 0 auto}
   .header-top{padding:18px 12px 10px}
+  /* 제목 옆 탭 줄(앱 관리 6개·데이터 관리 5개·대여 3개)이 화면보다 넓으면 페이지 전체가 옆으로 밀리고,
+     따라하기가 탭을 보여 주려 화면을 옆으로 굴리면 우하단 [+]가 왼쪽 메뉴 밑으로 숨는다 → 탭 줄만 옆으로 밀어 보기
+     (위아래 안쪽 여백 5px은 반짝임 테두리가 잘리지 않게, 바깥 -5px로 자리는 그대로) */
+  .header-top .inner-right{min-width:0;max-width:100%;overflow-x:auto;scrollbar-width:none;padding:5px 1px 5px 0;margin:-5px -1px -5px auto}
   .header-fix{padding:0 12px 0 16px;gap:8px}
   .school-name{font-size:19px;white-space:nowrap}
   .sim-tag,#topUser{display:none}
@@ -3149,7 +3153,7 @@ function exportChk(){
   L.push("MDM 운영 및 활용 점검표 (연수 실습 결과 초안)");
   L.push("학교명: "+SCHOOL+"    점검일자: "+today());L.push("");
   L.push("1. 단말 현황 확인");
-  L.push("  - 전체 "+d.length+"대 (연결 "+d.filter(x=>x.conn==="연결").length+" / 미연결 "+d.filter(x=>x.conn==="미연결").length+" / 미설치 "+d.filter(x=>x.conn==="미설치").length+" / 미등록 "+d.filter(x=>x.conn==="미등록").length+")");
+  L.push("  - 전체 "+d.length+"대 (연결 "+d.filter(x=>x.conn==="연결").length+" / 미연결 "+d.filter(x=>x.conn==="미연결").length+(PLAT==="and"?" / 설치 중 "+d.filter(x=>x.conn==="설치 중").length:"")+" / 미설치 "+d.filter(x=>x.conn==="미설치").length+" / 미등록 "+d.filter(x=>x.conn==="미등록").length+")");
   L.push("  - 사용자 이름 미등록: "+d.filter(x=>!x.user).length+"대 / 분실 등록: "+d.filter(x=>x.lost).length+"대 / 권한 해제 감지: "+d.filter(x=>x.perm).length+"대");L.push("");
   L.push("2. MDM 정책 관리");
   S.pol.forEach(p=>{L.push("  - ["+p.platform+"] "+p.name+" : 지정 "+p.targets.length+"대 / 적용 "+applied(p)+"대");});
@@ -3188,7 +3192,7 @@ document.addEventListener("click",function(e){
   if(h("[data-pageguide]")){pageGuide();return;}
   if(h("#fab")){$("#mp").hidden=!$("#mp").hidden;return;}
   if(h("#mpExport")){exportChk();return;}
-  if(h("#mpReset")){alertPop("처음 상태로","<p>모든 실습 내용(정책·그룹·대여·미션)이 지워지고 처음 상태로 돌아갑니다.</p>","초기화",function(){coachStop();S=fresh();WZ=null;save();render();toast("처음 상태로 되돌렸습니다.","ok");},true);return;}
+  if(h("#mpReset")){alertPop("처음 상태로","<p>모든 실습 내용(정책·그룹·대여·미션)이 지워지고 처음 상태로 돌아갑니다.</p>","초기화",function(){coachStop();S=fresh();if(LOGIN_USER)S.ui.user=LOGIN_USER;WZ=null;save();render();toast("처음 상태로 되돌렸습니다.","ok");},true);return;}
   if((n=h("[data-go]"))){e.preventDefault();go(n.getAttribute("data-go"));return;}
   if((n=h("[data-hb]"))){const k=n.getAttribute("data-hb");
     if(k==="setup"){go("setup");}else{go("devices");toast("단말을 선택한 뒤 화면 하단의 "+(k==="reset"?"「초기화」":"「분실 등록/해제」")+" 버튼을 누르세요.");}return;}
@@ -4319,7 +4323,6 @@ Object.assign(COACH,{
  i2:{n:"기기에서 바꾼 이름 가져오기",steps:_devOpen("i03","03_교사","교사가 iPad 설정 › 일반 › 정보 › 이름에서 이름을 바꿔 둔 상황입니다.").concat([
   {sel:'#contents [data-pick="d95"]',pin:"d95",t:"이름이 「iPad」인 교사 단말 선택",d:"기기에서는 「교사용 iPad (과학실)」로 바뀌어 있습니다."},
   {sel:'#footerFix [data-fn="sync"]',t:"[동기화] 누르기",d:"동기화 옵션 창이 열립니다."},
-  {sel:'#popRoot input[name="iodir"][value="d2s"]',ev:"change",skipIf:()=>{const x=$('#popRoot input[name="iodir"][value="d2s"]');return !!(x&&x.checked);},t:"「단말 → MDM 서버」",d:"기기의 이름을 MDM으로 가져옵니다(기본값)."},
   {sel:'#popRoot [data-ok]',t:"[동기화] 누르기",d:"카드 이름이 기기의 이름으로 바뀌면 완료입니다."}])},
  i3:{n:"ASM 구매 앱 가져오기",steps:[
   {page:"apps",sel:'#gnbUl a[data-go="apps"]',t:"[앱 관리] 열기",d:"ASM(school.apple.com)에서 「받기」한 앱을 가져옵니다."},
